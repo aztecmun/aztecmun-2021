@@ -1,15 +1,22 @@
 import Header from './Header'
 import Footer from './Footer'
 import { Layout, Container } from './styles'
+import { AnimatePresence } from 'framer-motion'
 
 
-function index( { children } ) {
+function index({ children }) {
     return (
-    <Layout>
-        <Header></Header>
-        <Container> { children } </Container>
-        <Footer></Footer>
-    </Layout>
+        <Layout>
+            <Header />
+            <AnimatePresence exitBeforeEnter
+                initial={{ opacity: 0 }}
+                animte={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+            >
+                <Container> {children} </Container>
+            </AnimatePresence>
+            <Footer />
+        </Layout>
     )
 }
 

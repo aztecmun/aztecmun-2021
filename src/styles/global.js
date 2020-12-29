@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-    font-family: 'sanspro' ;
-    src: url('/SourceSansPro-Regular.ttf') format('truetype');
+    font-family: 'helvetica' ;
+    src: url('/HelveticaNueu.ttf') format('truetype');
 }
 
 * {
@@ -22,7 +22,7 @@ a{
 }
 
 html, body {
-    font-family: sanspro;
+    font-family: helvetica;
 }
 `;
 

@@ -1,10 +1,14 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 
 function comites() {
     return (
-        <div>
-            comites
-        </div>
+        <motion.div
+        layoutId="Comites"
+        initial={{ opacity: 0, x: -50 }}
+        animate= {{ opacity: 1, x: 0 }}
+        >
+            Comites
+        </motion.div>
     )
 }
 
