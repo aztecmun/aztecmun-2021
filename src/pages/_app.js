@@ -1,26 +1,23 @@
 import Head from 'next/head'
 
-import { AnimateSharedLayout, AnimatePresence } from 'framer-motion'
-
 import { ThemeProvider } from 'styled-components';
+import Layout from '../components/layout';
 import GlobalStyle from '../styles/global';
 import theme from '../styles/theme';
-
-import Layout from '../components/Main'
 
 export default function App({ Component, pageProps }) {
 
   return (
-    <Layout>
+    <>
       <GlobalStyle />
-      <Head>
-        <title>AztecMun</title>
-      </Head>
-      <AnimateSharedLayout>
+      <Layout>
+        <Head>
+          <title>AztecMun</title>
+        </Head>
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
-      </AnimateSharedLayout>
-    </Layout>
+      </Layout>
+    </>
   );
 }
