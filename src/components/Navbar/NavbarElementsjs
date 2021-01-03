@@ -1,0 +1,176 @@
+import styled from 'styled-components'
+import { FaBars, FaBackward } from 'react-icons/fa'
+
+export const Nav = styled.nav`
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 5rem;
+  width: 100%;
+
+  padding: 0 2rem;
+`
+
+export const Bars = styled(FaBars)`
+  display: none;
+
+  height: 25px;
+  width: 25px;
+
+  @media(max-width: 700px){
+    display: block;
+  }
+`
+
+export const NavMenu = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 50%;
+  height: 100%;
+
+  @media(max-width: 700px){
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    height: 93.5vh;
+    width: 30vw;
+
+    background: white;
+    transform: ${({ open }) => open ? "translateX(0)" : "translateX(-200px)"};
+    transition: transform .5s ease-in-out;
+  }
+`
+
+export const NavLink = styled.li`
+  text-align: center;
+  text-transform: uppercase;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition: all .5s ease-in-out;
+
+  &:before{
+    content: "";
+
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    height: 2px;
+    width: 0%;
+
+    background: #3D66A8;
+
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover{
+    color: #3D66A8;
+
+    transition: all .5s ease-in-out;
+
+    &:before{
+      width: 100%;
+
+      transition: all .3s ease-in-out;
+    }
+  }
+`
+
+export const NavBtn = styled.div`
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 110px;
+
+  background: #3D66A8;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all .5s ease-in-out;
+
+  &:hover{
+    color: black;
+
+    background: white;
+    border: 1px solid #3D66A8;
+
+    transition: all .5s ease-in-out;
+  }
+`
+export const Form = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+  transform: ${({ formOpen }) => formOpen ? "translateX(100%)" : "translateX(0)"};
+  transition: all .5s ease-in-out;
+`
+
+export const FormContainer = styled.div`
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  height: 50%;
+  width: 90%;
+
+  background: white;
+`
+
+export const Login = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  background: red;
+`
+
+export const Signup = styled.div`
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  background: blue;
+`
+
+export const Icon = styled (FaBackward)`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+`
