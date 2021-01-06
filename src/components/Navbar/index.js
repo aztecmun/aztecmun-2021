@@ -14,6 +14,7 @@ import {
   Icon,
   Button,
   Frame,
+  NavIcon,
 } from './NavbarElements.js'
 
 function Navbar() {
@@ -23,9 +24,11 @@ function Navbar() {
 
   return (
     <Nav>
-      <Bars open={open} onClick={() => setOpen(!open)} />
+      <Bars onClick={() => setOpen(!open)} />
 
-      <NavMenu open={open} onClick={() => setOpen(!open)}>
+      <NavMenu open={open}>
+        <NavIcon onClick={() => setOpen(!open)} />
+
         <NavLink>
           <Link href="#">Inicio</Link>
         </NavLink>
@@ -50,8 +53,11 @@ function Navbar() {
             onClick={() => setFrameOpen(!frameOpen)}
           ></Frame>
 
-          <Signup>
-            <Icon formOpen={formOpen} onClick={() => setFormOpen(!formOpen)} />
+          <Signup frameOpen={frameOpen}>
+            <Icon
+              frameOpen={frameOpen}
+              onClick={() => setFormOpen(!formOpen)}
+            />
             <h1>Registrate</h1>
             <input type="text" placeholder="Nombre de Usuario" />
             <input type="email" placeholder="Correo" />
@@ -59,8 +65,11 @@ function Navbar() {
             <Button>Registrar</Button>
           </Signup>
 
-          <Login>
-            <Icon formOpen={formOpen} onClick={() => setFormOpen(!formOpen)} />
+          <Login frameOpen={frameOpen}>
+            <Icon
+              frameOpen={frameOpen}
+              onClick={() => setFormOpen(!formOpen)}
+            />
             <h1>Inicia Sesión</h1>
             <input type="text" placeholder="Usuario" />
             <input type="text" placeholder="Contraseña" />

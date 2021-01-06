@@ -22,7 +22,7 @@ export const Bars = styled(FaBars)`
   height: 25px;
   width: 25px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     display: block;
   }
 `
@@ -89,6 +89,14 @@ export const NavLink = styled.li`
 
       transition: all 0.3s ease-in-out;
     }
+  }
+`
+
+export const NavIcon = styled(VscChromeClose)`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `
 
@@ -160,6 +168,12 @@ export const Signup = styled.div`
   height: 100%;
   width: 100%;
 
+  opacity: ${({ frameOpen }) => (frameOpen ? '1' : '0')};
+  transform: ${({ frameOpen }) =>
+    frameOpen ? 'translateX(0)' : 'translate(100%)'};
+
+  transition: all 0.3s ease-in-out;
+
   input {
     padding: 15px 2rem;
 
@@ -167,6 +181,10 @@ export const Signup = styled.div`
     border-radius: 15px;
     border: none;
     outline: none;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `
 
@@ -182,6 +200,12 @@ export const Login = styled.div`
   height: 100%;
   width: 100%;
 
+  opacity: ${({ frameOpen }) => (frameOpen ? '0' : '1')};
+  transform: ${({ frameOpen }) =>
+    frameOpen ? 'translateX(-100%)' : 'translate(0)'};
+
+  transition: all 0.3s ease-in-out;
+
   input {
     padding: 15px 2rem;
 
@@ -195,7 +219,7 @@ export const Login = styled.div`
 export const Icon = styled(VscChromeClose)`
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: ${({ frameOpen }) => (frameOpen ? '20px' : '92%')};
 
   cursor: pointer;
 
@@ -219,6 +243,7 @@ export const Button = styled.div`
   border-radius: 30px;
   border: 1px solid #3d66a8;
   cursor: pointer;
+  pointer-events: none;
 
   transition: all 0.5s ease-in-out;
 
@@ -240,14 +265,18 @@ export const Frame = styled.div`
   height: 100%;
   width: 50%;
 
-  background: #fff;
+  background: white;
   background-image: url('/img/logo.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: ${({ frameOpen }) =>
     frameOpen ? 'translateX(0)' : 'translate(-100%)'};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

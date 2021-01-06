@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar'
+import Head from 'next/head'
 
 import styled from 'styled-components'
 
@@ -13,6 +14,7 @@ const MainWrapper = styled.div`
 function Layout() {
   return (
     <MainWrapper>
+      <Head></Head>
       <Navbar />
     </MainWrapper>
   )
