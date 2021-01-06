@@ -1,10 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
     font-family: 'helvetica' ;
-    src: url('/HelveticaNueu.ttf') format('truetype');
+    src: url('/HelveticaNeueBd.ttf') format('truetype');
 }
 
 * {
@@ -19,11 +19,11 @@ const GlobalStyle = createGlobalStyle`
 
 a{
     color: inherit;
-}
+}   
 
 html, body {
     font-family: helvetica;
 }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

@@ -11,12 +11,15 @@ import {
   FormContainer,
   Login,
   Signup,
- Icon } from './NavbarElementsjs'
-
+  Icon,
+  Button,
+  Frame,
+} from './NavbarElements.js'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
   const [formOpen, setFormOpen] = useState(false)
+  const [frameOpen, setFrameOpen] = useState(false)
 
   return (
     <Nav>
@@ -42,18 +45,26 @@ function Navbar() {
 
       <Form formOpen={formOpen}>
         <FormContainer>
+          <Frame
+            frameOpen={frameOpen}
+            onClick={() => setFrameOpen(!frameOpen)}
+          ></Frame>
+
           <Signup>
             <Icon formOpen={formOpen} onClick={() => setFormOpen(!formOpen)} />
             <h1>Registrate</h1>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <input type="text" placeholder="Nombre de Usuario" />
+            <input type="email" placeholder="Correo" />
+            <input type="password" placeholder="Contraseña" />
+            <Button>Registrar</Button>
           </Signup>
 
           <Login>
+            <Icon formOpen={formOpen} onClick={() => setFormOpen(!formOpen)} />
             <h1>Inicia Sesión</h1>
-            <input type="text" />
-            <input type="text" />
+            <input type="text" placeholder="Usuario" />
+            <input type="text" placeholder="Contraseña" />
+            <Button>Inicar Sesión</Button>
           </Login>
         </FormContainer>
       </Form>

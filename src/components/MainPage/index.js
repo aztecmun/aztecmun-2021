@@ -4,8 +4,8 @@ import Navbar from '../Navbar'
 import styled from 'styled-components'
 
 const MainWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 200vh;
+  width: 100%;
 
   overflow: hidden;
 `
