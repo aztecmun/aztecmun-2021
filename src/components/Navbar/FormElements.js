@@ -77,6 +77,10 @@ export const Signup = styled(FormLogIn)`
   transform: ${({ frameOpen }) =>
     frameOpen ? 'translateX(0)' : 'translate(100%)'};
   pointer-events: ${({ frameOpen }) => (frameOpen ? '' : 'none')};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const Login = styled(FormLogIn)`
