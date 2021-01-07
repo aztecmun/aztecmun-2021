@@ -79,7 +79,7 @@ export const Signup = styled(FormLogIn)`
   pointer-events: ${({ frameOpen }) => (frameOpen ? '' : 'none')};
 
   @media (max-width: 768px) {
-    display: none;
+    display: ${({ frameOpen }) => (frameOpen ? '' : 'none')};
   }
 `
 
@@ -88,6 +88,10 @@ export const Login = styled(FormLogIn)`
   transform: ${({ frameOpen }) =>
     frameOpen ? 'translateX(-100%)' : 'translate(0)'};
   pointer-events: ${({ frameOpen }) => (frameOpen ? 'none' : '')};
+
+  @media (max-width: 768px) {
+    display: ${({ frameOpen }) => (frameOpen ? 'none' : '')};
+  }
 `
 
 export const FormFrame = styled.div`

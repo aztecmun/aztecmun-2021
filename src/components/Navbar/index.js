@@ -58,7 +58,7 @@ function Navbar() {
             <p>
               ¿Ya tienes cuenta?{' '}
               <span onClick={() => setFrameOpen(!frameOpen)}>
-                Inicia Sesión!
+                ¡Inicia Sesión!
               </span>
             </p>
           </Signup>
@@ -71,10 +71,10 @@ function Navbar() {
             <h1>Inicia Sesión</h1>
             <input type="text" placeholder="Usuario" />
             <input type="password" placeholder="Contraseña" />
-            <Button>Inicar Sesión</Button>
+            <Button>Iniciar Sesión</Button>
             <p>
-              ¿Aun no tienes cuenta?{' '}
-              <span onClick={() => setFrameOpen(!frameOpen)}>Crea Una!</span>
+              ¿Aún no tienes cuenta?
+              <span onClick={() => setFrameOpen(!frameOpen)}>¡Crea Una!</span>
             </p>
           </Login>
         </FormContainer>

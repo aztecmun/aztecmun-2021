@@ -40,6 +40,10 @@ export const Icon = styled(VscChromeClose)`
     transform: rotate(-360deg);
     transition: all 0.5s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    left: 20px;
+  }
 `
 
 export const NavIcon = styled(Icon)`
