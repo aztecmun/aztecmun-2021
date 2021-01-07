@@ -27,6 +27,30 @@ export const Bars = styled(FaBars)`
   }
 `
 
+export const Icon = styled(VscChromeClose)`
+  position: absolute;
+  top: 20px;
+  left: ${({ frameOpen }) => (frameOpen ? '20px' : '92%')};
+
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(-360deg);
+    transition: all 0.5s ease-in-out;
+  }
+`
+
+export const NavIcon = styled(Icon)`
+  position: static;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`
+
 export const NavMenu = styled.ul`
   display: flex;
   justify-content: space-around;
@@ -35,7 +59,7 @@ export const NavMenu = styled.ul`
   width: 50%;
   height: 100%;
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     position: absolute;
     top: 0;
     left: 0;
@@ -92,158 +116,16 @@ export const NavLink = styled.li`
   }
 `
 
-export const NavIcon = styled(VscChromeClose)`
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`
-
 export const NavBtn = styled.div`
-  color: white;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 50px;
-  width: 110px;
-
-  background: #3d66a8;
-  border-radius: 10px;
-  cursor: pointer;
-
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    color: black;
-
-    background: white;
-    border: 1px solid #3d66a8;
-
-    transition: all 0.5s ease-in-out;
-  }
-`
-export const Form = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-  width: 100%;
-
-  background: rgba(0, 0, 0, 0.5);
-  transform: ${({ formOpen }) => (formOpen ? 'scale(100%)' : 'scale(0)')};
-  transition: all 0.2s ease-in-out;
-`
-
-export const FormContainer = styled.div`
-  position: relative;
-
-  display: flex;
-  justify-items: center;
-  align-items: center;
-
-  height: 70%;
-  width: 90%;
-
-  background: white;
-  border-radius: 20px;
-`
-
-export const Signup = styled.div`
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  height: 100%;
-  width: 100%;
-
-  opacity: ${({ frameOpen }) => (frameOpen ? '1' : '0')};
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(0)' : 'translate(100%)'};
-
-  transition: all 0.3s ease-in-out;
-
-  input {
-    padding: 15px 2rem;
-
-    background: #e2e2e2;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-
-export const Login = styled.div`
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  height: 100%;
-  width: 100%;
-
-  opacity: ${({ frameOpen }) => (frameOpen ? '0' : '1')};
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(-100%)' : 'translate(0)'};
-
-  transition: all 0.3s ease-in-out;
-
-  input {
-    padding: 15px 2rem;
-
-    background: #e2e2e2;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-  }
-`
-
-export const Icon = styled(VscChromeClose)`
-  position: absolute;
-  top: 20px;
-  left: ${({ frameOpen }) => (frameOpen ? '20px' : '92%')};
-
-  cursor: pointer;
-
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    transform: rotate(-360deg);
-    transition: all 0.5s ease-in-out;
-  }
-`
-
-export const Button = styled.div`
-  font-weight: 850;
-  font-size: 0.7rem;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   color: white;
 
   padding: 1rem 2rem;
 
   background: #3d66a8;
-  border-radius: 30px;
+  border-radius: 10px;
   border: 1px solid #3d66a8;
   cursor: pointer;
-  pointer-events: none;
 
   transition: all 0.5s ease-in-out;
 
@@ -256,27 +138,10 @@ export const Button = styled.div`
   }
 `
 
-export const Frame = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+export const Button = styled(NavBtn)`
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
-  height: 100%;
-  width: 50%;
-
-  background: white;
-  background-image: url('/img/logo.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-
-  transition: all 0.3s ease-in-out;
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(0)' : 'translate(-100%)'};
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  border-radius: 30px;
 `

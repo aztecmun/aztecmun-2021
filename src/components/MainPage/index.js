@@ -5,7 +5,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 const MainWrapper = styled.div`
-  height: 200vh;
+  height: 100vh;
   width: 100%;
 
   overflow: hidden;
@@ -14,7 +14,10 @@ const MainWrapper = styled.div`
 function Layout() {
   return (
     <MainWrapper>
-      <Head></Head>
+      <Head>
+        {' '}
+        <title>AztecMun</title>{' '}
+      </Head>
       <Navbar />
     </MainWrapper>
   )
