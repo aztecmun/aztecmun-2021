@@ -1,24 +1,16 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import Head from 'next/head'
 
-import styled from 'styled-components'
+import { MainWrapper, MainContent } from './MainElements'
 
-const MainWrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-
-  overflow: hidden;
-`
-
-function Layout() {
+function Layout({ children }) {
   return (
-    <MainWrapper>
-      <Head>
-        {' '}
-        <title>AztecMun</title>{' '}
-      </Head>
+    <MainWrapper
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <Navbar />
+      <MainContent>{children}</MainContent>
     </MainWrapper>
   )
 }

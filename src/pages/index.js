@@ -1,7 +1,9 @@
-import React from 'react'
+import { React } from 'react'
+
+import Layout from '../components/MainPage'
 
 function index() {
-  return <div>Index</div>
+  return <Layout>index</Layout>
 }
 
 export default index

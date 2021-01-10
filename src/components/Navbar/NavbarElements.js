@@ -3,7 +3,9 @@ import { FaBars } from 'react-icons/fa'
 import { VscChromeClose } from 'react-icons/vsc'
 
 export const Nav = styled.nav`
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 1;
 
   display: flex;
@@ -14,6 +16,9 @@ export const Nav = styled.nav`
   width: 100%;
 
   padding: 0 2rem;
+
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 `
 
 export const Bars = styled(FaBars)`
@@ -64,7 +69,7 @@ export const NavMenu = styled.ul`
   height: 100%;
 
   @media (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -73,11 +78,13 @@ export const NavMenu = styled.ul`
     align-items: center;
     gap: 3rem;
 
-    height: 93.5vh;
+    height: 100vh;
     width: 40vw;
 
     background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-200px)')};
+
     transition: transform 0.5s ease-in-out;
   }
 `
@@ -105,6 +112,18 @@ export const NavLink = styled.li`
     background: #3d66a8;
 
     transition: all 0.3s ease-in-out;
+  }
+
+  .active {
+    color: #3d66a8;
+
+    transition: all 0.5s ease-in-out;
+
+    &:before {
+      width: 100%;
+
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &:hover {

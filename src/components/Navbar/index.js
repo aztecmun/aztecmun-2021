@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import {
   Nav,
@@ -18,6 +19,7 @@ function Navbar() {
   const [open, setOpen] = useState(false)
   const [formOpen, setFormOpen] = useState(false)
   const [frameOpen, setFrameOpen] = useState(false)
+  const router = useRouter()
 
   return (
     <Nav>
@@ -26,16 +28,26 @@ function Navbar() {
       <NavMenu open={open}>
         <NavIcon onClick={() => setOpen(!open)} />
 
-        <NavLink>
-          <Link href="">Inicio</Link>
+        <NavLink onClick={() => setOpen(!open)}>
+          <Link
+            href=""
+            as="/inicio"
+            className={router.asPath === '/inicio' ? 'active' : ''}
+          >
+            Inicio
+          </Link>
         </NavLink>
 
-        <NavLink>
-          <Link href="">Comites</Link>
+        <NavLink onClick={() => setOpen(!open)}>
+          <Link href="" className={router.asPath === '' ? 'active' : ''}>
+            Comites
+          </Link>
         </NavLink>
 
-        <NavLink>
-          <Link href="">Secretarías</Link>
+        <NavLink onClick={() => setOpen(!open)}>
+          <Link href="" className={router.asPath === '' ? 'active' : ''}>
+            Secretarías
+          </Link>
         </NavLink>
       </NavMenu>
 
@@ -73,7 +85,7 @@ function Navbar() {
             <input type="password" placeholder="Contraseña" />
             <Button>Iniciar Sesión</Button>
             <p>
-              ¿Aún no tienes cuenta?
+              ¿Aún no tienes cuenta?{' '}
               <span onClick={() => setFrameOpen(!frameOpen)}>¡Crea Una!</span>
             </p>
           </Login>
