@@ -1,4 +1,5 @@
-import * as firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -17,12 +18,20 @@ export const LoginWithEmail = (email, password) => {
   return firebase.auth().signInWithEmailAndPassword(email, password)
 }
 
+export const onAuthStateChange = (onChange) => {
+  return firebase.auth().onAuthStateChanged(onChange)
+}
+
+export const loginWhitEmailAndPass = (email, password) => {
+  return firebase.auth().signInWithEmailAndPassword(email, password)
+}
+
 export const createAccountWithEmail = (email, password, name) => {
   return firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((result) => {
-      result.user.updatePropfile({
+      result.user.updateProfile({
         displayName: name,
       })
 
@@ -31,5 +40,10 @@ export const createAccountWithEmail = (email, password, name) => {
       result.user.sendEmailVerification(emailConfig).catch((error) => {
         console.error(error)
       })
+
+      return result.user
+    })
+    .catch((error) => {
+      console.error(error)
     })
 }

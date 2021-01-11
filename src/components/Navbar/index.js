@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -15,11 +15,48 @@ import {
 
 import { Form, FormContainer, Login, Signup, FormFrame } from './FormElements'
 
+import {
+  loginWhitEmailAndPass,
+  createAccountWithEmail,
+  onAuthStateChange,
+} from '../../../firebase/client'
+
 function Navbar() {
   const [open, setOpen] = useState(false)
   const [formOpen, setFormOpen] = useState(false)
   const [frameOpen, setFrameOpen] = useState(false)
   const router = useRouter()
+
+  // Users SignUp
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+    name: '',
+  })
+
+  const [user, setUser] = useState(undefined)
+
+  useEffect(() => {
+    onAuthStateChange(setUser)
+  }, [])
+
+  const handleInputChange = (event) => {
+    setData({
+      ...data,
+      [event.target.name]: event.target.value,
+    })
+    console.log(data)
+  }
+
+  const handleSignUp = (event) => {
+    event.preventDefault()
+    createAccountWithEmail(data.email, data.password, data.name).then(setUser)
+  }
+
+  const handleLogin = (event) => {
+    event.preventDefault()
+    loginWhitEmailAndPass(data.email, data.password).then(setUser)
+  }
 
   return (
     <Nav>
@@ -51,7 +88,10 @@ function Navbar() {
         </NavLink>
       </NavMenu>
 
-      <NavBtn onClick={() => setFormOpen(!formOpen)}>Ingresa</NavBtn>
+      {user === null && (
+        <NavBtn onClick={() => setFormOpen(!formOpen)}>Ingresa</NavBtn>
+      )}
+      {user && <h3>Hola, {user.displayName}</h3>}
 
       <Form formOpen={formOpen}>
         <FormContainer>
@@ -63,10 +103,25 @@ function Navbar() {
               onClick={() => setFormOpen(!formOpen)}
             />
             <h1>Crear Cuenta</h1>
-            <input type="text" placeholder="Nombre de Usuario" />
-            <input type="email" placeholder="Correo" />
-            <input type="password" placeholder="Contraseña" />
-            <Button>Crear</Button>
+            <input
+              name="name"
+              type="text"
+              placeholder="Nombre y apellido"
+              onChange={handleInputChange}
+            />
+            <input
+              name="email"
+              type="email"
+              placeholder="Correo electrónico"
+              onChange={handleInputChange}
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+              onChange={handleInputChange}
+            />
+            <Button onClick={handleSignUp}>Crear</Button>
             <p>
               ¿Ya tienes cuenta?{' '}
               <span onClick={() => setFrameOpen(!frameOpen)}>
@@ -81,9 +136,19 @@ function Navbar() {
               onClick={() => setFormOpen(!formOpen)}
             />
             <h1>Inicia Sesión</h1>
-            <input type="text" placeholder="Usuario" />
-            <input type="password" placeholder="Contraseña" />
-            <Button>Iniciar Sesión</Button>
+            <input
+              name="email"
+              type="email"
+              placeholder="Correo electrónico"
+              onChange={handleInputChange}
+            />
+            <input
+              name="password"
+              type="password"
+              placeholder="Contraseña"
+              onChange={handleInputChange}
+            />
+            <Button onClick={handleLogin}>Iniciar Sesión</Button>
             <p>
               ¿Aún no tienes cuenta?{' '}
               <span onClick={() => setFrameOpen(!frameOpen)}>¡Crea Una!</span>
