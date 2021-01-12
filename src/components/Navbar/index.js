@@ -1,7 +1,9 @@
+// React and Next imports
 import { React, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+// Styled Components imports
 import {
   Nav,
   NavLink,
@@ -15,11 +17,13 @@ import {
 
 import { Form, FormContainer, Login, Signup, FormFrame } from './FormElements'
 
+// Firebase authentication imports
 import {
   loginWhitEmailAndPass,
   createAccountWithEmail,
   onAuthStateChange,
-} from '../../../firebase/client'
+  signOut,
+} from '../../../firebase/authentication'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -27,7 +31,7 @@ function Navbar() {
   const [frameOpen, setFrameOpen] = useState(false)
   const router = useRouter()
 
-  // Users SignUp
+  // Users SignUp with firebase
   const [data, setData] = useState({
     email: '',
     password: '',
@@ -35,27 +39,51 @@ function Navbar() {
   })
 
   const [user, setUser] = useState(undefined)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     onAuthStateChange(setUser)
   }, [])
 
   const handleInputChange = (event) => {
+    setError(false)
     setData({
       ...data,
       [event.target.name]: event.target.value,
     })
-    console.log(data)
   }
 
   const handleSignUp = (event) => {
     event.preventDefault()
-    createAccountWithEmail(data.email, data.password, data.name).then(setUser)
+    createAccountWithEmail(data.email, data.password, data.name)
+      .then((user) => {
+        setUser(user)
+        if (user) setFormOpen(!formOpen)
+      })
+      .catch((error) => {
+        console.error(error)
+        setError(error.message)
+      })
   }
 
   const handleLogin = (event) => {
     event.preventDefault()
-    loginWhitEmailAndPass(data.email, data.password).then(setUser)
+    loginWhitEmailAndPass(data.email, data.password)
+      .then((user) => {
+        setUser(user)
+        if (user) setFormOpen(!formOpen)
+      })
+      .catch((error) => {
+        console.error(error)
+        setError(error.message)
+      })
+  }
+
+  const handleSignOut = (event) => {
+    event.preventDefault()
+    signOut().catch((error) => {
+      console.error(error)
+    })
   }
 
   return (
@@ -91,7 +119,12 @@ function Navbar() {
       {user === null && (
         <NavBtn onClick={() => setFormOpen(!formOpen)}>Ingresa</NavBtn>
       )}
-      {user && <h3>Hola, {user.displayName}</h3>}
+      {user && user.displayName && (
+        <div>
+          <h3>Hola, {user.displayName}</h3>
+          <span onClick={handleSignOut}>Salir</span>
+        </div>
+      )}
 
       <Form formOpen={formOpen}>
         <FormContainer>
@@ -121,10 +154,17 @@ function Navbar() {
               placeholder="Contraseña"
               onChange={handleInputChange}
             />
+            {error && <p>{error}</p>}
+
             <Button onClick={handleSignUp}>Crear</Button>
             <p>
               ¿Ya tienes cuenta?{' '}
-              <span onClick={() => setFrameOpen(!frameOpen)}>
+              <span
+                onClick={() => {
+                  setFrameOpen(!frameOpen)
+                  setError(false)
+                }}
+              >
                 ¡Inicia Sesión!
               </span>
             </p>
@@ -148,10 +188,20 @@ function Navbar() {
               placeholder="Contraseña"
               onChange={handleInputChange}
             />
+
+            {error && <p>{error}</p>}
+
             <Button onClick={handleLogin}>Iniciar Sesión</Button>
             <p>
               ¿Aún no tienes cuenta?{' '}
-              <span onClick={() => setFrameOpen(!frameOpen)}>¡Crea Una!</span>
+              <span
+                onClick={() => {
+                  setFrameOpen(!frameOpen)
+                  setError(false)
+                }}
+              >
+                ¡Crea Una!
+              </span>
             </p>
           </Login>
         </FormContainer>
