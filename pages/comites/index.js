@@ -12,9 +12,11 @@ export default function comites() {
       <Head>
         <title>Comités - AztecMUN 2021</title>
       </Head>
+
       <ComitesDescrip />
       <br />
       <br />
+
       <SubMenu />
     </>
   )

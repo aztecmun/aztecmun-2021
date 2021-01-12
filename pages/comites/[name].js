@@ -15,8 +15,10 @@ export default function comites() {
       <Head>
         <title>Comités - AztecMUN 2021</title>
       </Head>
+
       <ComitesDescrip />
       <h1>Esta es la sección del comité: {router.query.name}</h1>
+
       <SubMenu />
     </>
   )
