@@ -1,6 +1,8 @@
+// React and Next imports
 import React from 'react'
-
 import Document from 'next/document'
+
+// Styled components import
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
