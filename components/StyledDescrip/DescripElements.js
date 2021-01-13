@@ -53,8 +53,6 @@ export const Description = styled.div`
 
   padding: 50px;
 
-  border: 1px solid red;
-
   @media (max-width: 768px) {
     height: auto;
   }

@@ -1,6 +1,8 @@
 // React and Next imports
 import React from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 // Styled Components imports
 import {
@@ -9,8 +11,20 @@ import {
   Title,
   Description,
 } from 'components/StyledDescrip/DescripElements'
+import {
+  SecContainer,
+  SecDesc,
+  SecFunc,
+  SubLink,
+  SubMenu,
+  SecTitle,
+  SecMembers,
+  Members,
+} from './SecretariasElements'
 
 export default function secretarias() {
+  const router = useRouter()
+
   return (
     <Container>
       <Head>
@@ -39,6 +53,88 @@ export default function secretarias() {
           magnam placeat iste fuga sint. Non, corrupti?
         </p>
       </Description>
+      <SubMenu>
+        <SubLink>
+          <Link href="/secretarias/ingles">
+            <a
+              clasName={router.asPath === '/secretarias/ingles' ? 'active' : ''}
+            >
+              s. inglés
+            </a>
+          </Link>
+        </SubLink>
+
+        <SubLink>
+          <Link href="/secretarias/finanzas">
+            <a clasName={router.asPath === '/finanzas' ? 'active' : ''}>
+              s. finanzas
+            </a>
+          </Link>
+        </SubLink>
+
+        <SubLink>
+          <Link href="/secretarias/protocolo">
+            <a
+              clasName={
+                router.asPath === '/secretarias/protocolo' ? 'active' : ''
+              }
+            >
+              s. protocolo
+            </a>
+          </Link>
+        </SubLink>
+
+        <SubLink className="active">
+          <Link href="/secretarias/digital">
+            <a>s. digital</a>
+          </Link>
+        </SubLink>
+
+        <SubLink>
+          <Link href="/secretarias/academica">
+            <a
+              clasName={
+                router.asPath === '/secretarias/academica"' ? 'active' : ''
+              }
+            >
+              s. academica
+            </a>
+          </Link>
+        </SubLink>
+      </SubMenu>
+
+      <SecContainer>
+        <SecFunc>
+          <SecTitle>
+            <img src="/Img/SIM FOTOS.png" alt="aztecmun logo" />
+            <h3>S. digital</h3>
+          </SecTitle>
+          <SecDesc>
+            <h3>Función de la Secretaría Digital</h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+            nihil alias iste quae qui magnam odit cupiditate, ipsa voluptates
+            atque! Impedit officia nemo perferendis, dolorum nostrum nisi
+            aliquid labore! Dolorum! Repudiandae vel debitis sequi sint porro
+            unde asperiores magnam libero eius vitae et, accusamus totam
+            molestiae a sed animi id nostrum. Explicabo a eius nesciunt
+            perspiciatis reprehenderit non nihil commodi. Voluptas itaque nemo
+            provident minima, maiores praesentium modi doloremque repellat rerum
+            blanditiis expedita vel error? Unde, laudantium? Ad hic dignissimos
+            illo quos, accusantium dolore illum quibusdam praesentium magni
+            facilis accusamus!
+          </SecDesc>
+        </SecFunc>
+
+        <SecMembers>
+          <Title>
+            <h2>Miembros de la Secretaría Digital</h2>
+          </Title>
+          <Members />
+          <Members />
+          <Members />
+          <Members />
+        </SecMembers>
+      </SecContainer>
     </Container>
   )
 }
