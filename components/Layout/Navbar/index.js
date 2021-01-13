@@ -14,7 +14,7 @@ export default function Navbar() {
     <Nav>
       <Bars onClick={() => setOpen(!open)} />
 
-      <img src="/Img/logo.png" alt="" />
+      <img src="/Img/logo.png" alt="Logo de Aztecmun 2021" />
 
       <NavMenu open={open}>
         <NavIcon onClick={() => setOpen(!open)} />

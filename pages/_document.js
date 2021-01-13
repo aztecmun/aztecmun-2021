@@ -1,6 +1,6 @@
 // React and Next imports
 import React from 'react'
-import Document from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 // Styled components import
 import { ServerStyleSheet } from 'styled-components'
@@ -30,5 +30,20 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel="shortcut icon" type="image/png" href="/Img/favicon.png" />
+          <link rel="icon" type="image/png" href="/Img/favicon.png" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
