@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-
 import { Nav, NavLink, NavMenu, NavBtn, NavIcon } from './NavbarElements'
 
 export default function Navbar() {
@@ -10,7 +9,9 @@ export default function Navbar() {
         <NavIcon />
 
         <NavLink>
-          <Link href="/">Inicio</Link>
+          <Link href="/">
+            <a>Inicio</a>
+          </Link>
         </NavLink>
 
         <NavLink>
