@@ -7,8 +7,8 @@ import GlobalStyles from 'styles/global'
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyles />
       <Layout>
+        <GlobalStyles />
         <Component {...pageProps} />
       </Layout>
     </>
