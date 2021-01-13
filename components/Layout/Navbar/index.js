@@ -14,6 +14,8 @@ export default function Navbar() {
     <Nav>
       <Bars onClick={() => setOpen(!open)} />
 
+      <img src="/Img/logo.png" alt="" />
+
       <NavMenu open={open}>
         <NavIcon onClick={() => setOpen(!open)} />
 

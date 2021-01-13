@@ -15,13 +15,22 @@ export const Nav = styled.nav`
   height: 5rem;
   width: 100%;
 
-  padding: 0 10rem;
+  padding: 0 6rem;
 
   background: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
+  img {
+    height: 30px;
+    width: 120px;
+  }
+
   @media (max-width: 768px) {
     padding: 0 2rem;
+
+    img {
+      display: none;
+    }
   }
 `
 
