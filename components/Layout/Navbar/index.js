@@ -1,33 +1,46 @@
-import React from 'react'
+// React and Next imports
+import { React, useState } from 'react'
 import Link from 'next/link'
-import { Nav, NavLink, NavMenu, NavBtn, NavIcon } from './NavbarElements'
+import { useRouter } from 'next/router'
+
+// Styled Components imports
+import { Nav, NavLink, Bars, NavMenu, NavBtn, NavIcon } from './NavbarElements'
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const router = useRouter()
+
   return (
     <Nav>
-      <NavMenu>
-        <NavIcon />
+      <Bars onClick={() => setOpen(!open)} />
 
-        <NavLink>
+      <NavMenu open={open}>
+        <NavIcon onClick={() => setOpen(!open)} />
+
+        <NavLink onClick={() => setOpen(!open)}>
           <Link href="/">
-            <a>Inicio</a>
+            <a className={router.asPath === '/' ? 'active' : ''}>Inicio</a>
           </Link>
         </NavLink>
 
-        <NavLink>
+        <NavLink onClick={() => setOpen(!open)}>
           <Link href="/comites">
-            <a>Comites</a>
+            <a className={router.asPath === '/comites' ? 'active' : ''}>
+              Comites
+            </a>
           </Link>
         </NavLink>
 
-        <NavLink>
+        <NavLink onClick={() => setOpen(!open)}>
           <Link href="/secretarias">
-            <a>Secretarías</a>
+            <a className={router.asPath === '/secretarias' ? 'active' : ''}>
+              Secretarías
+            </a>
           </Link>
         </NavLink>
       </NavMenu>
 
-      <Link href="/ingresar">
+      <Link href="/login">
         <a>
           <NavBtn>Ingresar</NavBtn>
         </a>
