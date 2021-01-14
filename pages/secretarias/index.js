@@ -55,7 +55,7 @@ export default function secretarias() {
       </Description>
       <SubMenu>
         <SubLink>
-          <Link href="/secretarias/ingles">
+          <Link href="/secretarias/ingles" scroll={false}>
             <a
               clasName={router.asPath === '/secretarias/ingles' ? 'active' : ''}
             >
@@ -65,7 +65,7 @@ export default function secretarias() {
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/finanzas">
+          <Link href="/secretarias/finanzas" scroll={false}>
             <a clasName={router.asPath === '/finanzas' ? 'active' : ''}>
               s. finanzas
             </a>
@@ -73,7 +73,7 @@ export default function secretarias() {
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/protocolo">
+          <Link href="/secretarias/protocolo" scroll={false}>
             <a
               clasName={
                 router.asPath === '/secretarias/protocolo' ? 'active' : ''
@@ -85,13 +85,13 @@ export default function secretarias() {
         </SubLink>
 
         <SubLink className="active">
-          <Link href="/secretarias/digital">
+          <Link href="/secretarias/digital" scroll={false}>
             <a>s. digital</a>
           </Link>
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/academica">
+          <Link href="/secretarias/academica" scroll={false}>
             <a
               clasName={
                 router.asPath === '/secretarias/academica"' ? 'active' : ''

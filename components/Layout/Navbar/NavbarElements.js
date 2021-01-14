@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import { VscChromeClose } from 'react-icons/vsc'
 
 export const Nav = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -98,8 +98,8 @@ export const NavMenu = styled.ul`
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-200px)')};
-    transition: transform 0.5s ease-in-out;
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-600px)')};
+    transition: transform 0.3s ease-in-out;
   }
 `
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const SubMenu = styled.ul`
   display: flex;
@@ -30,9 +31,11 @@ export const SubLink = styled.li`
   }
 `
 
-export const SecContainer = styled.div`
+export const SecContainer = styled(motion.div)`
   width: 100%;
-  height: 70vh;
+  height: 80vh;
+
+  overflow: hidden;
 `
 
 export const SecFunc = styled.div`
