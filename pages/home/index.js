@@ -18,6 +18,10 @@ const Desc = styled(Description)`
     height: 250px;
     width: 300px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export default function Home() {

@@ -20,8 +20,8 @@ export default function Navbar() {
         <NavIcon onClick={() => setOpen(!open)} />
 
         <NavLink onClick={() => setOpen(!open)}>
-          <Link href="/home">
-            <a className={router.asPath === '/home' ? 'active' : ''}>Inicio</a>
+          <Link href="/">
+            <a className={router.asPath === '/' ? 'active' : ''}>Inicio</a>
           </Link>
         </NavLink>
 
