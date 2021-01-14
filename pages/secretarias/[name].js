@@ -4,6 +4,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
+// Libraries imports
+import { AnimatePresence } from 'framer-motion'
+
 // Styled Components imports
 import {
   Container,
@@ -55,7 +58,7 @@ export default function secretarias() {
       </Description>
       <SubMenu>
         <SubLink>
-          <Link href="/secretarias/ingles">
+          <Link href="/secretarias/ingles" scroll={false}>
             <a
               clasName={router.asPath === '/secretarias/ingles' ? 'active' : ''}
             >
@@ -65,7 +68,7 @@ export default function secretarias() {
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/finanzas">
+          <Link href="/secretarias/finanzas" scroll={false}>
             <a clasName={router.asPath === '/finanzas' ? 'active' : ''}>
               s. finanzas
             </a>
@@ -73,25 +76,21 @@ export default function secretarias() {
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/protocolo">
-            <a
-              clasName={
-                router.asPath === '/secretarias/protocolo' ? 'active' : ''
-              }
-            >
-              s. protocolo
+          <Link href="/secretarias/protocolos" scroll={false}>
+            <a clasName={router.asPath === '/protocolos' ? 'active' : ''}>
+              s. protocolos
             </a>
           </Link>
         </SubLink>
 
         <SubLink className="active">
-          <Link href="/secretarias/digital">
+          <Link href="/secretarias/digital" scroll={false}>
             <a>s. digital</a>
           </Link>
         </SubLink>
 
         <SubLink>
-          <Link href="/secretarias/academica">
+          <Link href="/secretarias/academica" scroll={false}>
             <a
               clasName={
                 router.asPath === '/secretarias/academica"' ? 'active' : ''
@@ -103,38 +102,45 @@ export default function secretarias() {
         </SubLink>
       </SubMenu>
 
-      <SecContainer>
-        <SecFunc>
-          <SecTitle>
-            <img src="/Img/SIM FOTOS.png" alt="aztecmun logo" />
-            <h3>S. {router.query.name}</h3>
-          </SecTitle>
-          <SecDesc>
-            <h3>Función de la Secretaría {router.query.name}</h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
-            nihil alias iste quae qui magnam odit cupiditate, ipsa voluptates
-            atque! Impedit officia nemo perferendis, dolorum nostrum nisi
-            aliquid labore! Dolorum! Repudiandae vel debitis sequi sint porro
-            unde asperiores magnam libero eius vitae et, accusamus totam
-            molestiae a sed animi id nostrum. Explicabo a eius nesciunt
-            perspiciatis reprehenderit non nihil commodi. Voluptas itaque nemo
-            provident minima, maiores praesentium modi doloremque repellat rerum
-            blanditiis expedita vel error? Unde, laudantium? Ad hic dignissimos
-            illo quos, accusantium dolore illum quibusdam praesentium magni
-            facilis accusamus!
-          </SecDesc>
-        </SecFunc>
+      <AnimatePresence exitBeforeEnter>
+        <SecContainer
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key={router.query.name}
+        >
+          <SecFunc>
+            <SecTitle>
+              <img src="/Img/SIM FOTOS.png" alt="aztecmun logo" />
+              <h3>S. {router.query.name}</h3>
+            </SecTitle>
+            <SecDesc>
+              <h3>Función de la Secretaría {router.query.name}</h3>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+              nihil alias iste quae qui magnam odit cupiditate, ipsa voluptates
+              atque! Impedit officia nemo perferendis, dolorum nostrum nisi
+              aliquid labore! Dolorum! Repudiandae vel debitis sequi sint porro
+              unde asperiores magnam libero eius vitae et, accusamus totam
+              molestiae a sed animi id nostrum. Explicabo a eius nesciunt
+              perspiciatis reprehenderit non nihil commodi. Voluptas itaque nemo
+              provident minima, maiores praesentium modi doloremque repellat
+              rerum blanditiis expedita vel error? Unde, laudantium? Ad hic
+              dignissimos illo quos, accusantium dolore illum quibusdam
+              praesentium magni facilis accusamus!
+            </SecDesc>
+          </SecFunc>
 
-        <SecMembers>
-          <Title>
-            <h2>Miembros de la Secretaría {router.query.name}</h2>
-          </Title>
-          <Members />
-          <Members />
-          <Members />
-          <Members />
-        </SecMembers>
-      </SecContainer>
+          <SecMembers>
+            <Title>
+              <h2>Miembros de la Secretaría {router.query.name}</h2>
+            </Title>
+            <Members />
+            <Members />
+            <Members />
+            <Members />
+          </SecMembers>
+        </SecContainer>
+      </AnimatePresence>
     </Container>
   )
 }
