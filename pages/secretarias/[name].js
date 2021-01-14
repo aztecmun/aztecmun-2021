@@ -104,9 +104,9 @@ export default function secretarias() {
 
       <AnimatePresence exitBeforeEnter>
         <SecContainer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0, x: 500 }}
+          animate={{ opacity: 1, x: 0, duration: 2 }}
+          exit={{ opacity: 0, y: 1000, duration: 2 }}
           key={router.query.name}
         >
           <SecFunc>

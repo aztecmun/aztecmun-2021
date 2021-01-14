@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import { VscChromeClose } from 'react-icons/vsc'
 
 export const Nav = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
