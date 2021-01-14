@@ -1,14 +1,23 @@
 // React and Next imports
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 // Styled Components imports
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavIcon } from './NavbarElements'
 
+// firebase imports
+import { onAuthStateChanged, signOut } from 'firebase/authClient'
+
 export default function Navbar() {
+  // Hooks
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState(undefined)
   const router = useRouter()
+
+  useEffect(() => {
+    onAuthStateChanged(setUser)
+  })
 
   return (
     <Nav>
@@ -42,11 +51,20 @@ export default function Navbar() {
         </NavLink>
       </NavMenu>
 
-      <Link href="/login">
-        <a>
-          <NavBtn>Ingresar</NavBtn>
-        </a>
-      </Link>
+      {user === null && (
+        <Link href="/ingresar">
+          <a>
+            <NavBtn>Ingresar</NavBtn>
+          </a>
+        </Link>
+      )}
+
+      {user && user.displayName && (
+        <div>
+          <h3>Hola, {user.displayName}</h3>
+          <span onClick={signOut}>Salir</span>
+        </div>
+      )}
     </Nav>
   )
 }
