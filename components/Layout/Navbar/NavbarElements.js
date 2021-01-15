@@ -246,3 +246,10 @@ export const Option = styled.li`
     width: 100%;
   }
 `
+
+export const Line = styled.div`
+  height: 1px;
+  width: 100%;
+
+  background: #dbdbdb;
+`

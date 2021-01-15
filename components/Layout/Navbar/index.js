@@ -17,6 +17,7 @@ import {
   UserMenu,
   UserOptions,
   Option,
+  Line,
 } from './NavbarElements'
 
 // firebase imports
@@ -84,7 +85,9 @@ export default function Navbar() {
                   <a>Perfil</a>
                 </Option>
               </Link>
-              <Option onClick={() => setUserOpen(!userOpen)}></Option>
+
+              <Line />
+
               <Option onClick={signOut}>Cerrar Sesión</Option>
             </UserOptions>
           </UserMenu>

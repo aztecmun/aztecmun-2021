@@ -1,12 +1,16 @@
 // React and Next imports
 import React from 'react'
 
-import { Foot } from './FooterElements'
+import { FooterContainer } from './FooterElements'
 
 export default function Footer() {
   return (
-    <Foot>
+    <FooterContainer>
       <p>Aztecmun 2021 &copy;</p>
-    </Foot>
+      <p>
+        {' '}
+        <span>ES</span> │ <span>EN</span>{' '}
+      </p>
+    </FooterContainer>
   )
 }
