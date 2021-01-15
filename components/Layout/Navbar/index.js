@@ -4,7 +4,20 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 // Styled Components imports
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavIcon } from './NavbarElements'
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavIcon,
+  UserDrop,
+  User,
+  UserIcon,
+  UserMenu,
+  UserOptions,
+  Option,
+} from './NavbarElements'
 
 // firebase imports
 import { onAuthStateChanged, signOut } from 'firebase/authClient'
@@ -12,6 +25,7 @@ import { onAuthStateChanged, signOut } from 'firebase/authClient'
 export default function Navbar() {
   // Hooks
   const [open, setOpen] = useState(false)
+  const [userOpen, setUserOpen] = useState(false)
   const [user, setUser] = useState(undefined)
   const router = useRouter()
 
@@ -60,10 +74,21 @@ export default function Navbar() {
       )}
 
       {user && user.displayName && (
-        <div>
-          <h3>Hola, {user.displayName}</h3>
-          <span onClick={signOut}>Salir</span>
-        </div>
+        <User>
+          <UserIcon />
+          <UserDrop onClick={() => setUserOpen(!userOpen)} />
+          <UserMenu userOpen={userOpen}>
+            <UserOptions>
+              <Link href="/users/profile">
+                <Option onClick={() => setUserOpen(!userOpen)}>
+                  <a>Perfil</a>
+                </Option>
+              </Link>
+              <Option onClick={() => setUserOpen(!userOpen)}></Option>
+              <Option onClick={signOut}>Cerrar Sesión</Option>
+            </UserOptions>
+          </UserMenu>
+        </User>
       )}
     </Nav>
   )

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { VscChromeClose } from 'react-icons/vsc'
+import { BiUserCircle } from 'react-icons/bi'
+import { IoMdArrowDropdown } from 'react-icons/io'
 
 export const Nav = styled.nav`
   position: sticky;
@@ -172,5 +174,75 @@ export const NavBtn = styled.button`
     color: black;
     background: white;
     transition: all 0.5s ease-in-out;
+  }
+`
+
+export const User = styled.div`
+  font-size: 1.5rem;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 1rem 2rem;
+`
+
+export const UserIcon = styled(BiUserCircle)``
+
+export const UserDrop = styled(IoMdArrowDropdown)`
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(1px);
+  }
+`
+
+export const UserMenu = styled.div`
+  position: absolute;
+  top: 120%;
+  right: 25%;
+
+  height: 150px;
+  width: 200px;
+
+  padding: 1rem;
+
+  background: white;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  opacity: ${({ userOpen }) => (userOpen ? '1' : '0')};
+  pointer-events: ${({ userOpen }) => (userOpen ? 'default' : 'none')};
+`
+
+export const UserOptions = styled.ul`
+  font-size: 1rem;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const Option = styled.li`
+  padding: 0.5rem 1rem;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #dbdbdb;
+  }
+
+  Link {
+    height: 100%;
+    width: 100%;
   }
 `
