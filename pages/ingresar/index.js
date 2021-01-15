@@ -50,21 +50,19 @@ export default function ingresar() {
 
   const handleSignUp = (event) => {
     event.preventDefault()
-    createAccountWithEmail(data.email, data.password, data.name)
-      .then(setUser)
-      .catch((error) => {
+    createAccountWithEmail(data.email, data.password, data.name).catch(
+      (error) => {
         console.error(error)
-      })
+      }
+    )
   }
 
   const handleLogin = (event) => {
     event.preventDefault()
     console.log(data)
-    loginWithEmailAndPass(data.email, data.password)
-      .then(setUser)
-      .catch((error) => {
-        console.error(error)
-      })
+    loginWithEmailAndPass(data.email, data.password).catch((error) => {
+      console.error(error)
+    })
   }
 
   return (

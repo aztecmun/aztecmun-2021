@@ -74,7 +74,7 @@ export default function Navbar() {
         </Link>
       )}
 
-      {user && user.displayName && (
+      {user && (
         <User>
           <UserIcon />
           <UserDrop onClick={() => setUserOpen(!userOpen)} />

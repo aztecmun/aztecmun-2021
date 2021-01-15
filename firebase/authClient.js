@@ -33,8 +33,6 @@ export const createAccountWithEmail = (email, password, name) => {
       result.user.sendEmailVerification(emailConfig).catch((error) => {
         console.error(error)
       })
-
-      return result.user
     })
     .catch((error) => {
       console.error(error)
