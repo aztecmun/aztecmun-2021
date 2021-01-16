@@ -9,7 +9,8 @@ export const ComMenu = styled.ul`
   height: 5vh;
   width: 100%;
 
-  background: url('/Img/MENU TITULO.png');
+  background: url('/Img/MENU TITULO.png') center no-repeat;
+  background-size: cover;
 
   @media (max-width: 768px) {
     font-size: 0.6rem;
@@ -34,12 +35,17 @@ export const ComLink = styled.li`
 export const ComContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 
   padding: 50px;
 
-  max-height: 100vh;
+  height: 100vh;
   max-width: 100vw;
+
+  @media (max-width: 768px) {
+    height: 200vh;
+  }
 `
 
 export const ComHeader = styled.div`
@@ -68,6 +74,12 @@ export const ComDescription = styled.div`
 
 export const ComTopic = styled.div`
   display: flex;
+
+  height: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const Topic = styled.div`

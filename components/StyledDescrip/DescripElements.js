@@ -7,7 +7,7 @@ export const Container = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    min-height: 200vh;
+    min-height: ${(props) => (props.higher ? '350vh' : '200vh')};
   }
 `
 

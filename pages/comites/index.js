@@ -27,7 +27,7 @@ export default function comites() {
   const router = useRouter()
 
   return (
-    <Container>
+    <Container higher>
       <Head>
         <title>Comités - AztecMUN 2021</title>
       </Head>
@@ -128,6 +128,25 @@ export default function comites() {
           <Topic>
             <h2>Tópicos a tratar:</h2>
             <h3>Tópico A:</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed
+              ducimus quia fugiat laboriosam possimus, aperiam maxime, id quod
+              dicta minima itaque, nemo consequuntur! Illo doloribus repellendus
+              numquam mollitia! Perspiciatis? Repellendus voluptates eligendi
+              modi deserunt culpa dicta non, harum temporibus porro. Aut itaque
+              deleniti natus mollitia architecto neque, atque dolores laborum,
+              suscipit rerum eveniet sapiente facere dolor explicabo quisquam
+              dolore? Blanditiis, quis inventore nam assumenda praesentium odit
+              ea, sint eum voluptatem nulla fugiat officiis asperiores sit a
+              minus at, veritatis laborum repellendus consequatur totam dicta
+              nesciunt recusandae quibusdam perspiciatis! Quaerat. Alias rem
+              omnis, enim dolor reiciendis fugiat blanditiis corrupti dolorem
+              minus doloremque at, quisquam expedita, in similique vero quam
+              dicta vitae laboriosam sunt voluptates magni totam aspernatur
+              consequuntur voluptate! Doloremque.
+            </p>
+
+            <h3>Tópico B:</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed
               ducimus quia fugiat laboriosam possimus, aperiam maxime, id quod
