@@ -32,10 +32,8 @@ export const SubLink = styled.li`
 `
 
 export const SecContainer = styled(motion.div)`
-  width: 100%;
-  height: 80vh;
-
-  overflow: hidden;
+  max-width: 100%;
+  max-height: 80vh;
 `
 
 export const SecFunc = styled.div`

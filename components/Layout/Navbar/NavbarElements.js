@@ -240,11 +240,6 @@ export const Option = styled.li`
   &:hover {
     background: #dbdbdb;
   }
-
-  Link {
-    height: 100%;
-    width: 100%;
-  }
 `
 
 export const Line = styled.div`

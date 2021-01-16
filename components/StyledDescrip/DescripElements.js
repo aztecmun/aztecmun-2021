@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 150vh;
   width: 100%;
+
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    min-height: 200vh;
+  }
 `
 
 export const Header = styled.div`
@@ -45,6 +51,9 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-weight: lighter;
   text-align: justify;
+
+  display: flex;
+  align-items: center;
 
   position: relative;
 

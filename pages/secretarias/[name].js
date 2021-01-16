@@ -60,7 +60,9 @@ export default function secretarias() {
         <SubLink>
           <Link href="/secretarias/ingles" scroll={false}>
             <a
-              clasName={router.asPath === '/secretarias/ingles' ? 'active' : ''}
+              className={
+                router.asPath === '/secretarias/ingles' ? 'active' : ''
+              }
             >
               s. inglés
             </a>
@@ -69,7 +71,7 @@ export default function secretarias() {
 
         <SubLink>
           <Link href="/secretarias/finanzas" scroll={false}>
-            <a clasName={router.asPath === '/finanzas' ? 'active' : ''}>
+            <a className={router.asPath === '/finanzas' ? 'active' : ''}>
               s. finanzas
             </a>
           </Link>
@@ -77,7 +79,7 @@ export default function secretarias() {
 
         <SubLink>
           <Link href="/secretarias/protocolos" scroll={false}>
-            <a clasName={router.asPath === '/protocolos' ? 'active' : ''}>
+            <a className={router.asPath === '/protocolos' ? 'active' : ''}>
               s. protocolos
             </a>
           </Link>
@@ -92,7 +94,7 @@ export default function secretarias() {
         <SubLink>
           <Link href="/secretarias/academica" scroll={false}>
             <a
-              clasName={
+              className={
                 router.asPath === '/secretarias/academica"' ? 'active' : ''
               }
             >
@@ -104,9 +106,9 @@ export default function secretarias() {
 
       <AnimatePresence exitBeforeEnter>
         <SecContainer
-          initial={{ opacity: 0, x: 500 }}
+          initial={{ opacity: 0, x: 500, duration: 2 }}
           animate={{ opacity: 1, x: 0, duration: 2 }}
-          exit={{ opacity: 0, y: 1000, duration: 2 }}
+          exit={{ opacity: 0, y: 500, duration: 2 }}
           key={router.query.name}
         >
           <SecFunc>
@@ -116,17 +118,19 @@ export default function secretarias() {
             </SecTitle>
             <SecDesc>
               <h3>Función de la Secretaría {router.query.name}</h3>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
-              nihil alias iste quae qui magnam odit cupiditate, ipsa voluptates
-              atque! Impedit officia nemo perferendis, dolorum nostrum nisi
-              aliquid labore! Dolorum! Repudiandae vel debitis sequi sint porro
-              unde asperiores magnam libero eius vitae et, accusamus totam
-              molestiae a sed animi id nostrum. Explicabo a eius nesciunt
-              perspiciatis reprehenderit non nihil commodi. Voluptas itaque nemo
-              provident minima, maiores praesentium modi doloremque repellat
-              rerum blanditiis expedita vel error? Unde, laudantium? Ad hic
-              dignissimos illo quos, accusantium dolore illum quibusdam
-              praesentium magni facilis accusamus!
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt nihil alias iste quae qui magnam odit cupiditate, ipsa
+                voluptates atque! Impedit officia nemo perferendis, dolorum
+                nostrum nisi aliquid labore! Dolorum! Repudiandae vel debitis
+                sequi sint porro unde asperiores magnam libero eius vitae et,
+                accusamus totam molestiae a sed animi id nostrum. Explicabo a
+                eius nesciunt perspiciatis reprehenderit non nihil commodi.
+                Voluptas itaque nemo provident minima, maiores praesentium modi
+                doloremque repellat rerum blanditiis expedita vel error? Unde,
+                laudantium? Ad hic dignissimos illo quos, accusantium dolore
+                illum quibusdam praesentium magni facilis accusamus!
+              </p>
             </SecDesc>
           </SecFunc>
 
