@@ -7,6 +7,7 @@ function index() {
   return (
     <div>
       <Home />
+      hola
     </div>
   )
 }
