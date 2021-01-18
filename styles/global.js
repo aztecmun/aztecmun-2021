@@ -1,31 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-* {
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    color: inherit;
-}   
-html, body {
-    font-family: helvetica;
+    html, body{ margin: 0; padding: 0; }
 
-    -webkit-user-select: none;
+    body,
+    input, 
+    button,
+    select, 
+    textarea{ font: 400 1rem 'Roboto Condensed', sans-serif; color: #000;}
 
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        width: 8px;
-
-        background: #929292;
-        border-radius: 10px;
-    }
-}
+    html, body, #root { height: 100% }
 `
 export default GlobalStyle
