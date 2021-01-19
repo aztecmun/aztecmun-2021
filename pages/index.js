@@ -7,7 +7,7 @@ function index() {
   return (
     <div>
       <Home />
-      hola
+      home
     </div>
   )
 }
