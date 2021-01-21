@@ -1,6 +1,9 @@
 // React import
 import React from 'react'
 
+// Libraries imports
+import { AnimatePresence } from 'framer-motion'
+
 // Local Components import
 import Layout from '../components/Layout'
 
@@ -9,9 +12,11 @@ import GlobalStyles from 'styles/global'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </Layout>
+    <AnimatePresence exitBeforeEnter>
+      <Layout>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </Layout>
+    </AnimatePresence>
   )
 }

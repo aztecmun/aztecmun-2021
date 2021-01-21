@@ -4,12 +4,7 @@ import React from 'react'
 import Home from './home'
 
 function index() {
-  return (
-    <div>
-      <Home />
-      home
-    </div>
-  )
+  return <Home />
 }
 
 export default index

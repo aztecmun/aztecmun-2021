@@ -2,22 +2,30 @@
 import React, { useState } from 'react'
 
 // Styled Components import
-import { NavWrapper, NavMenu, NavIcon, NavLink, NavPanel } from './NavbarSyles'
+import {
+  NavWrapper,
+  NavMenu,
+  NavIcon,
+  NavLink,
+  NavPanel,
+  NavIconClose,
+} from './NavbarSyles'
 
 export default function navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <NavWrapper>
-      <NavMenu>
+    <NavWrapper open={open}>
+      <NavMenu open={open}>
         <NavLink href="/">
           <a> AZTECMUN </a>
         </NavLink>
 
-        <NavIcon onClick={() => setOpen(!open)} />
+        <NavIcon open={open} onClick={() => setOpen(!open)} />
+        <NavIconClose open={open} onClick={() => setOpen(!open)} />
       </NavMenu>
 
-      <NavPanel></NavPanel>
+      <NavPanel open={open}></NavPanel>
     </NavWrapper>
   )
 }
