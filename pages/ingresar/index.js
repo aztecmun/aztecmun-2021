@@ -16,11 +16,9 @@ import {
 } from './LoginElements'
 
 // import firebase auth client
-import {
-  createAccountWithEmail,
-  loginWithEmailAndPass,
-  onAuthStateChanged,
-} from 'firebase/authClient'
+import { createAccountWithEmail, loginWithEmailAndPass } from 'firebase/client'
+
+import useUser, { USER_STATES } from 'hooks/useUser'
 
 export default function ingresar() {
   // Hooks
@@ -30,12 +28,8 @@ export default function ingresar() {
     password: '',
     name: '',
   })
-  const [user, setUser] = useState(undefined)
+  const user = useUser()
   const router = useRouter()
-
-  useEffect(() => {
-    onAuthStateChanged(setUser)
-  }, [])
 
   useEffect(() => {
     user && router.replace('/users/profile')
@@ -59,7 +53,6 @@ export default function ingresar() {
 
   const handleLogin = (event) => {
     event.preventDefault()
-    console.log(data)
     loginWithEmailAndPass(data.email, data.password).catch((error) => {
       console.error(error)
     })
@@ -67,38 +60,42 @@ export default function ingresar() {
 
   return (
     <>
-      {user === undefined && <LoadingSpinner />}
+      <Head>
+        <title>Ingresar - AztecMUN 2021</title>
+      </Head>
 
-      {user === null && (
+      {user === USER_STATES.UNKNOWN && <LoadingSpinner />}
+
+      {user === USER_STATES.NOT_LOGGED && (
         <Form>
-          <Head>
-            <title>Ingresar - AztecMUN 2021</title>
-          </Head>
           <FormContainer>
             <FormFrame frameOpen={frameOpen} />
 
-            <Signup frameOpen={frameOpen}>
+            <Signup onSubmit={handleSignUp} frameOpen={frameOpen}>
               <h1>Crear Cuenta</h1>
               <input
                 name="name"
                 type="text"
                 placeholder="Nombre completo"
                 onChange={handleInputChange}
+                required
               />
               <input
                 name="email"
                 type="email"
                 placeholder="Correo electrónico"
                 onChange={handleInputChange}
+                required
               />
               <input
                 name="password"
                 type="password"
                 placeholder="Contraseña"
                 onChange={handleInputChange}
+                required
               />
 
-              <Button onClick={handleSignUp}>Crear</Button>
+              <Button>Crear</Button>
               <p>
                 ¿Ya tienes cuenta?{' '}
                 <span
@@ -111,22 +108,24 @@ export default function ingresar() {
               </p>
             </Signup>
 
-            <Login frameOpen={frameOpen}>
+            <Login onSubmit={handleLogin} frameOpen={frameOpen}>
               <h1>Inicia Sesión</h1>
               <input
                 name="email"
                 type="email"
                 placeholder="Correo electrónico"
                 onChange={handleInputChange}
+                required
               />
               <input
                 name="password"
                 type="password"
                 placeholder="Contraseña"
                 onChange={handleInputChange}
+                required
               />
 
-              <Button onClick={handleLogin}>Iniciar Sesión</Button>
+              <Button>Iniciar Sesión</Button>
               <p>
                 ¿Aún no tienes cuenta?{' '}
                 <span

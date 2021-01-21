@@ -21,7 +21,7 @@ import {
 } from './NavbarElements'
 
 // firebase imports
-import { onAuthStateChanged, signOut } from 'firebase/authClient'
+import { onAuthStateChanged, signOut } from 'firebase/client'
 
 export default function Navbar() {
   // Hooks
