@@ -21,6 +21,8 @@ export default function profile() {
   const router = useRouter()
 
   const [profileData, setProfileData] = useState({
+    profileId: '',
+    name: '',
     age: '',
     school: '',
     grade: '',
@@ -32,6 +34,8 @@ export default function profile() {
       queryUserProfile(user.uid).then((profile) => {
         setProfileData({
           ...profileData,
+          profileId: profile.profileId,
+          name: profile.name,
           age: profile.age,
           school: profile.school,
           grade: profile.grade,

@@ -80,6 +80,9 @@ export const queryUserProfile = (userId) => {
     .limit(1)
     .get()
     .then((querySnapshot) => {
-      return querySnapshot.docs[0].data()
+      const profileId = querySnapshot.docs[0].id
+      const data = querySnapshot.docs[0].data()
+
+      return { profileId, ...data }
     })
 }
