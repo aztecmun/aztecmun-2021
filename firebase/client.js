@@ -15,6 +15,8 @@ const firebaseConfig = {
 
 !firebase.apps.length && firebase.initializeApp(firebaseConfig)
 
+const db = firebase.firestore()
+
 export const onAuthStateChanged = (onChange) => {
   return firebase.auth().onAuthStateChanged(onChange)
 }
@@ -52,6 +54,32 @@ export const createAccountWithEmail = (email, password, name) => {
     })
 }
 
-export const createProfile = (age, school, grade, group) => {
-  // TODO: create profile
+export const createUserProfile = ({
+  userId,
+  name,
+  age,
+  school,
+  grade,
+  group,
+}) => {
+  return db.collection('usersProfiles').add({
+    userId: userId,
+    name: name,
+    age: age,
+    school: school,
+    grade: grade,
+    group: group,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+  })
+}
+
+export const queryUserProfile = (userId) => {
+  return db
+    .collection('usersProfiles')
+    .where('userId', '==', userId)
+    .limit(1)
+    .get()
+    .then((querySnapshot) => {
+      return querySnapshot.docs[0].data()
+    })
 }

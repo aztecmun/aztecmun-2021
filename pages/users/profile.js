@@ -1,6 +1,7 @@
 // React and Next imports
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 // Styled Components imports
 import {
@@ -11,28 +12,57 @@ import {
 } from './ProfileElements'
 
 import { Button } from 'pages/ingresar/LoginElements'
+
 import useUser from 'hooks/useUser'
+import { createUserProfile, queryUserProfile } from 'firebase/client'
 
 export default function profile() {
-  useUser()
+  const user = useUser()
+  const router = useRouter()
 
-  const [data, setData] = useState({
+  const [profileData, setProfileData] = useState({
     age: '',
     school: '',
     grade: '',
     group: '',
   })
 
+  useEffect(() => {
+    user &&
+      queryUserProfile(user.uid).then((profile) => {
+        setProfileData({
+          ...profileData,
+          age: profile.age,
+          school: profile.school,
+          grade: profile.grade,
+          group: profile.group,
+        })
+      })
+  }, [user])
+
   const handleInputChange = (event) => {
-    setData({
-      ...data,
+    setProfileData({
+      ...profileData,
       [event.target.name]: event.target.value,
     })
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(data)
+    createUserProfile({
+      userId: user.uid,
+      name: user.displayName,
+      age: profileData.age,
+      school: profileData.school,
+      grade: profileData.grade,
+      group: profileData.group,
+    })
+      .then(() => {
+        router.push('/')
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   return (
@@ -54,6 +84,7 @@ export default function profile() {
               type="number"
               onChange={handleInputChange}
               required
+              value={profileData.age}
             />{' '}
           </ProfileInput>
           <ProfileInput>
@@ -64,6 +95,7 @@ export default function profile() {
               type="text"
               onChange={handleInputChange}
               required
+              value={profileData.school}
             />{' '}
           </ProfileInput>
           <ProfileInput>
@@ -74,6 +106,7 @@ export default function profile() {
               type="text"
               onChange={handleInputChange}
               required
+              value={profileData.grade}
             />{' '}
           </ProfileInput>
           <ProfileInput>
@@ -84,6 +117,7 @@ export default function profile() {
               type="text"
               onChange={handleInputChange}
               required
+              value={profileData.group}
             />{' '}
           </ProfileInput>
 
