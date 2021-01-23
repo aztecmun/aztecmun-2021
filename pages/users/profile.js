@@ -1,7 +1,7 @@
 // React and Next imports
 import { React, useState, useEffect } from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 // Styled Components imports
 import {
@@ -22,14 +22,9 @@ import {
 
 export default function profile() {
   const user = useUser()
-  const router = useRouter()
+  // const router = useRouter()
 
-  const PROFILE_STATES = {
-    NOT_CREATED: 0,
-    CREATED: 1,
-  }
-
-  const [profileStatus, setProfileStatus] = useState(PROFILE_STATES.NOT_CREATED)
+  const [profileCreated, setProfileCreated] = useState(false)
   const [profileData, setProfileData] = useState({
     profileId: '',
     name: '',
@@ -42,7 +37,7 @@ export default function profile() {
   useEffect(() => {
     let unsuscribe
 
-    if (user) {
+    if (user && profileCreated) {
       queryUserProfile(user.uid, (profile) => {
         if (profile) {
           unsuscribe = setProfileData({
@@ -54,7 +49,6 @@ export default function profile() {
             grade: profile.grade,
             group: profile.group,
           })
-          setProfileStatus(PROFILE_STATES.CREATED)
         }
       })
     }
@@ -71,7 +65,7 @@ export default function profile() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (profileStatus === PROFILE_STATES.NOT_CREATED) {
+    if (user && profileCreated === false) {
       createUserProfile({
         userId: user.uid,
         name: user.displayName,
@@ -81,7 +75,10 @@ export default function profile() {
         group: profileData.group,
       })
         .then(() => {
-          router.push('/')
+          setProfileCreated(true)
+          console.log('aquí debería setearlo en true')
+          console.log(profileCreated)
+          // router.push('/')
         })
         .catch((error) => {
           console.error(error)
