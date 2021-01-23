@@ -73,16 +73,33 @@ export const createUserProfile = ({
   })
 }
 
-export const queryUserProfile = (userId) => {
+export const queryUserProfile = (userId, callback) => {
   return db
     .collection('usersProfiles')
     .where('userId', '==', userId)
     .limit(1)
-    .get()
-    .then((querySnapshot) => {
+    .onSnapshot((querySnapshot) => {
       const profileId = querySnapshot.docs[0].id
       const data = querySnapshot.docs[0].data()
+      const profile = { profileId, ...data }
 
-      return { profileId, ...data }
+      callback(profile)
     })
+}
+
+export const updateUserProfile = ({
+  profileId,
+  name,
+  age,
+  school,
+  grade,
+  group,
+}) => {
+  return db.collection('usersProfiles').doc(profileId).update({
+    name: name,
+    age: age,
+    school: school,
+    grade: grade,
+    group: group,
+  })
 }

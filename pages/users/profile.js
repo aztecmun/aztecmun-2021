@@ -14,12 +14,22 @@ import {
 import { Button } from 'pages/ingresar/LoginElements'
 
 import useUser from 'hooks/useUser'
-import { createUserProfile, queryUserProfile } from 'firebase/client'
+import {
+  createUserProfile,
+  queryUserProfile,
+  updateUserProfile,
+} from 'firebase/client'
 
 export default function profile() {
   const user = useUser()
   const router = useRouter()
 
+  const PROFILE_STATES = {
+    NOT_CREATED: 0,
+    CREATED: 1,
+  }
+
+  const [profileStatus, setProfileStatus] = useState(PROFILE_STATES.NOT_CREATED)
   const [profileData, setProfileData] = useState({
     profileId: '',
     name: '',
@@ -30,18 +40,26 @@ export default function profile() {
   })
 
   useEffect(() => {
-    user &&
-      queryUserProfile(user.uid).then((profile) => {
-        setProfileData({
-          ...profileData,
-          profileId: profile.profileId,
-          name: profile.name,
-          age: profile.age,
-          school: profile.school,
-          grade: profile.grade,
-          group: profile.group,
-        })
+    let unsuscribe
+
+    if (user) {
+      queryUserProfile(user.uid, (profile) => {
+        if (profile) {
+          unsuscribe = setProfileData({
+            ...profileData,
+            profileId: profile.profileId,
+            name: profile.name,
+            age: profile.age,
+            school: profile.school,
+            grade: profile.grade,
+            group: profile.group,
+          })
+          setProfileStatus(PROFILE_STATES.CREATED)
+        }
       })
+    }
+
+    return () => unsuscribe && unsuscribe()
   }, [user])
 
   const handleInputChange = (event) => {
@@ -53,20 +71,33 @@ export default function profile() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    createUserProfile({
-      userId: user.uid,
-      name: user.displayName,
-      age: profileData.age,
-      school: profileData.school,
-      grade: profileData.grade,
-      group: profileData.group,
-    })
-      .then(() => {
-        router.push('/')
+    if (profileStatus === PROFILE_STATES.NOT_CREATED) {
+      createUserProfile({
+        userId: user.uid,
+        name: user.displayName,
+        age: profileData.age,
+        school: profileData.school,
+        grade: profileData.grade,
+        group: profileData.group,
       })
-      .catch((error) => {
-        console.error(error)
+        .then(() => {
+          router.push('/')
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    } else {
+      updateUserProfile({
+        profileId: profileData.profileId,
+        name: user.displayName,
+        age: profileData.age,
+        school: profileData.school,
+        grade: profileData.grade,
+        group: profileData.group,
       })
+        .then(alert('Perfil actualizado con éxito'))
+        .catch((error) => console.error(error))
+    }
   }
 
   return (
