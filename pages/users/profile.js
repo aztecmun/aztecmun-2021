@@ -10,7 +10,7 @@ import {
   ProfileInput,
 } from './ProfileElements'
 
-// Components
+// Other components
 import { Button } from 'pages/ingresar/LoginElements'
 import LoadingSpinner from 'components/LoadingSpinner'
 

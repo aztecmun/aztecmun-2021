@@ -3,8 +3,6 @@ import { React, useState, useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import LoadingSpinner from 'components/LoadingSpinner'
-
 // Styled Components imports
 import {
   Form,
@@ -15,9 +13,11 @@ import {
   Button,
 } from './LoginElements'
 
+// Other components
+import LoadingSpinner from 'components/LoadingSpinner'
+
 // import firebase auth client
 import { createAccountWithEmail, loginWithEmailAndPass } from 'firebase/client'
-
 import useUser, { USER_STATES } from 'hooks/useUser'
 
 export default function ingresar() {
