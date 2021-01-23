@@ -19,7 +19,7 @@ export const FormContainer = styled.div`
   justify-items: center;
   align-items: center;
 
-  height: 70%;
+  height: 80%;
   width: 90%;
 
   background: white;
@@ -68,6 +68,7 @@ const FormLogIn = styled.form`
 `
 
 export const Signup = styled(FormLogIn)`
+  gap: 1rem;
   opacity: ${({ frameOpen }) => (frameOpen ? '1' : '0')};
   transform: ${({ frameOpen }) =>
     frameOpen ? 'translateX(0)' : 'translate(100%)'};

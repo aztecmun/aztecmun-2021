@@ -22,7 +22,7 @@ import useUser, { USER_STATES } from 'hooks/useUser'
 
 export default function ingresar() {
   // Hooks
-  const [frameOpen, setFrameOpen] = useState(false)
+  const [frameOpen, setFrameOpen] = useState(true)
   const [data, setData] = useState({
     email: '',
     password: '',
@@ -77,6 +77,27 @@ export default function ingresar() {
                 name="name"
                 type="text"
                 placeholder="Nombre completo"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                name="age"
+                type="number"
+                placeholder="Edad"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                name="group"
+                type="text"
+                placeholder="Grupo"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                name="school"
+                type="text"
+                placeholder="Escuela"
                 onChange={handleInputChange}
                 required
               />
