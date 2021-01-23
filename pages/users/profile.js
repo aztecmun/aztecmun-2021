@@ -1,6 +1,7 @@
 // React and Next imports
 import { React, useState, useEffect } from 'react'
 import Head from 'next/head'
+import Swal from 'sweetalert2'
 
 // Styled Components imports
 import {
@@ -70,8 +71,20 @@ export default function profile() {
       grade: profileData.grade,
       group: profileData.group,
     })
-      .then(alert('Perfil actualizado con éxito'))
-      .catch((error) => console.error(error))
+      .then(
+        Swal.fire({
+          icon: 'success',
+          text: 'Perfil actualizado con éxito',
+        })
+      )
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al actualizar los datos',
+          text: 'Por favor intente más tarde',
+        })
+        console.error(error)
+      })
   }
 
   return (
