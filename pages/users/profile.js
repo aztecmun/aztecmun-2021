@@ -14,17 +14,12 @@ import {
 import { Button } from 'pages/ingresar/LoginElements'
 
 import useUser from 'hooks/useUser'
-import {
-  createUserProfile,
-  queryUserProfile,
-  updateUserProfile,
-} from 'firebase/client'
+import { queryUserProfile, updateUserProfile } from 'firebase/client'
 
 export default function profile() {
   const user = useUser()
   // const router = useRouter()
 
-  const [profileCreated, setProfileCreated] = useState(false)
   const [profileData, setProfileData] = useState({
     profileId: '',
     name: '',
@@ -37,7 +32,7 @@ export default function profile() {
   useEffect(() => {
     let unsuscribe
 
-    if (user && profileCreated) {
+    if (user) {
       queryUserProfile(user.uid, (profile) => {
         if (profile) {
           unsuscribe = setProfileData({
@@ -65,36 +60,16 @@ export default function profile() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (user && profileCreated === false) {
-      createUserProfile({
-        userId: user.uid,
-        name: user.displayName,
-        age: profileData.age,
-        school: profileData.school,
-        grade: profileData.grade,
-        group: profileData.group,
-      })
-        .then(() => {
-          setProfileCreated(true)
-          console.log('aquí debería setearlo en true')
-          console.log(profileCreated)
-          // router.push('/')
-        })
-        .catch((error) => {
-          console.error(error)
-        })
-    } else {
-      updateUserProfile({
-        profileId: profileData.profileId,
-        name: user.displayName,
-        age: profileData.age,
-        school: profileData.school,
-        grade: profileData.grade,
-        group: profileData.group,
-      })
-        .then(alert('Perfil actualizado con éxito'))
-        .catch((error) => console.error(error))
-    }
+    updateUserProfile({
+      profileId: profileData.profileId,
+      name: user.displayName,
+      age: profileData.age,
+      school: profileData.school,
+      grade: profileData.grade,
+      group: profileData.group,
+    })
+      .then(alert('Perfil actualizado con éxito'))
+      .catch((error) => console.error(error))
   }
 
   return (
