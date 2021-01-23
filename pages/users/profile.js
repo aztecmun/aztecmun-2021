@@ -1,7 +1,6 @@
 // React and Next imports
 import { React, useState, useEffect } from 'react'
 import Head from 'next/head'
-// import { useRouter } from 'next/router'
 
 // Styled Components imports
 import {
@@ -11,9 +10,12 @@ import {
   ProfileInput,
 } from './ProfileElements'
 
+// Components
 import { Button } from 'pages/ingresar/LoginElements'
+import LoadingSpinner from 'components/LoadingSpinner'
 
-import useUser from 'hooks/useUser'
+// Firebase and user auth
+import useUser, { USER_STATES } from 'hooks/useUser'
 import { queryUserProfile, updateUserProfile } from 'firebase/client'
 
 export default function profile() {
@@ -78,59 +80,63 @@ export default function profile() {
         <title>Profile</title>
       </Head>
 
-      <ProfileContainer>
-        <ProfileTitle>¡Bienvenido!</ProfileTitle>
-        <p>Completa tu perfil ahora :)</p>
+      {user === USER_STATES.UNKNOWN && <LoadingSpinner />}
 
-        <ProfileForm onSubmit={handleSubmit}>
-          <ProfileInput>
-            {' '}
-            <p>Edad</p>{' '}
-            <input
-              name="age"
-              type="number"
-              onChange={handleInputChange}
-              required
-              value={profileData.age}
-            />{' '}
-          </ProfileInput>
-          <ProfileInput>
-            {' '}
-            <p>Escuela</p>{' '}
-            <input
-              name="school"
-              type="text"
-              onChange={handleInputChange}
-              required
-              value={profileData.school}
-            />{' '}
-          </ProfileInput>
-          <ProfileInput>
-            {' '}
-            <p>Grado</p>{' '}
-            <input
-              name="grade"
-              type="text"
-              onChange={handleInputChange}
-              required
-              value={profileData.grade}
-            />{' '}
-          </ProfileInput>
-          <ProfileInput>
-            {' '}
-            <p>Grupo</p>{' '}
-            <input
-              name="group"
-              type="text"
-              onChange={handleInputChange}
-              required
-              value={profileData.group}
-            />{' '}
-          </ProfileInput>
+      {user && (
+        <ProfileContainer>
+          <ProfileTitle>¡Bienvenido!</ProfileTitle>
+          <p>Completa tu perfil ahora :)</p>
 
-          <Button>Actualizar datos</Button>
-        </ProfileForm>
-      </ProfileContainer>
+          <ProfileForm onSubmit={handleSubmit}>
+            <ProfileInput>
+              {' '}
+              <p>Edad</p>{' '}
+              <input
+                name="age"
+                type="number"
+                onChange={handleInputChange}
+                required
+                value={profileData.age}
+              />{' '}
+            </ProfileInput>
+            <ProfileInput>
+              {' '}
+              <p>Escuela</p>{' '}
+              <input
+                name="school"
+                type="text"
+                onChange={handleInputChange}
+                required
+                value={profileData.school}
+              />{' '}
+            </ProfileInput>
+            <ProfileInput>
+              {' '}
+              <p>Grado</p>{' '}
+              <input
+                name="grade"
+                type="text"
+                onChange={handleInputChange}
+                required
+                value={profileData.grade}
+              />{' '}
+            </ProfileInput>
+            <ProfileInput>
+              {' '}
+              <p>Grupo</p>{' '}
+              <input
+                name="group"
+                type="text"
+                onChange={handleInputChange}
+                required
+                value={profileData.group}
+              />{' '}
+            </ProfileInput>
+
+            <Button>Actualizar datos</Button>
+          </ProfileForm>
+        </ProfileContainer>
+      )}
     </>
   )
 }
