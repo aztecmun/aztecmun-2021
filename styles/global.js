@@ -21,14 +21,7 @@ html, body {
     -webkit-user-select: none;
 
     &::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        width: 8px;
-
-        background: #929292;
-        border-radius: 10px;
+        width: 0px;
     }
 }
 `

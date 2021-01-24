@@ -5,12 +5,15 @@ import React from 'react'
 import Navbar from 'components/Layout/Navbar'
 import Footer from 'components/Layout/Footer'
 
+// Styled Components imports
+import { LayoutWrapper } from './LayoutElements'
+
 export default function Layout({ children }) {
   return (
-    <>
+    <LayoutWrapper>
       <Navbar />
       {children}
       <Footer />
-    </>
+    </LayoutWrapper>
   )
 }

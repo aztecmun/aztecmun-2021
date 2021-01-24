@@ -19,7 +19,7 @@ export const FormContainer = styled.div`
   justify-items: center;
   align-items: center;
 
-  height: 80%;
+  height: 90%;
   width: 90%;
 
   background: white;

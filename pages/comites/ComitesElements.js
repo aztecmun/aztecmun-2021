@@ -40,7 +40,7 @@ export const ComContainer = styled(motion.div)`
 
   padding: 50px;
 
-  height: 100vh;
+  height: 100%;
   max-width: 100vw;
 
   @media (max-width: 768px) {
