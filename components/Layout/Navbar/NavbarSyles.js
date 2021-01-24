@@ -12,6 +12,7 @@ import styled from 'styled-components'
 
 export const NavWrapper = styled.nav`
   position: relative;
+  z-index: 2;
 
   display: flex;
 
