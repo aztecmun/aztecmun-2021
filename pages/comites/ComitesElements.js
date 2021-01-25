@@ -42,10 +42,6 @@ export const ComContainer = styled(motion.div)`
 
   height: 100%;
   max-width: 100vw;
-
-  @media (max-width: 768px) {
-    height: 200vh;
-  }
 `
 
 export const ComHeader = styled.div`

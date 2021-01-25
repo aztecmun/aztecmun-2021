@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const ProfileContainer = styled.div`
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
 
@@ -20,9 +22,8 @@ export const ProfileForm = styled.form`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
 
   height: 50vh;
   width: 100%;
