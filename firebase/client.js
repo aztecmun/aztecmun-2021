@@ -1,6 +1,10 @@
+// Firebase imports
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
+
+// SweetAlert import
+import Swal from 'sweetalert2'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -26,12 +30,27 @@ export const signOut = () => {
     .auth()
     .signOut()
     .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al cerrar sesión',
+        text: error.message,
+      })
       console.error(error)
     })
 }
 
 export const loginWithEmailAndPass = (email, password) => {
-  return firebase.auth().signInWithEmailAndPassword(email, password)
+  return firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al iniciar sesión',
+        text: error.message,
+      })
+      console.error(error)
+    })
 }
 
 export const createAccountWithEmail = (email, password, name) => {
@@ -43,12 +62,6 @@ export const createAccountWithEmail = (email, password, name) => {
         displayName: name,
       })
 
-      const emailConfig = { url: 'https://localhost:3000' }
-
-      result.user.sendEmailVerification(emailConfig).catch((error) => {
-        console.error(error)
-      })
-
       createUserProfile({
         userId: result.user.uid,
         name: result.user.displayName,
@@ -57,8 +70,24 @@ export const createAccountWithEmail = (email, password, name) => {
         grade: '',
         group: '',
       })
+
+      const emailConfig = { url: 'http://localhost:3000/users/profile' }
+
+      result.user.sendEmailVerification(emailConfig).catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al enviar el email',
+          text: error.message,
+        })
+        console.error(error)
+      })
     })
     .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al crear el usuario',
+        text: error.message,
+      })
       console.error(error)
     })
 }

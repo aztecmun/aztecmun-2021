@@ -49,6 +49,14 @@ export default function profile() {
           })
         }
       })
+
+      if (!user.emailVerified) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Verifica tu email',
+          text: 'Si no lo encuentras, revisa en el spam',
+        })
+      }
     }
 
     return () => unsuscribe && unsuscribe()
@@ -74,7 +82,8 @@ export default function profile() {
       .then(
         Swal.fire({
           icon: 'success',
-          text: 'Perfil actualizado con éxito',
+          title: 'Datos guardados con éxito',
+          text: '¡Ahora tu perfil está actualizado!',
         })
       )
       .catch((error) => {

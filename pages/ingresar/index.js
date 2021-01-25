@@ -44,18 +44,12 @@ export default function ingresar() {
 
   const handleSignUp = (event) => {
     event.preventDefault()
-    createAccountWithEmail(data.email, data.password, data.name).catch(
-      (error) => {
-        console.error(error)
-      }
-    )
+    createAccountWithEmail(data.email, data.password, data.name)
   }
 
   const handleLogin = (event) => {
     event.preventDefault()
-    loginWithEmailAndPass(data.email, data.password).catch((error) => {
-      console.error(error)
-    })
+    loginWithEmailAndPass(data.email, data.password)
   }
 
   return (
