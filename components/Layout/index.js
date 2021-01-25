@@ -6,13 +6,13 @@ import Navbar from 'components/Layout/Navbar'
 import Footer from 'components/Layout/Footer'
 
 // Styled Components imports
-import { LayoutWrapper } from './LayoutElements'
+import { LayoutWrapper, LayoutContainer } from './LayoutElements'
 
 export default function Layout({ children }) {
   return (
     <LayoutWrapper>
       <Navbar />
-      {children}
+      <LayoutContainer>{children}</LayoutContainer>
       <Footer />
     </LayoutWrapper>
   )
