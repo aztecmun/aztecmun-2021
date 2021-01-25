@@ -97,7 +97,7 @@ export default function profile() {
 
       {user && (
         <ProfileContainer>
-          <ProfileTitle>¡Bienvenido!</ProfileTitle>
+          <ProfileTitle>¡Hola! {user.displayName}</ProfileTitle>
           <p>Completa tu perfil ahora :)</p>
 
           <ProfileForm onSubmit={handleSubmit}>

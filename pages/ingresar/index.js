@@ -17,7 +17,7 @@ import {
 import LoadingSpinner from 'components/LoadingSpinner'
 
 // import firebase auth client
-import { createAccountWithEmail, loginWithEmailAndPass } from 'firebase/client'
+import { loginWithEmailAndPass, createAccountWithEmail } from 'firebase/client'
 import useUser, { USER_STATES } from 'hooks/useUser'
 
 export default function ingresar() {
@@ -77,27 +77,6 @@ export default function ingresar() {
                 name="name"
                 type="text"
                 placeholder="Nombre completo"
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                name="age"
-                type="number"
-                placeholder="Edad"
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                name="group"
-                type="text"
-                placeholder="Grupo"
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                name="school"
-                type="text"
-                placeholder="Escuela"
                 onChange={handleInputChange}
                 required
               />

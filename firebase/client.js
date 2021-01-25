@@ -48,6 +48,15 @@ export const createAccountWithEmail = (email, password, name) => {
       result.user.sendEmailVerification(emailConfig).catch((error) => {
         console.error(error)
       })
+
+      createUserProfile({
+        userId: result.user.uid,
+        name: result.user.displayName,
+        age: '',
+        school: '',
+        grade: '',
+        group: '',
+      })
     })
     .catch((error) => {
       console.error(error)
