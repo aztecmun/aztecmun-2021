@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
           <link rel="shortcut icon" type="image/png" href="/Img/favicon.png" />
           <link rel="icon" type="image/png" href="/Img/favicon.png" />
