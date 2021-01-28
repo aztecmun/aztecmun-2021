@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-    *{ text-decoration: none; color: inherit; margin: 0; padding: 0; box-sizing: border-box; ::-webkit-scrollbar{width: 0px;}  }
+    *{ text-decoration: none; color: inherit; margin: 0; padding: 0; box-sizing: border-box; }
 
     body,
     input, 

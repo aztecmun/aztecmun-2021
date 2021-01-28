@@ -1,4 +1,4 @@
-export const lightTheme = {
+export const darkTheme = {
   body_bg1: '#141518',
   body_bg2: '#141518',
   text: '#EDEDED',
@@ -6,7 +6,7 @@ export const lightTheme = {
   blue2: '#87B6EE',
 }
 
-export const darkTheme = {
+export const lightTheme = {
   body_bg1: '#F4F4FB',
   body_bg2: '#E3E3EA',
   text: '#252525',

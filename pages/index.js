@@ -1,6 +1,9 @@
+// React imports
+import React from 'react'
+
 // Local components imports
-import home from '../components/home/home'
+import Home from '../components/home'
 
 export default function index() {
-  return home
+  return <Home />
 }
