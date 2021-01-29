@@ -2,9 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 
-// Libraries imports
-// import LocomotiveScroll from 'locomotive-scroll'
-
 // Styles
 import {
   HomeWrapper,
@@ -13,21 +10,15 @@ import {
   Committees,
   Secretaries,
   Footer,
-  ScrollableCommittees,
+  Nav,
+  Bars,
 } from './homeComponents'
 
 export default function index() {
-  // const scrollRef = React.createRef()
+  // Hamburguer Menu
+  const [open, setOpen] = useState(false)
 
-  // useEffect(() =>{
-  //   const scroll = new LocomotiveScroll({
-  //     el: scrollRef.current,
-  //     smooth: true
-  //   })
-  // })
-
-  scroll()
-
+  // Locomotive Scroll
   const [offsetY, setOffsetY] = useState(0)
   const handleScroll = () => setOffsetY(window.pageYOffset)
 
@@ -37,18 +28,31 @@ export default function index() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Locomotive Speeds
   const sp8 = offsetY * 1
   const sp7 = offsetY * 0.9
   const sp6 = offsetY * 0.8
   const sp5 = offsetY * 0.7
   const sp4 = offsetY * 0.6
   const sp3 = offsetY * 0.5
+  const sp2 = offsetY * 0.4
 
   return (
-    <HomeWrapper dark>
+    <HomeWrapper>
       <Head>
         <title>Aztecmun 2021 | Inicio</title>
       </Head>
+
+      <div
+        className="tri"
+        style={{ transform: `translateX(${sp8}px) rotate(${sp2}deg)` }}
+      ></div>
+
+      <Nav open={open}>
+        <Bars open={open} onClick={() => setOpen(!open)} />
+        <p>AztecMUN</p>
+        <input type="radio" />
+      </Nav>
 
       <Header>
         <div className="title">
@@ -90,16 +94,61 @@ export default function index() {
         <div className="img"></div>
       </Header>
 
-      <About></About>
+      <About>
+        <div className="title">
+          <h1>Un Poco De Nuestra Historia</h1>
+        </div>
+
+        <div>
+          Antecedentes <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          iusto, esse dolor itaque perspiciatis exercitationem sapiente corporis
+          eos. Ratione quam dolorum perspiciatis aut, dolorem quibusdam quasi
+          nam veniam deleniti illum!
+        </div>
+
+        <div>
+          Historia <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
+          laborum sapiente, ut error blanditiis placeat tempora. Doloremque odit
+          recusandae corrupti officia debitis voluptas ab, reiciendis tenetur,
+          veniam, maxime est.
+        </div>
+      </About>
 
       <Committees>
-        Comités
-        <ScrollableCommittees>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-        </ScrollableCommittees>
+        <div className="title">
+          <h1>Comités</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            numquam accusamus provident est! Quam iste non voluptas recusandae
+            unde nisi repudiandae ullam perspiciatis error architecto. Quo velit
+            amet praesentium facilis! Distinctio sequi ratione corporis
+            excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
+            enim nam laborum doloremque molestias sapiente similique odit omnis,
+            debitis itaque, iure nemo. Labore doloribus saepe assumenda!
+            Blanditiis dignissimos voluptates esse labore magni deleniti cumque
+            debitis, est in nobis laudantium error illum soluta aperiam ab quia
+            id fuga beatae exercitationem odit, unde eligendi eius voluptate
+            laboriosam? Nulla? Laboriosam magnam ipsa modi, eos quisquam
+            dignissimos fugiat obcaecati ea excepturi minima et! Alias
+            laudantium accusamus rerum iure dicta. Eum veritatis consectetur
+            corporis fugit tempora, iste quibusdam obcaecati aperiam assumenda!
+            Reprehenderit suscipit pariatur voluptate facere qui, provident
+            velit perferendis in! Beatae quidem quia dolorum optio in eos, nisi
+            mollitia tempora esse cupiditate aut! Molestiae facilis
+            exercitationem sint, odit laudantium iste?
+          </p>
+          <div className="scrollable">
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+            <div className="card"></div>
+          </div>
+        </div>
       </Committees>
 
       <Secretaries>
