@@ -1,6 +1,6 @@
 export const darkTheme = {
   body_bg1: '#141518',
-  body_bg2: '#141518',
+  body_bg2: '#1f2125',
   text: '#EDEDED',
   blue1: '#45ADFF',
   blue2: '#87B6EE',

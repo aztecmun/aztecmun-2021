@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { lightTheme } from '../theme.js'
+import { darkTheme } from '../theme.js'
 
 const frame = styled.div`
   min-height: 90vh;
@@ -20,12 +20,12 @@ const frame = styled.div`
   h1 {
     font-size: 4rem;
     text-align: center;
-    color: ${lightTheme.blue};
+    color: ${darkTheme.blue1};
   }
 `
 
 export const HomeWrapper = styled.div`
-  color: ${lightTheme.text};
+  color: ${darkTheme.text};
 
   position: relative;
 
@@ -38,7 +38,7 @@ export const HomeWrapper = styled.div`
 
   padding: 3rem;
 
-  background: ${lightTheme.body_bg1};
+  background: ${darkTheme.body_bg1};
   overflow-x: hidden;
 
   .tri {
@@ -50,7 +50,7 @@ export const HomeWrapper = styled.div`
     height: 250px;
     width: 250px;
 
-    background: ${lightTheme.blue};
+    background: ${darkTheme.blue1};
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
 `
@@ -72,60 +72,6 @@ export const Nav = styled.nav`
   padding: 0 40px;
 `
 
-export const Bars = styled.div`
-  position: relative;
-
-  height: 3px;
-  width: 33px;
-
-  background: black;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  transform: ${({ open }) => (open ? 'rotate(55deg)' : 'rotate(0deg)')};
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: ${({ open }) => (open ? '0px' : '6px')};
-    left: 0;
-
-    height: 3px;
-    width: ${({ open }) => (open ? '100%' : '50%')};
-    background: black;
-    transition: all 0.3s ease-in-out;
-    transform: ${({ open }) => (open ? 'rotate(70deg)' : 'rotate(0deg)')};
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 6px;
-    left: 0;
-
-    height: 3px;
-    width: 75%;
-    background: black;
-    transition: all 0.3s ease-in-out;
-
-    opacity: ${({ open }) => (open ? '0' : '1')};
-  }
-
-  &:hover {
-    background: ${lightTheme.blue};
-
-    &:after {
-      width: 100%;
-      background: ${lightTheme.blue};
-    }
-
-    &:before {
-      width: 100%;
-      background: ${lightTheme.blue};
-    }
-  }
-`
-
 export const Header = styled(frame)`
   position: relative;
   z-index: 1;
@@ -136,13 +82,14 @@ export const Header = styled(frame)`
 
   .title {
     h1 {
-      color: ${lightTheme.text};
+      color: ${darkTheme.text};
     }
 
     span {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      gap: 10px;
 
       max-width: 100%;
 
@@ -150,10 +97,7 @@ export const Header = styled(frame)`
         font-weight: 600;
         font-size: 12rem;
 
-        height: 100px;
-        width: 100px;
-
-        margin-bottom: 60px;
+        width: 5vmax;
       }
 
       @media (max-width: 768px) {
@@ -204,41 +148,9 @@ export const About = styled(frame)`
 `
 
 export const Committees = styled(frame)`
-  position: relative;
-
-  .scrollable {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    scroll-snap-type: x mandatory;
-
-    height: 60%;
-    width: 100%;
-
-    padding: 0 2rem;
-
-    overflow: scroll;
-
-    .card {
-      scroll-snap-align: start;
-
-      min-height: 70%;
-      min-width: 400px;
-
-      border: 1px solid black;
-      border-radius: 20px;
-    }
-  }
-`
-
-export const Secretaries = styled(frame)`
   border: 1px solid red;
 `
 
-export const Footer = styled(frame)`
+export const Secretaries = styled(frame)`
   border: 1px solid red;
 `

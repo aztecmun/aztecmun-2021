@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 
+// Local components imports
+import Scrollbar from './scrollbar'
+import Hamburguer from './hamburguer'
+
 // Styles
 import {
   HomeWrapper,
@@ -9,15 +13,10 @@ import {
   About,
   Committees,
   Secretaries,
-  Footer,
   Nav,
-  Bars,
 } from './homeComponents'
 
 export default function index() {
-  // Hamburguer Menu
-  const [open, setOpen] = useState(false)
-
   // Locomotive Scroll
   const [offsetY, setOffsetY] = useState(0)
   const handleScroll = () => setOffsetY(window.pageYOffset)
@@ -43,13 +42,15 @@ export default function index() {
         <title>Aztecmun 2021 | Inicio</title>
       </Head>
 
+      <Scrollbar />
+
       <div
         className="tri"
         style={{ transform: `translateX(${sp8}px) rotate(${sp2}deg)` }}
       ></div>
 
-      <Nav open={open}>
-        <Bars open={open} onClick={() => setOpen(!open)} />
+      <Nav>
+        <Hamburguer />
         <p>AztecMUN</p>
         <input type="radio" />
       </Nav>
@@ -100,19 +101,18 @@ export default function index() {
         </div>
 
         <div>
-          Antecedentes <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          iusto, esse dolor itaque perspiciatis exercitationem sapiente corporis
-          eos. Ratione quam dolorum perspiciatis aut, dolorem quibusdam quasi
-          nam veniam deleniti illum!
+          Misión <br />
+          Promover la participación de los jóvenes al debate y desarrollar en
+          ellos el pensamiento crítico-analítico a través de un foro
+          constructivo, donde el diálogo abierto sea la principal herramienta
+          para solucionar conflictos planteados.
         </div>
 
         <div>
-          Historia <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
-          laborum sapiente, ut error blanditiis placeat tempora. Doloremque odit
-          recusandae corrupti officia debitis voluptas ab, reiciendis tenetur,
-          veniam, maxime est.
+          Visión <br />
+          Catalogarse como un modelo de las Naciones Unidas con alto impacto
+          social, impulsando el idioma inglés y la formación de líderes
+          estudiantes dentro de México.
         </div>
       </About>
 
@@ -139,23 +139,19 @@ export default function index() {
             mollitia tempora esse cupiditate aut! Molestiae facilis
             exercitationem sint, odit laudantium iste?
           </p>
-          <div className="scrollable">
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
-          </div>
+        </div>
+
+        <div className="scrollable">
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
         </div>
       </Committees>
 
       <Secretaries>
         <span style={{ transform: `translateX(${offsetY * 0.8}px)` }}>N</span>
       </Secretaries>
-
-      <Footer></Footer>
     </HomeWrapper>
   )
 }
