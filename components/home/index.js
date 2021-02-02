@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 // Local components imports
 import Scrollbar from './scrollbar'
-import Hamburguer from './hamburguer'
+import Hamburguer from './menu'
 
 // Styles
 import {
@@ -14,7 +14,7 @@ import {
   Committees,
   Secretaries,
   Nav,
-} from './homeComponents'
+} from './homeElements'
 
 export default function index() {
   // Locomotive Scroll
@@ -44,10 +44,12 @@ export default function index() {
 
       <Scrollbar />
 
-      <div
-        className="tri"
-        style={{ transform: `translateX(${sp8}px) rotate(${sp2}deg)` }}
-      ></div>
+      <img
+        src="/bg_2.png"
+        alt="bg"
+        className="bg"
+        style={{ transform: `translateY(${sp2}px)` }}
+      />
 
       <Nav>
         <Hamburguer />

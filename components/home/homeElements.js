@@ -1,5 +1,7 @@
+// Libraires imports
 import styled from 'styled-components'
 
+// Theme import
 import { darkTheme } from '../theme.js'
 
 const frame = styled.div`
@@ -9,6 +11,7 @@ const frame = styled.div`
 
   margin: auto;
 
+  background: ${darkTheme.body_bg1};
   overflow: hidden;
 
   .title p {
@@ -19,7 +22,6 @@ const frame = styled.div`
 
   h1 {
     font-size: 4rem;
-    text-align: center;
     color: ${darkTheme.blue1};
   }
 `
@@ -28,10 +30,11 @@ export const HomeWrapper = styled.div`
   color: ${darkTheme.text};
 
   position: relative;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 200px;
 
   height: 100%;
   width: 100%;
@@ -41,17 +44,17 @@ export const HomeWrapper = styled.div`
   background: ${darkTheme.body_bg1};
   overflow-x: hidden;
 
-  .tri {
+  .bg {
     position: absolute;
-    top: 25%;
-    left: 0;
-    z-index: 1;
+    top: 30%;
+    left: -20%;
+    z-index: -1;
 
-    height: 250px;
-    width: 250px;
+    height: 500px;
 
-    background: ${darkTheme.blue1};
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    @media (max-width: 768px) {
+      top: 25%;
+    }
   }
 `
 
@@ -81,31 +84,35 @@ export const Header = styled(frame)`
   margin-top: 3rem;
 
   .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40%;
+
     h1 {
       color: ${darkTheme.text};
-    }
 
-    span {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 10px;
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
 
-      max-width: 100%;
-
-      div {
-        font-weight: 600;
-        font-size: 12rem;
-
-        width: 5vmax;
-      }
-
-      @media (max-width: 768px) {
         div {
-          font-size: 3rem;
+          font-weight: 600;
+          font-size: 12rem;
 
-          height: 30px;
-          width: 30px;
+          width: 5vmax;
+        }
+
+        @media (max-width: 768px) {
+          div {
+            font-size: 3rem;
+
+            height: 40px;
+            width: 15px;
+          }
         }
       }
     }
@@ -145,12 +152,20 @@ export const About = styled(frame)`
       flex: 1;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 `
 
 export const Committees = styled(frame)`
-  border: 1px solid red;
+  .card {
+    height: 100px;
+    width: 200px;
+
+    border: 1px solid red;
+  }
 `
 
-export const Secretaries = styled(frame)`
-  border: 1px solid red;
-`
+export const Secretaries = styled(frame)``
