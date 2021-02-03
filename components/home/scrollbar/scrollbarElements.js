@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const Scrollbar = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 25%;
   left: 50px;
   right: 0;
