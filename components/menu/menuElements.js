@@ -166,6 +166,12 @@ export const MenuContainer = styled.div`
       border-radius: 20px;
       cursor: pointer;
       outline: none;
+      
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        transform: scale(1.05)
+      }
     }
 
     .ghost {
@@ -191,6 +197,12 @@ export const MenuContainer = styled.div`
       width: 30px;
 
       cursor: pointer;
+
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        transform: scale(1.1);
+      }
     }
   }
 `

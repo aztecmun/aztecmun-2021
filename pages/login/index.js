@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from 'react'
+import { React, useState } from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 // Styled Components imports
 import {
@@ -11,7 +11,8 @@ import {
   FormFrame,
   Button,
   LoginWrapper,
-  Input
+  Input,
+  Close
 } from './LoginElements'
 
 export default function ingresar() {
@@ -26,12 +27,18 @@ export default function ingresar() {
 
       <Form>
         <FormContainer>
+          <Link href="/">
+            <Close frameOpen={frameOpen}>
+              <div className="icon"></div>
+            </Close>
+          </Link>
+
           <FormFrame frameOpen={frameOpen} />
 
           <Signup frameOpen={frameOpen}>
             <h1>Crear Cuenta</h1> <br />
             <Input>
-              <p></p>
+              <p>Nombre Completo</p>
               <input
                 name="name"
                 type="text"
@@ -40,10 +47,10 @@ export default function ingresar() {
             </Input>
 
             <Input>
-              Correo Electrónico
+              <p>Correo Electrónico</p>
               <input
-                name="email"
-                type="email"
+                name="name"
+                type="text"
                 required
               />
             </Input>
@@ -59,7 +66,7 @@ export default function ingresar() {
 
             <Button>Crear</Button>
             <p>
-              ¿Ya tienes cuenta?
+              ¿Ya tienes cuenta?{' '}
               <span onClick={() => { setFrameOpen(!frameOpen) }}>
                 ¡Inicia Sesión!
               </span>

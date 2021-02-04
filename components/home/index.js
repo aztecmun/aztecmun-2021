@@ -45,7 +45,7 @@ export default function index() {
   const l24 = useRef(null)
 
   return (
-    <Layout>
+    <>
       <ScrollContainer>
         <HomeWrapper>
 
@@ -203,6 +203,6 @@ export default function index() {
           </Secretaries>
         </HomeWrapper>
       </ScrollContainer>
-    </Layout>
+    </>
   )
 }

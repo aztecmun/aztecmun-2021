@@ -21,14 +21,15 @@ export default function index() {
       <MenuWrapper open={open} onClick={() => setOpen(!open)}>
         <div className="bars" open={open}></div>
       </MenuWrapper>
+      
       <MenuContainer open={open}>
         <div className="links">
           <Link href="/">
-            <a className="link">Inicio</a>
+            <a className="link" onClick={() => setOpen(!open)}>Inicio</a>
           </Link>
 
-          <Link href="/">
-            <a className="link">Perfil</a>
+          <Link href="/profile">
+            <a className="link" onClick={() => setOpen(!open)}>Perfil</a>
           </Link>
         </div>
 
@@ -36,22 +37,22 @@ export default function index() {
           <Link href="login">
             <a>
               {' '}
-              <button className="button">Crear Cuenta</button>{' '}
+              <button className="button" onClick={() => setOpen(!open)}>Crear Cuenta</button>{' '}
             </a>
           </Link>
 
           <Link href="login">
             <a>
               {' '}
-              <button className="button ghost">Iniciar Sesión</button>{' '}
+              <button className="button ghost" onClick={() => setOpen(!open)}>Iniciar Sesión</button>{' '}
             </a>
           </Link>
         </div>
 
         <div className="footer">
-          <AiFillFacebook className="icons" />
-          <AiFillInstagram className="icons" />
-          <AiFillTwitterSquare className="icons" />
+          <AiFillFacebook className="icons" onClick={() => setOpen(!open)}/>
+          <AiFillInstagram className="icons" onClick={() => setOpen(!open)}/>
+          <AiFillTwitterSquare className="icons" onClick={() => setOpen(!open)}/>
         </div>
       </MenuContainer>
 

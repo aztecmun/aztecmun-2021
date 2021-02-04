@@ -7,11 +7,11 @@ import Menu from '../menu'
 //Styles
 import { LayoutWrapper } from './layoutElements'
 
-export default function index({children}) {
+export default function index({ children }) {
   return (
     <LayoutWrapper>
       <Menu />
-      {children}
+        {children}
     </LayoutWrapper>
   )
 }

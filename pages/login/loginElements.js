@@ -80,7 +80,7 @@ const FormLogIn = styled.form`
 `
 
 export const Signup = styled(FormLogIn)`
-  gap: 1rem;
+  gap: 1.2rem;
 
   opacity: ${({ frameOpen }) => (frameOpen ? '1' : '0')};
   transform: ${({ frameOpen }) =>
@@ -133,6 +133,7 @@ export const Button = styled.button`
   font-weight: 800;
   color: white;
 
+  margin-bottom: 15px;
   padding: 1rem 2rem;
 
   background: #45ADFF;
@@ -162,12 +163,46 @@ export const Input = styled.div`
   gap: 10px;
 
   margin-bottom: 15px;
+`
 
-  p{
-    color: black;
+export const Close = styled.div`
+  position: absolute;
+  top: 2%;
+  left: ${({frameOpen}) => frameOpen ? '2%' : '98%'};
+  z-index: 2;
 
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
+  height: 25px;
+  width: 25px;
+
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  @media (max-width: 768px){
+    top: 25px;
+    left: 25px;
+  }
+
+  .icon{
+    position: relative;
+
+    height: 100%;
+    width: 2px;
+
+    background: white;
+    transform: rotate(155deg);
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 2px;
+
+      background: white;
+
+      transform: rotate(50deg);
+    }
   }
 `
