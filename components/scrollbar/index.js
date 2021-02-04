@@ -14,13 +14,13 @@ export default function index() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const sp1 = offsetY * 0.0005
+  const sp1 = offsetY * 0.00033
 
   return (
     <Scrollbar
       style={{
-        scaleY: sp1,
-        originY: 0,
+        scaleX: sp1,
+        originX: 0,
       }}
     />
   )

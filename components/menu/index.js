@@ -2,8 +2,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
+//Local components imports
+import Scrollbar from '../scrollbar'
+
 // Styles
-import { MenuWrapper, MenuContainer } from './menuElements'
+import { MenuWrapper, MenuContainer, Nav } from './menuElements'
 import {
   AiFillInstagram,
   AiFillFacebook,
@@ -14,7 +17,7 @@ export default function index() {
   const [open, setOpen] = useState(false)
 
   return (
-    <>
+    <Nav>
       <MenuWrapper open={open} onClick={() => setOpen(!open)}>
         <div className="bars" open={open}></div>
       </MenuWrapper>
@@ -51,6 +54,10 @@ export default function index() {
           <AiFillTwitterSquare className="icons" />
         </div>
       </MenuContainer>
-    </>
+
+      <p>AztecMUN</p>
+      <input type="radio" />
+      <Scrollbar />
+    </Nav>
   )
 }
