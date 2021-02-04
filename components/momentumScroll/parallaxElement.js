@@ -6,4 +6,3 @@ export default (props) => {
   useEffect(() => context.addBlock(props), [])
   return props.children
 }
-  
