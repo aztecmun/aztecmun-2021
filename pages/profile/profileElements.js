@@ -7,6 +7,7 @@ export const ProfileWrapper = styled.div`
   padding: 5rem 2rem;
 
   background: #141518;
+  overflow-y: scroll;
 `
 
 export const ProfileContainer = styled.div`
@@ -24,8 +25,6 @@ export const ProfileContainer = styled.div`
 
 export const ProfilePic = styled.div`
   flex: 2;
-
-  border: 1px solid blue;
 
   .pic{
     color: #EDEDED;
@@ -45,13 +44,13 @@ export const ProfileInfo = styled.div`
 
   padding: 2rem;
 
-  border: 1px solid blue;
-
   .top{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
+
+    margin-bottom: 20px;
 
     .name{
       font-size: 2rem;
@@ -71,6 +70,53 @@ export const ProfileInfo = styled.div`
     .committee{
       font-size: 1.2rem;
       color: #45ADFF;
+    }
+  }
+
+  .about{
+    
+    .icon{
+      font-size: 1.2rem;
+
+      margin-bottom: 20px;
+
+      border-bottom: 3px solid #45ADFF;
+
+      .edit{
+        margin-left: 50%;
+
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          background: #2a2c2e;
+        }
+      }
+    }
+
+    .contact{
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: auto;
+      
+      .c1{
+        grid-column: 1 / 2;
+        justify-self: start;
+
+        margin-bottom: 20px;
+      }
+
+      .c2{
+        grid-column: 2 / 3;
+
+        margin-bottom: 20px;
+      }
+
+      .dec{
+        text-decoration: underline;
+        color: #45ADFF;
+      }
     }
   }
 `
