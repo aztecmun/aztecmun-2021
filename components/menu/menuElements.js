@@ -1,5 +1,27 @@
 // Libraries imports
 import styled from 'styled-components'
+import { darkTheme } from '../theme'
+
+export const Nav = styled.nav`
+  color: ${darkTheme.text};
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 40px;
+  width: 100%;
+
+  margin: auto;
+  padding: 0 40px;
+
+  background: ${darkTheme.body_bg1};
+`
 
 export const MenuWrapper = styled.div`
   z-index: 3;
@@ -100,6 +122,7 @@ export const MenuContainer = styled.div`
 
     .link {
       font-size: 2rem;
+      color: white;
 
       position: relative;
 

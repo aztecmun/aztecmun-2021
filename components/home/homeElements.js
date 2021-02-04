@@ -58,23 +58,6 @@ export const HomeWrapper = styled.div`
   }
 `
 
-export const Nav = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  height: 40px;
-  width: 100%;
-
-  margin: auto;
-  padding: 0 40px;
-`
-
 export const Header = styled(frame)`
   position: relative;
   z-index: 1;

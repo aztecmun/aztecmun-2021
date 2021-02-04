@@ -4,14 +4,14 @@ import { motion } from 'framer-motion'
 
 export const Scrollbar = styled(motion.div)`
   position: absolute;
-  top: 25%;
-  left: 50px;
+  bottom: 0;
+  left: 0;
   right: 0;
 
-  height: 300px;
-  width: 2px;
+  height: 5px;
+  width: 100%;
 
-  background: #45adff;
+  background: #45ADFF;
 
   @media (max-width: 768px) {
     left: 25px;
