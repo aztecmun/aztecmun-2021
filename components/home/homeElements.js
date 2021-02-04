@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 // Theme import
-import { darkTheme } from '../theme.js'
+import { darkTheme, lighTheme } from '../theme.js'
 
 const frame = styled.div`
   min-height: 90vh;
@@ -22,7 +22,7 @@ const frame = styled.div`
 
   h1 {
     font-size: 4rem;
-    color: ${darkTheme.blue1};
+    color: ${darkTheme.blue};
   }
 `
 
@@ -46,7 +46,7 @@ export const HomeWrapper = styled.div`
 
   .bg {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: -20%;
     z-index: -1;
 
@@ -82,19 +82,40 @@ export const Header = styled(frame)`
         justify-content: flex-start;
         gap: 10px;
 
-        div {
-          font-weight: 600;
-          font-size: 12rem;
+        @media (max-width: 320px){
+          div{
+            font-size: 2rem;
 
-          width: 5vmax;
+            height: 30px;
+            width: 7px;
+          }
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 321px) and (max-width: 768px) {
           div {
             font-size: 3rem;
 
             height: 40px;
             width: 15px;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+          div{
+            font-size: 5rem;
+
+            height: 100px;
+            width: 30px;
+          }
+        }
+
+        @media (min-width: 1224px){
+          div {
+            font-weight: 600;
+            font-size: 10rem;
+
+            height: 140px;
+            width: 75px;
           }
         }
       }
@@ -107,11 +128,10 @@ export const Header = styled(frame)`
     right: 0;
     z-index: -1;
 
-    height: 60%;
+    min-height: 60%;
     width: 100%;
 
     background: url('/comite.jpg');
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

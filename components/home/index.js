@@ -1,11 +1,10 @@
 // React and Next imports
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Head from 'next/head'
 
 // Local components imports
 import ScrollContainer from '../momentumScroll/scrollContainer'
 import ParallaxElement from '../momentumScroll/parallaxElement'
-import Layout from '../layout'
 
 // Styles
 import {
@@ -14,10 +13,11 @@ import {
   About,
   Committees,
   Secretaries,
-  Nav,
 } from './homeElements'
 
 export default function index() {
+
+  const [dark, setDark] = useState(true)
 
   const l1 = useRef(null)
   const l2 = useRef(null)

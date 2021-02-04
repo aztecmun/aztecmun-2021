@@ -21,7 +21,7 @@ export default function index() {
       <MenuWrapper open={open} onClick={() => setOpen(!open)}>
         <div className="bars" open={open}></div>
       </MenuWrapper>
-      
+
       <MenuContainer open={open}>
         <div className="links">
           <Link href="/">
@@ -46,9 +46,17 @@ export default function index() {
         </div>
 
         <div className="footer">
-          <AiFillFacebook className="icons" onClick={() => setOpen(!open)}/>
-          <AiFillInstagram className="icons" onClick={() => setOpen(!open)}/>
-          <AiFillTwitterSquare className="icons" onClick={() => setOpen(!open)}/>
+          <Link href="https://www.facebook.com/AZTECMUN2021/">
+            <a> <AiFillFacebook className="icons" onClick={() => setOpen(!open)} /> </a>
+          </Link>
+
+          <Link href="https://www.instagram.com/aztecmun/">
+            <a> <AiFillInstagram className="icons" onClick={() => setOpen(!open)} /> </a>
+          </Link>
+
+          <Link href="https://twitter.com/FundacionAzteca">
+            <a> <AiFillTwitterSquare className="icons" onClick={() => setOpen(!open)} /> </a>
+          </Link>
         </div>
       </MenuContainer>
 
