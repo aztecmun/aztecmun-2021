@@ -27,10 +27,6 @@ export default function index() {
           <Link href="/">
             <a className="link" onClick={() => setOpen(!open)}>Inicio</a>
           </Link>
-
-          <Link href="/profile">
-            <a className="link" onClick={() => setOpen(!open)}>Perfil</a>
-          </Link>
         </div>
 
         <div className="login">
