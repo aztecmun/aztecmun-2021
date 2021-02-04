@@ -12,8 +12,8 @@ import {
   Button,
   LoginWrapper,
   Input,
-  Close
-} from './LoginElements'
+  Close,
+} from './loginElements'
 
 export default function ingresar() {
   // Hooks
@@ -39,35 +39,24 @@ export default function ingresar() {
             <h1>Crear Cuenta</h1> <br />
             <Input>
               <p>Nombre Completo</p>
-              <input
-                name="name"
-                type="text"
-                required
-              />
+              <input name="name" type="text" required />
             </Input>
-
             <Input>
               <p>Correo Electrónico</p>
-              <input
-                name="name"
-                type="text"
-                required
-              />
+              <input name="name" type="text" required />
             </Input>
-
             <Input>
               Contraseña
-              <input
-                name="password"
-                type="password"
-                required
-              />
+              <input name="password" type="password" required />
             </Input>
-
             <Button>Crear</Button>
             <p>
               ¿Ya tienes cuenta?{' '}
-              <span onClick={() => { setFrameOpen(!frameOpen) }}>
+              <span
+                onClick={() => {
+                  setFrameOpen(!frameOpen)
+                }}
+              >
                 ¡Inicia Sesión!
               </span>
             </p>
@@ -77,26 +66,20 @@ export default function ingresar() {
             <h1>Inicia Sesión</h1> <br />
             <Input>
               Correo Electrónico
-              <input
-                name="email"
-                type="email"
-                required
-              />
+              <input name="email" type="email" required />
             </Input>
-
             <Input>
               Contraseña
-              <input
-                name="password"
-                type="password"
-                required
-              />
+              <input name="password" type="password" required />
             </Input>
-
             <Button>Iniciar Sesión</Button>
             <p>
               ¿Aún no tienes cuenta?{' '}
-              <span onClick={() => { setFrameOpen(!frameOpen) }}>
+              <span
+                onClick={() => {
+                  setFrameOpen(!frameOpen)
+                }}
+              >
                 ¡Crea Una!
               </span>
             </p>

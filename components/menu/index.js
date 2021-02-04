@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
-//Local components imports
+// Local components imports
 import Scrollbar from '../scrollbar'
 
 // Styles
@@ -25,38 +25,68 @@ export default function index() {
       <MenuContainer open={open}>
         <div className="links">
           <Link href="/">
-            <a className="link" onClick={() => setOpen(!open)}>Inicio</a>
+            <a className="link" onClick={() => setOpen(!open)}>
+              Inicio
+            </a>
           </Link>
         </div>
 
         <div className="login">
-          <Link href="login">
+          <Link href="/login">
             <a>
               {' '}
-              <button className="button" onClick={() => setOpen(!open)}>Crear Cuenta</button>{' '}
+              <button className="button" onClick={() => setOpen(!open)}>
+                Crear Cuenta
+              </button>{' '}
             </a>
           </Link>
 
-          <Link href="login">
+          <Link href="/login">
             <a>
               {' '}
-              <button className="button ghost" onClick={() => setOpen(!open)}>Iniciar Sesión</button>{' '}
+              <button className="button ghost" onClick={() => setOpen(!open)}>
+                Iniciar Sesión
+              </button>{' '}
             </a>
           </Link>
         </div>
 
         <div className="footer">
-          <Link href="https://www.facebook.com/AZTECMUN2021/">
-            <a> <AiFillFacebook className="icons" onClick={() => setOpen(!open)} /> </a>
-          </Link>
+          <a
+            href="https://www.facebook.com/AZTECMUN2021/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            <AiFillFacebook
+              className="icons"
+              onClick={() => setOpen(!open)}
+            />{' '}
+          </a>
 
-          <Link href="https://www.instagram.com/aztecmun/">
-            <a> <AiFillInstagram className="icons" onClick={() => setOpen(!open)} /> </a>
-          </Link>
+          <a
+            href="https://www.instagram.com/aztecmun/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            <AiFillInstagram
+              className="icons"
+              onClick={() => setOpen(!open)}
+            />{' '}
+          </a>
 
-          <Link href="https://twitter.com/FundacionAzteca">
-            <a> <AiFillTwitterSquare className="icons" onClick={() => setOpen(!open)} /> </a>
-          </Link>
+          <a
+            href="https://twitter.com/FundacionAzteca"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            <AiFillTwitterSquare
+              className="icons"
+              onClick={() => setOpen(!open)}
+            />{' '}
+          </a>
         </div>
       </MenuContainer>
 
