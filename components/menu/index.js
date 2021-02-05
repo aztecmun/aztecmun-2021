@@ -11,9 +11,7 @@ import { motion } from 'framer-motion'
 // Styles
 import { Nav, Switch } from './menuElements'
 
-export default function index({children}) {
-  const [isOn, setIsOn] = useState(false)
-  const toggleSwitch = () => setIsOn(!isOn)
+export default function index({ children }) {
 
   return (
     <Nav>
@@ -22,7 +20,7 @@ export default function index({children}) {
       </Link>
 
       <div className="menu">
-        {chidlren}
+        {children}
 
         <Link href="/signup">
           <button>Registrarse</button>
@@ -35,10 +33,4 @@ export default function index({children}) {
       </div>
     </Nav>
   )
-}
-
-const spring = {
-  type: 'spring',
-  stiffness: 700,
-  damping: 30,
 }
