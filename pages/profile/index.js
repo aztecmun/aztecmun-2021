@@ -1,9 +1,14 @@
-//React and Next imports
+// React and Next imports
 import React from 'react'
 import Head from 'next/head'
 
-//Styles
-import { ProfileWrapper, ProfileContainer, ProfilePic, ProfileInfo } from './profileElements'
+// Styles
+import {
+  ProfileWrapper,
+  ProfileContainer,
+  ProfilePic,
+  ProfileInfo,
+} from './profileElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
 import { GoLocation as Location } from 'react-icons/go'
 import { FaUserAlt as About } from 'react-icons/fa'
@@ -12,7 +17,10 @@ import { BsPencil as Pencil } from 'react-icons/bs'
 export default function index() {
   return (
     <ProfileWrapper>
-      <Head> <title> Perfil | Aztecmun </title> </Head>
+      <Head>
+        {' '}
+        <title> Perfil | Aztecmun </title>{' '}
+      </Head>
       <ProfileContainer>
         <ProfilePic>
           <User className="pic" />
@@ -21,13 +29,18 @@ export default function index() {
         <ProfileInfo>
           <div className="top">
             <div className="name">Username</div>
-            <div className="school"> <Location /> School Name </div>
+            <div className="school">
+              {' '}
+              <Location /> School Name{' '}
+            </div>
             <div className="committee">Committee</div>
           </div>
 
           <div className="about">
-
-            <div className="icon"> <About /> About <Pencil className="edit"/> </div>
+            <div className="icon">
+              {' '}
+              <About /> About <Pencil className="edit" />{' '}
+            </div>
 
             <div className="contact">
               <p className="c1">Grade: </p>

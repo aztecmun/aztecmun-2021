@@ -1,17 +1,17 @@
-//React imports
+// React imports
 import React from 'react'
 
-//Local components imports
+// Local components imports
 import Menu from '../menu'
 
-//Styles
+// Styles
 import { LayoutWrapper } from './layoutElements'
 
 export default function index({ children }) {
   return (
     <LayoutWrapper>
       <Menu />
-        {children}
+      {children}
     </LayoutWrapper>
   )
 }

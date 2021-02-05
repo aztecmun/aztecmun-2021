@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -11,10 +11,9 @@ import {
   LoginWrapper,
   Input,
   Close,
-} from './loginElements'
+} from '../login/loginElements'
 
 export default function signup() {
-
   return (
     <LoginWrapper>
       <Head>
@@ -31,7 +30,6 @@ export default function signup() {
 
           <Signup>
             <h1>Crear Cuenta</h1> <br />
-
             <Input>
               Nombre
               <input name="name" type="text" required />
@@ -44,7 +42,6 @@ export default function signup() {
               Contraseña
               <input name="password" type="password" required />
             </Input>
-
             <Button>Iniciar Sesión</Button>
             <p>
               ¿Ya tienes cuenta?{' '}
