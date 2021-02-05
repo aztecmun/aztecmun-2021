@@ -5,7 +5,7 @@ import Link from 'next/link'
 // Local components imports
 import Scrollbar from '../scrollbar'
 
-//Libraries imports
+// Libraries imports
 import { motion } from 'framer-motion'
 
 // Styles
@@ -26,14 +26,14 @@ export default function index() {
           <motion.div
             className="handle"
             layout
-            transition={spring}>
-          </motion.div>
+            transition={spring}
+          ></motion.div>
         </Switch>
 
-        <Link href="/login/signup">
-          <button>Crear Cuenta</button>
+        <Link href="/signup">
+          <button>Registrarse</button>
         </Link>
-        <Link href="/login/login">
+        <Link href="/login">
           <button className="ghost">Inicia Sesión</button>
         </Link>
 
@@ -44,7 +44,7 @@ export default function index() {
 }
 
 const spring = {
-  type: "spring",
+  type: 'spring',
   stiffness: 700,
-  damping: 30
+  damping: 30,
 }
