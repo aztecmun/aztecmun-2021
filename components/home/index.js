@@ -177,8 +177,8 @@ export default function index() {
                 <div className="descrip">
                   ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
                 </div>
-                <Link href="/login/signup">
-                  <div className="enroll">PARTICIPA</div>
+                <Link href="/signup">
+                  <div className="enroll"> <a> PARTICIPA </a> </div>
                 </Link>
               </div>
 
@@ -187,7 +187,9 @@ export default function index() {
                 <div className="descrip">
                   También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
                 </div>
-                <div className="enroll">PARTICIPA</div>
+                <Link href="/signup">
+                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                </Link>
               </div>
 
               <div className="card">
@@ -195,7 +197,9 @@ export default function index() {
                 <div className="descrip">
                   El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
                 </div>
-                <div className="enroll">PARTICIPA</div>
+                <Link href="/signup">
+                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                </Link>
               </div>
 
               <div className="card">
@@ -203,7 +207,9 @@ export default function index() {
                 <div className="descrip">
                   Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
                 </div>
-                <div className="enroll">PARTICIPA</div>
+                <Link href="/signup">
+                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                </Link>
               </div>
             </div>
 

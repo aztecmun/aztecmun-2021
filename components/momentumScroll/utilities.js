@@ -1,7 +1,7 @@
 export const setTransform = (el, transform) => {
   el.style.transform = transform
   el.style.WebkitTransform = transform
-}
+} 
 
 export const isVisibleTop = (el, container) => {
   const wHeight = window.innerHeight
