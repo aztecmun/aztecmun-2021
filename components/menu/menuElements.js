@@ -23,6 +23,10 @@ export const Nav = styled.nav`
 
   background: ${darkTheme.body_bg1};
 
+  @media (min-width: 320px) and (max-width: 768px){
+    padding: 0 5px;
+  }
+
   .menu{
     display: flex;
     justify-content: center;

@@ -14,10 +14,9 @@ import {
   Committees,
   Secretaries,
 } from './homeElements'
+import { BsArrowRightShort as Arrow } from 'react-icons/bs'
 
 export default function index() {
-
-  const [dark, setDark] = useState(true)
 
   const l1 = useRef(null)
   const l2 = useRef(null)
@@ -138,7 +137,7 @@ export default function index() {
 
           <About>
             <div className="title">
-              <h1>Un Poco De Nuestra Historia</h1>
+              <h1>¿Quiénes somos?</h1>
             </div>
 
             <div>
@@ -168,24 +167,14 @@ export default function index() {
                 excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
                 enim nam laborum doloremque molestias sapiente similique odit omnis,
                 debitis itaque, iure nemo. Labore doloribus saepe assumenda!
-                Blanditiis dignissimos voluptates esse labore magni deleniti cumque
-                debitis, est in nobis laudantium error illum soluta aperiam ab quia
-                id fuga beatae exercitationem odit, unde eligendi eius voluptate
-                laboriosam? Nulla? Laboriosam magnam ipsa modi, eos quisquam
-                dignissimos fugiat obcaecati ea excepturi minima et! Alias
-                laudantium accusamus rerum iure dicta. Eum veritatis consectetur
-                corporis fugit tempora, iste quibusdam obcaecati aperiam assumenda!
-                Reprehenderit suscipit pariatur voluptate facere qui, provident
-                velit perferendis in! Beatae quidem quia dolorum optio in eos, nisi
-                mollitia tempora esse cupiditate aut! Molestiae facilis
-                exercitationem sint, odit laudantium iste?
-          </p>
+              </p>
             </div>
+
             <div className="slides">
               <div className="card">
                 <div className="title">ONU MUJERES</div>
                 <div className="descrip">
-                    ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
+                  ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
                 </div>
                 <div className="members">
                   <div className="img"></div>
@@ -233,9 +222,9 @@ export default function index() {
                   <div className="img"></div>
                 </div>
               </div>
-
-
             </div>
+
+            <div className="scroll"> <Arrow /> Desliza </div>
           </Committees>
 
           <Secretaries>

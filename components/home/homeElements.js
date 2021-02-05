@@ -34,7 +34,7 @@ export const HomeWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 300px;
 
   height: 100%;
   width: 100%;
@@ -163,13 +163,39 @@ export const About = styled(frame)`
 `
 
 export const Committees = styled(frame)`
+  position: relative;
+
+  .scroll{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+      
+    display: flex;
+
+    animation: 2s infinite scroll;
+
+    @media (min-width: 1220px){
+      display: none;
+    }
+  }
+
+  @keyframes scroll{
+    50%{
+      transform: translateX(-10px);
+    }
+    0%, 100%{
+      transform: translateX(0);
+    }
+  }
 
   .slides{
+    position: relative;
+
     display: flex;
     scroll-snap-type: x mandatory;
     gap: 20px;
 
-    margin-top: 40px;
+    margin-top: 100px;
     overflow-x: scroll;
 
     .card {
