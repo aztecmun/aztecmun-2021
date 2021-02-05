@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 // Styles
 import { Nav, Switch } from './menuElements'
 
-export default function index() {
+export default function index({children}) {
   const [isOn, setIsOn] = useState(false)
   const toggleSwitch = () => setIsOn(!isOn)
 
@@ -22,13 +22,7 @@ export default function index() {
       </Link>
 
       <div className="menu">
-        <Switch data-isOn={isOn} onClick={toggleSwitch}>
-          <motion.div
-            className="handle"
-            layout
-            transition={spring}
-          ></motion.div>
-        </Switch>
+        {chidlren}
 
         <Link href="/signup">
           <button>Registrarse</button>
