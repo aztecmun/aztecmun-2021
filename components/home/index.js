@@ -181,12 +181,60 @@ export default function index() {
                 exercitationem sint, odit laudantium iste?
           </p>
             </div>
+            <div className="slides">
+              <div className="card">
+                <div className="title">ONU MUJERES</div>
+                <div className="descrip">
+                    ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
+                </div>
+                <div className="members">
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                </div>
+              </div>
 
-            <div className="scrollable">
-              <div className="card"></div>
-              <div className="card"></div>
-              <div className="card"></div>
-              <div className="card"></div>
+              <div className="card">
+                <div className="title">CORTE INTERNACIONAL DE JUSTICIA</div>
+                <div className="descrip">
+                  También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
+                </div>
+                <div className="members">
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="title">SENADO DE LA REPÚBLICA</div>
+                <div className="descrip">
+                  El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
+                </div>
+                <div className="members">
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="title">World Tourism Organization </div>
+                <div className="descrip">
+                  Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
+                </div>
+                <div className="members">
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                  <div className="img"></div>
+                </div>
+              </div>
+
+
             </div>
           </Committees>
 

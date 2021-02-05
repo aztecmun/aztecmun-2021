@@ -81,26 +81,9 @@ const FormLogIn = styled.form`
 
 export const Signup = styled(FormLogIn)`
   gap: 1.2rem;
-
-  opacity: ${({ frameOpen }) => (frameOpen ? '1' : '0')};
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(0)' : 'translate(100%)'};
-  pointer-events: ${({ frameOpen }) => (frameOpen ? '' : 'none')};
-
-  @media (max-width: 768px) {
-    display: ${({ frameOpen }) => (frameOpen ? '' : 'none')};
-  }
 `
 
 export const Login = styled(FormLogIn)`
-  opacity: ${({ frameOpen }) => (frameOpen ? '0' : '1')};
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(-100%)' : 'translate(0)'};
-  pointer-events: ${({ frameOpen }) => (frameOpen ? 'none' : '')};
-
-  @media (max-width: 768px) {
-    display: ${({ frameOpen }) => (frameOpen ? 'none' : '')};
-  }
 `
 
 export const FormFrame = styled.div`

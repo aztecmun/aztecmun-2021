@@ -163,11 +163,64 @@ export const About = styled(frame)`
 `
 
 export const Committees = styled(frame)`
-  .card {
-    height: 100px;
-    width: 200px;
 
-    border: 1px solid red;
+  .slides{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+
+    margin-top: 40px;
+    overflow-x: scroll;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      scroll-snap-align: start;
+
+      min-height: 450px;
+      min-width: 300px;
+
+      padding: 20px;
+
+      border-radius: 20px;
+
+      .title{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-align: center;
+        text-transform: uppercase;
+        color: ${darkTheme.blue};
+
+        height: 20%;
+      }
+
+      .descrip{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        line-height: 22px;
+
+        height: 60%;
+
+        margin-top: 20px;
+      }
+
+      .members{
+        display: flex;
+        gap: 5px;
+
+        height: 20%;
+
+        .img{
+          width: 60px;
+          height: 60px;
+
+          border-radius: 50%;
+          background: white;
+        }
+      }
+    }
   }
 `
 
