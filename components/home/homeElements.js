@@ -34,7 +34,7 @@ export const HomeWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 300px;
 
   height: 100%;
   width: 100%;
@@ -163,16 +163,44 @@ export const About = styled(frame)`
 `
 
 export const Committees = styled(frame)`
+  position: relative;
+
+  .scroll{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+      
+    display: flex;
+
+    animation: 2s infinite scroll;
+
+    @media (min-width: 1220px){
+      display: none;
+    }
+  }
+
+  @keyframes scroll{
+    50%{
+      transform: translateX(-10px);
+    }
+    0%, 100%{
+      transform: translateX(0);
+    }
+  }
 
   .slides{
+    position: relative;
+
     display: flex;
     scroll-snap-type: x mandatory;
     gap: 20px;
 
-    margin-top: 40px;
+    margin-top: 100px;
     overflow-x: scroll;
 
     .card {
+      position: relative;
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -185,6 +213,10 @@ export const Committees = styled(frame)`
       padding: 20px;
 
       border-radius: 20px;
+
+      &:nth-of-type(1){
+        
+      }
 
       .title{
         font-size: 1.5rem;
@@ -206,19 +238,13 @@ export const Committees = styled(frame)`
         margin-top: 20px;
       }
 
-      .members{
-        display: flex;
-        gap: 5px;
+      .enroll{
+        color: ${darkTheme.blue};
+        text-decoration: underline;
 
-        height: 20%;
-
-        .img{
-          width: 60px;
-          height: 60px;
-
-          border-radius: 50%;
-          background: white;
-        }
+        position: absolute;
+        right: 0;
+        bottom: 0;
       }
     }
   }
