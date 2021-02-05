@@ -199,6 +199,8 @@ export const Committees = styled(frame)`
     overflow-x: scroll;
 
     .card {
+      position: relative;
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -211,6 +213,10 @@ export const Committees = styled(frame)`
       padding: 20px;
 
       border-radius: 20px;
+
+      &:nth-of-type(1){
+        
+      }
 
       .title{
         font-size: 1.5rem;
@@ -232,19 +238,13 @@ export const Committees = styled(frame)`
         margin-top: 20px;
       }
 
-      .members{
-        display: flex;
-        gap: 5px;
+      .enroll{
+        color: ${darkTheme.blue};
+        text-decoration: underline;
 
-        height: 20%;
-
-        .img{
-          width: 60px;
-          height: 60px;
-
-          border-radius: 50%;
-          background: white;
-        }
+        position: absolute;
+        right: 0;
+        bottom: 0;
       }
     }
   }
