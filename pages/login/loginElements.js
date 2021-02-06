@@ -5,13 +5,13 @@ export const LoginWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  color: #EDEDED;
+  color: ${props => props.theme.text};
   position: relative;
 
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 
-  background: #141518;
+  background: ${props => props.theme.body_bg1};
 `
 
 export const Form = styled.div`
@@ -22,7 +22,6 @@ export const Form = styled.div`
   height: calc(100vh - 8rem);
   
   width: 100%;
-  transition: all 0.2s ease-in-out;
 `
 
 export const FormContainer = styled.div`
@@ -35,7 +34,7 @@ export const FormContainer = styled.div`
   height: 90%;
   width: 90%;
 
-  background: #1f2125;
+  background: ${props => props.theme.body_bg2};
   border-radius: 20px;
 `
 
@@ -51,10 +50,8 @@ const FormLogIn = styled.form`
   height: 100%;
   width: 100%;
 
-  transition: all 0.3s ease-in-out;
-
   span {
-    color: #45ADFF;
+    color: ${props => props.theme.blue};
     text-decoration: underline;
 
     cursor: pointer;
@@ -63,18 +60,18 @@ const FormLogIn = styled.form`
   input {
     padding: 15px 2rem;
 
-    background: #e2e2e2;
+    background: ${props => props.theme.body_bg1};
     border-radius: 15px;
     border: 1px solid transparent;
     outline: none;
     transition: all 0.3s ease-in-out;
 
     &:focus {
-      border: 1px solid #45ADFF;
+      ${props => props.theme.blue};
     }
 
     &:hover {
-      border: 1px solid #45ADFF;
+      border: 1px solid ${props => props.theme.blue};
     }
   }
 `
@@ -86,49 +83,24 @@ export const Signup = styled(FormLogIn)`
 export const Login = styled(FormLogIn)`
 `
 
-export const FormFrame = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-
-  height: 100%;
-  width: 50%;
-
-  background: #1f2125;
-  background-image: url('/img/logo.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-
-  transition: all 0.3s ease-in-out;
-  transform: ${({ frameOpen }) =>
-    frameOpen ? 'translateX(0)' : 'translate(-100%)'};
-  
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-
 export const Button = styled.button`
   font-size: 1rem;
   font-weight: 800;
-  color: white;
+  color: ${props => props.theme.text};
 
   margin-bottom: 15px;
   padding: 1rem 2rem;
 
-  background: #45ADFF;
+  background: ${props => props.theme.blue};
   border-radius: 10px;
-  border: 1px solid #45ADFF;
+  border: 1px solid ${props => props.theme.blue};
   cursor: pointer;
   outline: none;
 
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: black;
+    color: ${props => props.theme.text};
 
     background: white;
 
@@ -151,7 +123,7 @@ export const Input = styled.div`
 export const Close = styled.div`
   position: absolute;
   top: 2%;
-  left: ${({frameOpen}) => frameOpen ? '2%' : '98%'};
+  left: 2%;
   z-index: 2;
 
   height: 25px;
@@ -171,7 +143,7 @@ export const Close = styled.div`
     height: 100%;
     width: 2px;
 
-    background: white;
+    background: ${props => props.theme.button};;
     transform: rotate(155deg);
 
     &:after{
@@ -183,7 +155,7 @@ export const Close = styled.div`
       height: 100%;
       width: 2px;
 
-      background: white;
+      background: ${props => props.theme.button};;
 
       transform: rotate(50deg);
     }

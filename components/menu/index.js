@@ -5,11 +5,8 @@ import Link from 'next/link'
 // Local components imports
 import Scrollbar from '../scrollbar'
 
-// Libraries imports
-import { motion } from 'framer-motion'
-
 // Styles
-import { Nav, Switch } from './menuElements'
+import { Nav } from './menuElements'
 
 export default function index({ children }) {
 

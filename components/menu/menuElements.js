@@ -1,10 +1,9 @@
 // Libraries imports
 import styled from 'styled-components'
-import { darkTheme, lightTheme } from '../theme'
-import { motion } from 'framer-motion'
+import { darkTheme } from '../theme'
 
 export const Nav = styled.nav`
-  color: ${darkTheme.text};
+  color: ${props => props.theme.text};
 
   position: fixed;
   top: 0;
@@ -16,15 +15,23 @@ export const Nav = styled.nav`
   align-items: center;
 
   height: 60px;
-  width: 100%;
+  width: 100vw;
 
   margin: auto;
   padding: 0 40px;
 
-  background: ${darkTheme.body_bg1};
+  background: ${props => props.theme.body_bg1};
+
+  a{
+    font-size: 1.5rem;
+  }
 
   @media (min-width: 320px) and (max-width: 768px){
     padding: 0 5px;
+
+    a{
+      font-size: 1rem;
+    }
   }
 
   .menu{
@@ -34,18 +41,22 @@ export const Nav = styled.nav`
     gap: 20px;
 
     button{
+      color: ${props => props.theme.body_bg2};
+
       padding: 10px 25px;
 
-      outline: none;
+      border: 1px solid transparent;
+      background: ${props => props.theme.button};
       border-radius: 15px;
+      outline: none;
       cursor: pointer;
     }
 
     .ghost{
-      color: ${darkTheme.text};
+      color: ${props => props.theme.text};
 
       background: transparent;
-      border: 1px solid ${darkTheme.text};
+      border: 1px solid ${props => props.theme.text};
     }
 
     @media (min-width: 320px) and (max-width: 768px){

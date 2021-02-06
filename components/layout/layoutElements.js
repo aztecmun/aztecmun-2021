@@ -17,7 +17,7 @@ export const Switch = styled(motion.div)`
 
   padding: 5px;
 
-  background: ${darkTheme.text};
+  background: ${props => props.theme.text};
   border-radius: 50px;
   cursor: pointer;
 
@@ -26,7 +26,7 @@ export const Switch = styled(motion.div)`
     height: 15px;
 
     border-radius: 50px;
-    background: ${darkTheme.body_bg1};
+    background: ${props => props.theme.body_bg2};
   }
 
   &[data-isOn="true"]{
@@ -44,7 +44,7 @@ export const Switch = styled(motion.div)`
       height: 7px;
 
       border-radius: 50px;
-      background: ${darkTheme.body_bg1};
+      background: ${props => props.theme.body_bg1};
     }
   }
 `

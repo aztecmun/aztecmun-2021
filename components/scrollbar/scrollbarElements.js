@@ -11,9 +11,5 @@ export const Scrollbar = styled(motion.div)`
   height: 5px;
   width: 100%;
 
-  background: #45ADFF;
-
-  @media (max-width: 768px) {
-    left: 25px;
-  }
+  background: ${props => props.theme.blue};;
 `

@@ -3,6 +3,7 @@ export const darkTheme = {
   body_bg2: '#1f2125',
   text: '#EDEDED',
   blue: '#45ADFF',
+  button: '#F4F4FB'
 }
 
 export const lightTheme = {
@@ -10,4 +11,5 @@ export const lightTheme = {
   body_bg2: '#E3E3EA',
   text: '#252525',
   blue: '#008FFF',
+  button: '#141518'
 }

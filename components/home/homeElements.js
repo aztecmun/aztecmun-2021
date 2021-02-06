@@ -1,9 +1,6 @@
 // Libraires imports
 import styled from 'styled-components'
 
-// Theme import
-import { darkTheme, lighTheme } from '../theme.js'
-
 const frame = styled.div`
   min-height: 90vh;
   min-width: 80vw;
@@ -11,7 +8,7 @@ const frame = styled.div`
 
   margin: auto;
 
-  background: ${darkTheme.body_bg1};
+  background: ${props => props.theme.body_bg1};;
   overflow: hidden;
 
   .title p {
@@ -22,12 +19,12 @@ const frame = styled.div`
 
   h1 {
     font-size: 4rem;
-    color: ${darkTheme.blue};
+    color: ${props => props.theme.blue};;
   }
 `
 
 export const HomeWrapper = styled.div`
-  color: ${darkTheme.text};
+  color: ${props => props.theme.text};
 
   position: relative;
   z-index: 1;
@@ -41,7 +38,7 @@ export const HomeWrapper = styled.div`
 
   padding: 3rem;
 
-  background: ${darkTheme.body_bg1};
+  background: ${props => props.theme.body_bg1};;
   overflow-x: hidden;
 
   .bg {
@@ -74,7 +71,7 @@ export const Header = styled(frame)`
     height: 40%;
 
     h1 {
-      color: ${darkTheme.text};
+      color: ${props => props.theme.text};;
 
       span {
         display: flex;
@@ -213,17 +210,14 @@ export const Committees = styled(frame)`
       padding: 20px;
 
       border-radius: 20px;
-
-      &:nth-of-type(1){
-        
-      }
+      background: ${props => props.theme.body_bg2};;
 
       .title{
         font-size: 1.5rem;
         font-weight: bolder;
         text-align: center;
         text-transform: uppercase;
-        color: ${darkTheme.blue};
+        color: ${props => props.theme.blue};;
 
         height: 20%;
       }
@@ -239,12 +233,12 @@ export const Committees = styled(frame)`
       }
 
       .enroll{
-        color: ${darkTheme.blue};
+        color: ${props => props.theme.blue};
         text-decoration: underline;
 
         position: absolute;
-        right: 0;
-        bottom: 0;
+        right: 15px;
+        bottom: 10px;
       }
     }
   }

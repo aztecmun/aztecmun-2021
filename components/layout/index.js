@@ -9,17 +9,23 @@ import { motion } from 'framer-motion'
 
 // Styles
 import { LayoutWrapper, Switch } from './layoutElements'
+import { darkTheme, lightTheme } from '../theme'
 import { ThemeProvider } from 'styled-components'
 
 export default function index({ children }) {
   // Theme hook
   const [theme, setTheme] = useState('dark')
+  const themes = {
+    light: lightTheme,
+    dark: darkTheme
+  }
 
   //Toggler hook
   const [isOn, setIsOn] = useState(false)
-  const toggleSwitch = () => setIsOn(!isOn)
 
   const changeTheme = () => {
+    setIsOn(!isOn)
+
     if (theme === 'dark') {
       setTheme('light')
     } else {
@@ -27,12 +33,12 @@ export default function index({ children }) {
     }
   }
 
-  return (
-    <ThemeProvider>
 
+  return (
+    <ThemeProvider theme={themes[theme]}>
       <LayoutWrapper>
         <Menu>
-          <Switch data-isOn={isOn} onClick={toggleSwitch} >
+          <Switch data-isOn={isOn} onClick={changeTheme}>
             <motion.div
               className="handle"
               layout

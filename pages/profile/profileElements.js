@@ -6,17 +6,17 @@ export const ProfileWrapper = styled.div`
 
   padding: 5rem 2rem;
 
-  background: #141518;
-  overflow-y: scroll;
+  background: ${props => props.theme.body_bg2};
+  overflow: hidden;
 `
 
 export const ProfileContainer = styled.div`
-  color: #EDEDED;
+  color: ${props => props.theme.text};
 
   display: flex;
 
   height: 100%;
-  width: 100%;
+  width: 100vw;
 
   @media (max-width: 768px){
     flex-direction: column;
@@ -27,14 +27,14 @@ export const ProfilePic = styled.div`
   flex: 2;
 
   .pic{
-    color: #EDEDED;
+    color: ${props => props.theme.text};
 
     width: 100%;
     height: 400px;
 
     margin-bottom: 20px;
 
-    background: #1f2125;
+    background: ${props => props.theme.body_bg1};
     border-radius: 20px;
   }
 `
@@ -57,7 +57,7 @@ export const ProfileInfo = styled.div`
     }
 
     .school{
-      color: #a8a8a8;
+      color: ${props => props.theme.text};
       font-size: 1.2rem;
       align-self: flex-end;
 
@@ -69,18 +69,18 @@ export const ProfileInfo = styled.div`
 
     .committee{
       font-size: 1.2rem;
-      color: #45ADFF;
+      color: ${props => props.theme.blue};
     }
   }
 
   .about{
-    
+
     .icon{
       font-size: 1.2rem;
 
       margin-bottom: 20px;
 
-      border-bottom: 3px solid #45ADFF;
+      border-bottom: 3px solid ${props => props.theme.blue};
 
       .edit{
         margin-left: 50%;
@@ -90,7 +90,7 @@ export const ProfileInfo = styled.div`
         transition: all .3s ease-in-out;
 
         &:hover{
-          background: #2a2c2e;
+          background: ${props => props.theme.body_bg1};
         }
       }
     }
@@ -115,7 +115,7 @@ export const ProfileInfo = styled.div`
 
       .dec{
         text-decoration: underline;
-        color: #45ADFF;
+        color: ${props => props.theme.blue};
       }
     }
   }

@@ -3,6 +3,9 @@ import React, { useRef } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
+//Libraries imports 
+import { AnimateSharedLayout, motion } from 'framer-motion'
+
 // Local components imports
 import ScrollContainer from '../momentumScroll/scrollContainer'
 import ParallaxElement from '../momentumScroll/parallaxElement'
@@ -172,45 +175,56 @@ export default function index() {
             </div>
 
             <div className="slides">
-              <div className="card">
-                <div className="title">ONU MUJERES</div>
-                <div className="descrip">
-                  ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
-                </div>
-                <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
-                </Link>
-              </div>
+              <AnimateSharedLayout type="crossfade">
 
-              <div className="card">
-                <div className="title">CORTE INTERNACIONAL DE JUSTICIA</div>
-                <div className="descrip">
-                  También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
-                </div>
-                <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
-                </Link>
-              </div>
 
-              <div className="card">
-                <div className="title">SENADO DE LA REPÚBLICA</div>
-                <div className="descrip">
-                  El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
-                </div>
-                <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
-                </Link>
-              </div>
 
-              <div className="card">
-                <div className="title">World Tourism Organization </div>
-                <div className="descrip">
-                  Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
+
+                <motion.div 
+                layout
+                className="card">
+                  <div className="title">ONU MUJERES</div>
+                  <div className="descrip">
+                    ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
+                  </div>
+                  <Link href="/signup">
+                    <div className="enroll"> <a> PARTICIPA </a> </div>
+                  </Link>
+                </motion.div>
+
+
+
+
+                <div className="card">
+                  <div className="title">CORTE INTERNACIONAL DE JUSTICIA</div>
+                  <div className="descrip">
+                    También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
                 </div>
-                <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
-                </Link>
-              </div>
+                  <Link href="/signup">
+                    <div className="enroll"> <a> PARTICIPA </a> </div>
+                  </Link>
+                </div>
+
+                <div className="card">
+                  <div className="title">SENADO DE LA REPÚBLICA</div>
+                  <div className="descrip">
+                    El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
+                </div>
+                  <Link href="/signup">
+                    <div className="enroll"> <a> PARTICIPA </a> </div>
+                  </Link>
+                </div>
+
+                <div className="card">
+                  <div className="title">World Tourism Organization </div>
+                  <div className="descrip">
+                    Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
+                </div>
+                  <Link href="/signup">
+                    <div className="enroll"> <a> PARTICIPA </a> </div>
+                  </Link>
+                </div>
+              </AnimateSharedLayout>
             </div>
 
             <div className="scroll"> <Arrow /> Desliza </div>
