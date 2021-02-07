@@ -18,9 +18,9 @@ export default function useUser() {
     onAuthStateChanged(setUser)
   }, [])
 
-  useEffect(() => {
-    user === USER_STATES.NOT_LOGGED && router.push('/ingresar')
-  }, [user])
+  // useEffect(() => {
+  //   user === USER_STATES.NOT_LOGGED && router.push('/login')
+  // }, [user])
 
   return user
 }
