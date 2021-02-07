@@ -15,3 +15,7 @@ const firebaseConfig = {
 }
 
 !firebase.apps.length && firebase.initializeApp(firebaseConfig)
+
+export const onAuthStateChanged = (onChange) => {
+  return firebase.auth().onAuthStateChanged(onChange)
+}
