@@ -15,7 +15,7 @@ import {
   Close,
 } from '../login/loginElements'
 
-// Firebase users auth client
+// Firebase users auth client and hook
 import { createAccountWithEmail } from 'firebase/client'
 import useUser, { USER_STATES } from 'hooks/useUser'
 

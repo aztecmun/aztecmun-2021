@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 // Local components imports
 import Menu from '../menu'
 
-//Libraries imports
+// Libraries imports
 import { motion } from 'framer-motion'
 
 // Styles
@@ -17,10 +17,10 @@ export default function index({ children }) {
   const [theme, setTheme] = useState('dark')
   const themes = {
     light: lightTheme,
-    dark: darkTheme
+    dark: darkTheme,
   }
 
-  //Toggler hook
+  // Toggler hook
   const [isOn, setIsOn] = useState(false)
 
   const changeTheme = () => {
@@ -33,7 +33,6 @@ export default function index({ children }) {
     }
   }
 
-
   return (
     <ThemeProvider theme={themes[theme]}>
       <LayoutWrapper>
@@ -44,7 +43,6 @@ export default function index({ children }) {
         </Menu>
 
         {children}
-
       </LayoutWrapper>
     </ThemeProvider>
   )

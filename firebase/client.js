@@ -26,6 +26,20 @@ export const onAuthStateChanged = (onChange) => {
   return firebase.auth().onAuthStateChanged(onChange)
 }
 
+export const signOut = () => {
+  return firebase
+    .auth()
+    .signOut()
+    .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al cerrar sesión',
+        text: error.message,
+      })
+      console.error(error)
+    })
+}
+
 export const createAccountWithEmail = (email, password, name) => {
   return firebase
     .auth()
