@@ -23,6 +23,18 @@ export const Nav = styled.nav`
 
   a{
     font-size: 1.5rem;
+
+    position: relative;
+
+    span{
+      font-weight: bolder;
+      font-size: .8rem;
+      color: ${props => props.theme.blue};
+
+      position: absolute;
+      top: -10px;
+      right: 0px;
+    }
   }
 
   @media (min-width: 320px) and (max-width: 768px){

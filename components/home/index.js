@@ -139,7 +139,7 @@ export default function index() {
               </h1>
             </div>
 
-            <ParallaxElement dataPercent="-30">
+            <ParallaxElement dataPercent="-10">
               <div ref={l22} className="img"></div>
             </ParallaxElement>
           </Header>
@@ -182,15 +182,14 @@ export default function index() {
               </p>
               </div>
 
-              <div className="slides">
+              <motion.div className="slides">
                 <AnimateSharedLayout type="crossfade">
-                  <motion.div
-                    layout
-                    className="card">
+
+                  <motion.div className="card" layout >
                     <div className="title">ONU MUJERES</div>
                     <div className="descrip">
                       ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
-                  </div>
+                    </div>
                     <Link href="/signup">
                       <div className="enroll"> <a> PARTICIPA </a> </div>
                     </Link>
@@ -226,7 +225,7 @@ export default function index() {
                     </Link>
                   </div>
                 </AnimateSharedLayout>
-              </div>
+              </motion.div>
 
               <div className="scroll"> <Arrow /> Desliza </div>
             </Committees>
@@ -236,34 +235,40 @@ export default function index() {
             <Secretaries ref={l25}>
               <ParallaxElement dataPx="150" dataDirection="x">
                 <ul ref={l26}>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
                   <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
                   <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
-                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
-                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
                   <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
-                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Logística</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Desarrollo Sostenible</li></Link>
                 </ul>
               </ParallaxElement>
 
               <ParallaxElement dataPx="150" dataDirection="x">
                 <ul ref={l27}>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
                   <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
                   <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
-                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
-                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
                   <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
-                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Logística</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Desarrollo Sostenible</li></Link>
                 </ul>
               </ParallaxElement>
 
               <ParallaxElement dataPx="150" dataDirection="x">
                 <ul ref={l28}>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
                   <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
                   <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
-                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
-                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
                   <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
-                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Logística</li></Link>
+                  <Link href="secretaries/desarrollo"><li>Secretaría de Desarrollo Sostenible</li></Link>
                 </ul>
               </ParallaxElement>
 

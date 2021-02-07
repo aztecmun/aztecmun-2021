@@ -13,7 +13,7 @@ export default function index({ children }) {
   return (
     <Nav>
       <Link href="/">
-        <a>AztecMUN</a>
+        <a>AztecMUN <span>2021</span> </a>
       </Link>
 
       <div className="menu">

@@ -8,7 +8,7 @@ const frame = styled.div`
   min-width: 80vw;
   max-width: 80vw;
 
-  margin: 150px auto;
+  margin: 200px auto;
 
   background: ${props => props.theme.body_bg1};;
   overflow: hidden;
@@ -111,6 +111,16 @@ export const Header = styled(frame)`
             width: 60px;
           }
         }
+
+        @media (min-width: 1367px){
+          div{
+            font-weight: 600;
+            font-size: 10rem;
+
+            height: 140px;
+            width: 75px;
+          }
+        }
       }
     }
   }
@@ -189,11 +199,16 @@ export const Committees = styled(frame)`
     position: relative;
 
     display: flex;
+    justify-content: flex-start;
     scroll-snap-type: x mandatory;
     gap: 20px;
 
     margin-top: 100px;
     overflow-x: scroll;
+
+    @media (min-width: 1366px) {
+      flex-wrap: wrap;
+    }
 
     .card {
       position: relative;
@@ -205,7 +220,9 @@ export const Committees = styled(frame)`
       scroll-snap-align: start;
 
       min-height: 450px;
+      max-height: 450px;
       min-width: 300px;
+      max-width: 300px;
 
       padding: 20px;
 
@@ -237,8 +254,8 @@ export const Committees = styled(frame)`
         text-decoration: underline;
 
         position: absolute;
-        right: 15px;
-        bottom: 25px;
+        right: 30px;
+        bottom: 30px;
       }
     }
   }
@@ -248,8 +265,8 @@ export const Secretaries = styled(frame)`
   display: flex;
   align-items: center;
 
-  max-height: 40vh;
-  min-height: 40vh;
+  max-height: 60vh;
+  min-height: 60vh;
 
   min-width: 100vw;
 
@@ -286,27 +303,39 @@ export const Secretaries = styled(frame)`
     li:nth-of-type(6){
       margin-left: 90px;
     }
+    li:nth-of-type(7){
+      margin-left: 105px;
+    }
+    li:nth-of-type(8){
+      margin-left: 120px;
+    }
 
     @media (min-width: 321px) and (max-width: 768px){
-      font-size: 2rem;
+      font-size: 1.5rem;
 
-      li:nth-of-type(1){
-        margin-left: 5px;
+        li:nth-of-type(1){
+        margin-left: 0px;
       }
       li:nth-of-type(2){
-        margin-left: 10px;
+        margin-left: 5px;
       }
       li:nth-of-type(3){
-        margin-left: 15px;
+        margin-left: 10px;
       }
       li:nth-of-type(4){
-        margin-left: 20px;
+        margin-left: 15px;
       }
       li:nth-of-type(5){
-        margin-left: 25px;
+        margin-left: 20px;
       }
       li:nth-of-type(6){
+        margin-left: 25px;
+      }
+      li:nth-of-type(7){
         margin-left: 30px;
+      }
+      li:nth-of-type(8){
+        margin-left: 35px;
       }
     }
   }

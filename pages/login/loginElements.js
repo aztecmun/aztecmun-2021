@@ -11,6 +11,10 @@ export const LoginWrapper = styled.div`
   height: 100vh;
   width: 100vw;
 
+  padding-top: 60px;
+
+  overflow-y: scroll;
+
   background: ${props => props.theme.body_bg1};
 `
 
@@ -19,7 +23,7 @@ export const Form = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: calc(100vh - 8rem);
+  height: 100vh;
   
   width: 100%;
 `
@@ -49,6 +53,8 @@ const FormLogIn = styled.form`
 
   height: 100%;
   width: 100%;
+
+  overflow-y: scroll;
 
   span {
     color: ${props => props.theme.blue};
@@ -122,7 +128,7 @@ export const Input = styled.div`
 
 export const Close = styled.div`
   position: absolute;
-  top: 2%;
+  top: 4%;
   left: 2%;
   z-index: 2;
 
@@ -144,6 +150,7 @@ export const Close = styled.div`
     width: 2px;
 
     background: ${props => props.theme.button};;
+    border-radius: 50px;
     transform: rotate(155deg);
 
     &:after{
@@ -156,7 +163,7 @@ export const Close = styled.div`
       width: 2px;
 
       background: ${props => props.theme.button};;
-
+      border-radius: 50px;
       transform: rotate(50deg);
     }
   }
