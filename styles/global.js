@@ -9,6 +9,6 @@ const GlobalStyle = createGlobalStyle`
     select, 
     textarea{ font: 400 1rem 'Roboto Condensed', sans-serif; color: #000;}
 
-    html, body, #root { height: 100%;}
+    html, body, #root { height: 100%; li{list-style: none;}}
 `
 export default GlobalStyle

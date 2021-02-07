@@ -39,22 +39,13 @@ export default function index({ children }) {
       <LayoutWrapper>
         <Menu>
           <Switch data-isOn={isOn} onClick={changeTheme}>
-            <motion.div
-              className="handle"
-              layout
-              transition={spring}
-            ></motion.div>
+            <div className="handle"></div>
           </Switch>
         </Menu>
 
         {children}
+
       </LayoutWrapper>
     </ThemeProvider>
   )
-}
-
-const spring = {
-  type: 'spring',
-  stiffness: 700,
-  damping: 30,
 }

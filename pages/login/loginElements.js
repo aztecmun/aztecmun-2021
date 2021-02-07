@@ -64,7 +64,7 @@ const FormLogIn = styled.form`
     border-radius: 15px;
     border: 1px solid transparent;
     outline: none;
-    transition: all 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
 
     &:focus {
       ${props => props.theme.blue};
@@ -86,7 +86,7 @@ export const Login = styled(FormLogIn)`
 export const Button = styled.button`
   font-size: 1rem;
   font-weight: 800;
-  color: ${props => props.theme.text};
+  color: #EDEDED;
 
   margin-bottom: 15px;
   padding: 1rem 2rem;
@@ -102,7 +102,7 @@ export const Button = styled.button`
   &:hover {
     color: ${props => props.theme.text};
 
-    background: white;
+    background: ${props => props.theme.body_bg2};
 
     transition: all 0.5s ease-in-out;
   }

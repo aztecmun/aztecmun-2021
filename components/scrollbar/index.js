@@ -14,7 +14,7 @@ export default function index() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const sp1 = offsetY * 0.00033
+  const sp1 = offsetY * 0.00043
 
   return (
     <Scrollbar

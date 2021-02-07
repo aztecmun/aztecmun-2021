@@ -13,17 +13,17 @@ export const Switch = styled(motion.div)`
   align-items: center;
 
   height: 20px;
-  width: 40px;
+  width: 35px;
 
-  padding: 5px;
+  padding: 4px;
 
   background: ${props => props.theme.text};
   border-radius: 50px;
   cursor: pointer;
 
   .handle{
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 
     border-radius: 50px;
     background: ${props => props.theme.body_bg2};
@@ -31,20 +31,5 @@ export const Switch = styled(motion.div)`
 
   &[data-isOn="true"]{
     justify-content: flex-start;
-  }
-
-  @media (min-width: 320px) and (max-width: 768px){
-    height: 10px;
-    width: 20px;
-
-    padding: 2px;
-
-    .handle{
-      width: 7px;
-      height: 7px;
-
-      border-radius: 50px;
-      background: ${props => props.theme.body_bg1};
-    }
   }
 `

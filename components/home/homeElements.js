@@ -2,11 +2,13 @@
 import styled from 'styled-components'
 
 const frame = styled.div`
+  position: relative;
+
   min-height: 90vh;
   min-width: 80vw;
   max-width: 80vw;
 
-  margin: auto;
+  margin: 150px auto;
 
   background: ${props => props.theme.body_bg1};;
   overflow: hidden;
@@ -29,14 +31,8 @@ export const HomeWrapper = styled.div`
   position: relative;
   z-index: 1;
 
-  display: flex;
-  flex-direction: column;
-  gap: 300px;
-
   height: 100%;
   width: 100%;
-
-  padding: 3rem;
 
   background: ${props => props.theme.body_bg1};;
   overflow-x: hidden;
@@ -106,13 +102,13 @@ export const Header = styled(frame)`
           }
         }
 
-        @media (min-width: 1224px){
+        @media (min-width: 1024px) and (max-width: 1366px) {
           div {
             font-weight: 600;
-            font-size: 10rem;
+            font-size: 7rem;
 
-            height: 140px;
-            width: 75px;
+            height: 100px;
+            width: 60px;
           }
         }
       }
@@ -133,15 +129,19 @@ export const Header = styled(frame)`
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media (min-width: 321px) and (max-width: 768px){
+    max-height: 100vh;
+  }
 `
 
 export const About = styled(frame)`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   gap: 10rem;
 
-  min-height: 50vh;
+  min-height: auto;
 
   div {
     font-size: 1.5rem;
@@ -227,7 +227,7 @@ export const Committees = styled(frame)`
         letter-spacing: 1px;
         line-height: 22px;
 
-        height: 60%;
+        height: 70%;
 
         margin-top: 20px;
       }
@@ -238,10 +238,78 @@ export const Committees = styled(frame)`
 
         position: absolute;
         right: 15px;
-        bottom: 10px;
+        bottom: 25px;
       }
     }
   }
 `
 
-export const Secretaries = styled(frame)``
+export const Secretaries = styled(frame)`
+  display: flex;
+  align-items: center;
+
+  max-height: 40vh;
+  min-height: 40vh;
+
+  min-width: 100vw;
+
+  ul{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: ${props => props.theme.blue};
+    min-width: 850px;
+
+    li{
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+        
+      &:hover{
+        color: ${props => props.theme.text}
+      }
+    }
+
+    li:nth-of-type(1){
+      margin-left: 15px;
+    }
+    li:nth-of-type(2){
+      margin-left: 30px;
+    }
+    li:nth-of-type(3){
+      margin-left: 45px;
+    }
+    li:nth-of-type(4){
+      margin-left: 60px;
+    }
+    li:nth-of-type(5){
+      margin-left: 75px;
+    }
+    li:nth-of-type(6){
+      margin-left: 90px;
+    }
+
+    @media (min-width: 321px) and (max-width: 768px){
+      font-size: 2rem;
+
+      li:nth-of-type(1){
+        margin-left: 5px;
+      }
+      li:nth-of-type(2){
+        margin-left: 10px;
+      }
+      li:nth-of-type(3){
+        margin-left: 15px;
+      }
+      li:nth-of-type(4){
+        margin-left: 20px;
+      }
+      li:nth-of-type(5){
+        margin-left: 25px;
+      }
+      li:nth-of-type(6){
+        margin-left: 30px;
+      }
+    }
+  }
+`
+
+export const Footer = styled(frame)``

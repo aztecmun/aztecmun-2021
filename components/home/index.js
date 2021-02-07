@@ -17,6 +17,7 @@ import {
   About,
   Committees,
   Secretaries,
+  Footer
 } from './homeElements'
 import { BsArrowRightShort as Arrow } from 'react-icons/bs'
 
@@ -46,6 +47,10 @@ export default function index() {
   const l22 = useRef(null)
   const l23 = useRef(null)
   const l24 = useRef(null)
+  const l25 = useRef(null)
+  const l26 = useRef(null)
+  const l27 = useRef(null)
+  const l28 = useRef(null)
 
   return (
     <>
@@ -56,191 +61,217 @@ export default function index() {
             <title>Aztecmun 2021 | Inicio</title>
           </Head>
 
-
           <Header>
             <div className="title">
               <h1>
                 <span>
-                  <ParallaxElement dataPercent="60" dataDirection="y">
-                    <div ref={l1} className="box"> N </div>
+                  <ParallaxElement dataPercent="60">
+                    <div ref={l1}> N </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l2} className="box"> O </div>
-                  </ParallaxElement>
-                  <div></div>
-                  <ParallaxElement dataPercent="70" dataDirection="y">
-                    <div ref={l3} className="box"> B </div>
-                  </ParallaxElement>
-                  <ParallaxElement dataPercent="30" dataDirection="y">
-                    <div ref={l4} className="box"> A </div>
-                  </ParallaxElement>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l5} className="box"> S </div>
-                  </ParallaxElement>
-                  <ParallaxElement dataPercent="40" dataDirection="y">
-                    <div ref={l6} className="box"> T </div>
-                  </ParallaxElement>
-                  <ParallaxElement dataPercent="20" dataDirection="y">
-                    <div ref={l7} className="box"> A </div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l2}> O </div>
                   </ParallaxElement>
                   <div></div>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l8} className="box"> C </div>
+                  <ParallaxElement dataPercent="70">
+                    <div ref={l3}> B </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="60" dataDirection="y">
-                    <div ref={l9} className="box"> O </div>
+                  <ParallaxElement dataPercent="30">
+                    <div ref={l4}> A </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="40" dataDirection="y">
-                    <div ref={l10} className="box"> N </div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l5}> S </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="40">
+                    <div ref={l6}> T </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="20">
+                    <div ref={l7}> A </div>
+                  </ParallaxElement>
+                  <div></div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l8}> C </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="60">
+                    <div ref={l9}> O </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="40">
+                    <div ref={l10}> N </div>
                   </ParallaxElement>
                   <div></div>
                 </span>
                 <span>
-                  <ParallaxElement dataPercent="60" dataDirection="y">
-                    <div ref={l11} className="box"> H </div>
+                  <ParallaxElement dataPercent="60">
+                    <div ref={l11}> H </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l12} className="box"> A </div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l12}> A </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="30" dataDirection="y">
-                    <div ref={l13} className="box"> B </div>
+                  <ParallaxElement dataPercent="30">
+                    <div ref={l13}> B </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="70" dataDirection="y">
-                    <div ref={l14} className="box"> L </div>
+                  <ParallaxElement dataPercent="70">
+                    <div ref={l14}> L </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="40" dataDirection="y">
-                    <div ref={l15} className="box"> A </div>
+                  <ParallaxElement dataPercent="40">
+                    <div ref={l15}> A </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l16} className="box"> R </div>
-                  </ParallaxElement>
-                  <div></div>
-                  <ParallaxElement dataPercent="60" dataDirection="y">
-                    <div ref={l17} className="box"> D </div>
-                  </ParallaxElement>
-                  <ParallaxElement dataPercent="50" dataDirection="y">
-                    <div ref={l18} className="box"> E </div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l16}> R </div>
                   </ParallaxElement>
                   <div></div>
-                  <ParallaxElement dataPercent="70" dataDirection="y">
-                    <div ref={l19} className="box"> P </div>
+                  <ParallaxElement dataPercent="60">
+                    <div ref={l17}> D </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="60" dataDirection="y">
-                    <div ref={l20} className="box"> A </div>
+                  <ParallaxElement dataPercent="50">
+                    <div ref={l18}> E </div>
                   </ParallaxElement>
-                  <ParallaxElement dataPercent="70" dataDirection="y">
-                    <div ref={l21} className="box"> Z </div>
+                  <div></div>
+                  <ParallaxElement dataPercent="70">
+                    <div ref={l19}> P </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="60">
+                    <div ref={l20}> A </div>
+                  </ParallaxElement>
+                  <ParallaxElement dataPercent="70">
+                    <div ref={l21}> Z </div>
                   </ParallaxElement>
                 </span>
-                <span></span>
               </h1>
             </div>
 
-            <div className="img"></div>
+            <ParallaxElement dataPercent="-30">
+              <div ref={l22} className="img"></div>
+            </ParallaxElement>
           </Header>
 
-          <About>
-            <div className="title">
-              <h1>¿Quiénes somos?</h1>
-            </div>
+          <ParallaxElement dataPercent="-2" dataDirection="y">
+            <About ref={l23}>
+              <div className="title">
+                <h1>¿Quiénes somos?</h1>
+              </div>
 
-            <div>
-              Misión <br />
-          Promover la participación de los jóvenes al debate y desarrollar en
-          ellos el pensamiento crítico-analítico a través de un foro
-          constructivo, donde el diálogo abierto sea la principal herramienta
-          para solucionar conflictos planteados.
-        </div>
+              <div>
+                Misión <br />
+                Promover la participación de los jóvenes al debate y desarrollar en
+                ellos el pensamiento crítico-analítico a través de un foro
+                constructivo, donde el diálogo abierto sea la principal herramienta
+                para solucionar conflictos planteados.
+              </div>
 
-            <div>
-              Visión <br />
-          Catalogarse como un modelo de las Naciones Unidas con alto impacto
-          social, impulsando el idioma inglés y la formación de líderes
-          estudiantes dentro de México.
-        </div>
-          </About>
+              <div>
+                Visión <br />
+                Catalogarse como un modelo de las Naciones Unidas con alto impacto
+                social, impulsando el idioma inglés y la formación de líderes
+                estudiantes dentro de México.
+              </div>
+            </About>
+          </ParallaxElement>
 
-          <Committees>
-            <div className="title">
-              <h1>Comités</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-                numquam accusamus provident est! Quam iste non voluptas recusandae
-                unde nisi repudiandae ullam perspiciatis error architecto. Quo velit
-                amet praesentium facilis! Distinctio sequi ratione corporis
-                excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
-                enim nam laborum doloremque molestias sapiente similique odit omnis,
-                debitis itaque, iure nemo. Labore doloribus saepe assumenda!
+          <ParallaxElement dataPercent="-2" dataDirection="y">
+            <Committees ref={l24}>
+              <div className="title">
+                <h1>Comités</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                  numquam accusamus provident est! Quam iste non voluptas recusandae
+                  unde nisi repudiandae ullam perspiciatis error architecto. Quo velit
+                  amet praesentium facilis! Distinctio sequi ratione corporis
+                  excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
+                  enim nam laborum doloremque molestias sapiente similique odit omnis,
+                  debitis itaque, iure nemo. Labore doloribus saepe assumenda!
               </p>
-            </div>
+              </div>
 
-            <div className="slides">
-              <AnimateSharedLayout type="crossfade">
-
-
-
-
-                <motion.div 
-                layout
-                className="card">
-                  <div className="title">ONU MUJERES</div>
-                  <div className="descrip">
-                    ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
+              <div className="slides">
+                <AnimateSharedLayout type="crossfade">
+                  <motion.div
+                    layout
+                    className="card">
+                    <div className="title">ONU MUJERES</div>
+                    <div className="descrip">
+                      ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
                   </div>
-                  <Link href="/signup">
-                    <div className="enroll"> <a> PARTICIPA </a> </div>
-                  </Link>
-                </motion.div>
+                    <Link href="/signup">
+                      <div className="enroll"> <a> PARTICIPA </a> </div>
+                    </Link>
+                  </motion.div>
 
+                  <div className="card">
+                    <div className="title">CORTE INTERNACIONAL DE JUSTICIA</div>
+                    <div className="descrip">
+                      También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
+                    </div>
+                    <Link href="/signup">
+                      <div className="enroll"> <a> PARTICIPA </a> </div>
+                    </Link>
+                  </div>
 
-
-
-                <div className="card">
-                  <div className="title">CORTE INTERNACIONAL DE JUSTICIA</div>
-                  <div className="descrip">
-                    También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
+                  <div className="card">
+                    <div className="title">SENADO DE LA REPÚBLICA</div>
+                    <div className="descrip">
+                      El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
                 </div>
-                  <Link href="/signup">
-                    <div className="enroll"> <a> PARTICIPA </a> </div>
-                  </Link>
-                </div>
+                    <Link href="/signup">
+                      <div className="enroll"> <a> PARTICIPA </a> </div>
+                    </Link>
+                  </div>
 
-                <div className="card">
-                  <div className="title">SENADO DE LA REPÚBLICA</div>
-                  <div className="descrip">
-                    El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
+                  <div className="card">
+                    <div className="title">World Tourism Organization </div>
+                    <div className="descrip">
+                      Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
                 </div>
-                  <Link href="/signup">
-                    <div className="enroll"> <a> PARTICIPA </a> </div>
-                  </Link>
-                </div>
+                    <Link href="/signup">
+                      <div className="enroll"> <a> PARTICIPA </a> </div>
+                    </Link>
+                  </div>
+                </AnimateSharedLayout>
+              </div>
 
-                <div className="card">
-                  <div className="title">World Tourism Organization </div>
-                  <div className="descrip">
-                    Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
-                </div>
-                  <Link href="/signup">
-                    <div className="enroll"> <a> PARTICIPA </a> </div>
-                  </Link>
-                </div>
-              </AnimateSharedLayout>
-            </div>
+              <div className="scroll"> <Arrow /> Desliza </div>
+            </Committees>
+          </ParallaxElement>
 
-            <div className="scroll"> <Arrow /> Desliza </div>
-          </Committees>
+          <ParallaxElement dataPercent="-2" dataDirection="y">
+            <Secretaries ref={l25}>
+              <ParallaxElement dataPx="150" dataDirection="x">
+                <ul ref={l26}>
+                  <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
+                  <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                </ul>
+              </ParallaxElement>
 
-          <Secretaries>
-            <ParallaxElement dataPercent="60" dataDirection="x">
-              <div ref={l22} className="box"> Z </div>
-            </ParallaxElement>
-            <ParallaxElement dataPercent="70" dataDirection="x">
-              <div ref={l23} className="box"> Z </div>
-            </ParallaxElement>
-            <ParallaxElement dataPercent="70" dataDirection="x">
-              <div ref={l24} className="box"> Z </div>
-            </ParallaxElement>
-          </Secretaries>
+              <ParallaxElement dataPx="150" dataDirection="x">
+                <ul ref={l27}>
+                  <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
+                  <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                </ul>
+              </ParallaxElement>
+
+              <ParallaxElement dataPx="150" dataDirection="x">
+                <ul ref={l28}>
+                  <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
+                  <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
+                  <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
+                  <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
+                  <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
+                  <Link href="secretaries/general"><li>Secretaría General</li></Link>
+                </ul>
+              </ParallaxElement>
+
+            </Secretaries>
+          </ParallaxElement>
+
+          <Footer></Footer>
+
         </HomeWrapper>
       </ScrollContainer>
     </>

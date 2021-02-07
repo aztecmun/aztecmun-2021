@@ -8,6 +8,10 @@ export const ProfileWrapper = styled.div`
 
   background: ${props => props.theme.body_bg2};
   overflow: hidden;
+
+  @media (min-width: 321px) and (max-width: 768px){
+    padding: 5rem 0rem;
+  }
 `
 
 export const ProfileContainer = styled.div`
@@ -87,7 +91,7 @@ export const ProfileInfo = styled.div`
 
         border-radius: 5px;
         cursor: pointer;
-        transition: all .3s ease-in-out;
+        transition: background-color .3s ease-in-out;
 
         &:hover{
           background: ${props => props.theme.body_bg1};

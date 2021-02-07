@@ -1,7 +1,7 @@
 export const setTransform = (el, transform) => {
   el.style.transform = transform
   el.style.WebkitTransform = transform
-} 
+}
 
 export const isVisibleTop = (el, container) => {
   const wHeight = window.innerHeight
@@ -34,15 +34,13 @@ export const setStyles = (spacer, container) => {
 
 export const updateElements = (blocks, yCurrent) => {
   blocks.forEach((b) => {
-    if (isVisible(b.start, b.end, yCurrent)) {
-      const el = b.el
-      const progress = -((b.start - yCurrent) / b.diffrence)
-      const px = progress * (b.distance / 100) * 100
-      const position = parseFloat(px).toFixed(2)
-      if (b.direction === 'x')
-        setTransform(el, 'translateX(' + position + 'px)')
-      else setTransform(el, 'translateY(' + position + 'px)')
-    }
+    const el = b.el
+    const progress = -((b.start - yCurrent) / b.diffrence)
+    const px = progress * (b.distance / 100) * 100
+    const position = parseFloat(px).toFixed(2)
+    if (b.direction === 'x')
+      setTransform(el, 'translateX(' + position + 'px)')
+    else setTransform(el, 'translateY(' + position + 'px)')
   })
 }
 

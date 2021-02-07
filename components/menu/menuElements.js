@@ -1,6 +1,5 @@
 // Libraries imports
 import styled from 'styled-components'
-import { darkTheme } from '../theme'
 
 export const Nav = styled.nav`
   color: ${props => props.theme.text};
@@ -41,12 +40,12 @@ export const Nav = styled.nav`
     gap: 20px;
 
     button{
-      color: ${props => props.theme.body_bg2};
+      color: #EDEDED;
 
       padding: 10px 25px;
 
       border: 1px solid transparent;
-      background: ${props => props.theme.button};
+      background: ${props => props.theme.blue};
       border-radius: 15px;
       outline: none;
       cursor: pointer;
@@ -56,7 +55,7 @@ export const Nav = styled.nav`
       color: ${props => props.theme.text};
 
       background: transparent;
-      border: 1px solid ${props => props.theme.text};
+      border: 1px solid ${props => props.theme.blue};
     }
 
     @media (min-width: 320px) and (max-width: 768px){
