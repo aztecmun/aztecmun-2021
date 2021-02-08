@@ -17,10 +17,10 @@ export default function index({ children }) {
   const [theme, setTheme] = useState('dark')
   const themes = {
     light: lightTheme,
-    dark: darkTheme
+    dark: darkTheme,
   }
 
-  //Toggler hook
+  // Toggler hook
   const [isOn, setIsOn] = useState(false)
 
   const changeTheme = () => {
@@ -32,7 +32,6 @@ export default function index({ children }) {
       setTheme('dark')
     }
   }
-
 
   return (
     <AnimatePresence exitBeforeEnter>

@@ -18,7 +18,8 @@
     "react-icons": "^4.1.0",
     "react-theme-switch": "^0.1.7",
     "react-three-fiber": "^5.3.18",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "sweetalert2": "^10.14.0"
   },
   "devDependencies": {
     "eslint": "^7.19.0",
