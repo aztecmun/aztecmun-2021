@@ -12,6 +12,7 @@ const frame = styled.div`
 
   background: ${props => props.theme.body_bg1};;
   overflow: hidden;
+  border: 1px solid red;
 
   .title p {
     text-align: justify;
@@ -256,6 +257,8 @@ export const Committees = styled(frame)`
         position: absolute;
         right: 30px;
         bottom: 30px;
+
+        cursor: pointer;
       }
     }
   }
@@ -312,8 +315,9 @@ export const Secretaries = styled(frame)`
 
     @media (min-width: 321px) and (max-width: 768px){
       font-size: 1.5rem;
+      height: 50vh;
 
-        li:nth-of-type(1){
+      li:nth-of-type(1){
         margin-left: 0px;
       }
       li:nth-of-type(2){

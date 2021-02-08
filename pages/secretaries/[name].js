@@ -11,7 +11,6 @@ import { SecWrapper } from './secretariesElements'
 
 export default function index() {
   const router = useRouter()
-  console.log(router.query.name)
 
   return (
     <SecWrapper>

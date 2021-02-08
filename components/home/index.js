@@ -64,10 +64,14 @@ export default function index() {
           <Header>
             <div className="title">
               <h1>
-                <span>
-                  <ParallaxElement dataPercent="60">
+                <motion.span
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <motion.ParallaxElement dataPercent="60">
                     <div ref={l1}> N </div>
-                  </ParallaxElement>
+                  </motion.ParallaxElement>
                   <ParallaxElement dataPercent="50">
                     <div ref={l2}> O </div>
                   </ParallaxElement>
@@ -98,8 +102,13 @@ export default function index() {
                     <div ref={l10}> N </div>
                   </ParallaxElement>
                   <div></div>
-                </span>
-                <span>
+                </motion.span>
+
+                <motion.span
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 1, delay: .3 }}
+                >
                   <ParallaxElement dataPercent="60">
                     <div ref={l11}> H </div>
                   </ParallaxElement>
@@ -135,7 +144,7 @@ export default function index() {
                   <ParallaxElement dataPercent="70">
                     <div ref={l21}> Z </div>
                   </ParallaxElement>
-                </span>
+                </motion.span>
               </h1>
             </div>
 

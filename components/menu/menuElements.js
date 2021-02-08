@@ -1,7 +1,8 @@
 // Libraries imports
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Nav = styled.nav`
+export const Nav = styled(motion.nav)`
   color: ${props => props.theme.text};
 
   position: fixed;
