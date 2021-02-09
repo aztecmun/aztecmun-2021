@@ -40,6 +40,20 @@ export const signOut = () => {
     })
 }
 
+export const loginWithEmailAndPass = (email, password) => {
+  return firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al iniciar sesión',
+        text: error.message,
+      })
+      console.error(error)
+    })
+}
+
 export const createAccountWithEmail = (email, password, name) => {
   return firebase
     .auth()
