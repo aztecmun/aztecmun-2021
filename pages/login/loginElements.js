@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const LoginWrapper = styled.div`
+  color: ${props => props.theme.text};
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  color: ${props => props.theme.text};
   position: relative;
 
   height: 100vh;
@@ -64,6 +65,8 @@ const FormLogIn = styled.form`
   }
 
   input {
+    color: ${props => props.theme.text};
+
     padding: 15px 2rem;
 
     background: ${props => props.theme.body_bg1};

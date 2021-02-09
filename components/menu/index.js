@@ -16,11 +16,7 @@ export default function index({ children }) {
   const user = useUser()
 
   return (
-    <Nav
-      initial={{ y: -50 }}
-      aniamte={{ y: 0 }}
-      transition={{ duration: 1, delay: 1 }}
-    >
+    <Nav>
       <Link href="/">
         <a> AztecMUN <span> 2021 </span> </a>
       </Link>

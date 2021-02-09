@@ -9,6 +9,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@popmotion/popcorn": "^0.4.4",
     "firebase": "^8.2.6",
     "framer-motion": "^3.3.0",
     "locomotive-scroll": "^4.0.6",

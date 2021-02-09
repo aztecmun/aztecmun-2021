@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ProfileWrapper = styled.div`
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 
   padding: 5rem 2rem;
@@ -9,7 +9,7 @@ export const ProfileWrapper = styled.div`
   background: ${props => props.theme.body_bg2};
   overflow: hidden;
 
-  @media (min-width: 321px) and (max-width: 768px){
+  @media (min-width: 320px) and (max-width: 768px){
     padding: 5rem 0rem;
   }
 `
@@ -47,6 +47,18 @@ export const ProfileInfo = styled.div`
   flex: 6;
 
   padding: 2rem;
+
+  input{
+    width: 150px;
+
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      border: 1px solid ${props => props.theme.blue};
+    }
+  }
 
   .top{
     display: grid;
