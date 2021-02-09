@@ -10,7 +10,6 @@ import {
   ProfileInfo,
 } from './profileElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
-import { GoLocation as Location } from 'react-icons/go'
 import { FaUserAlt as About } from 'react-icons/fa'
 import { BsPencil as Pencil } from 'react-icons/bs'
 
@@ -28,36 +27,35 @@ export default function index() {
 
         <ProfileInfo>
           <div className="top">
-            <div className="name">Username</div>
-            <div className="school">
-              {' '}
-              <Location /> School Name{' '}
-            </div>
-            <div className="committee">Committee</div>
+            <input type="text" className="name" placeholder="Username" />
+            <input type="text" className="school" placeholder="School" />
+            <input type="text" className="committee" placeholder="Committee" />
           </div>
 
           <div className="about">
             <div className="icon">
               {' '}
-              <About /> About <Pencil className="edit" />{' '}
+              <About /> About <Pencil className="edit" />
             </div>
 
-            <div className="contact">
-              <p className="c1">Grade: </p>
-              <p className="c2"> 5 </p>
+            <form>
+              <div className="contact">
+                <p className="c1">Grade: </p>
+                <input type="text" className="c2" placeholder="5" />
 
-              <p className="c1">Group: </p>
-              <p className="c2"> 623 </p>
+                <p className="c1">Group: </p>
+                <input type="text" className="c2" placeholder="623" />
 
-              <p className="c1">Age: </p>
-              <p className="c2"> 16 </p>
+                <p className="c1">Age: </p>
+                <input type="text" className="c2" placeholder="18" />
 
-              <p className="c1">Phone: </p>
-              <p className="c2 dec">+52 55 1201 6836 </p>
+                <p className="c1">Phone: </p>
+                <input type="number" className="c2" placeholder="+52 56 1185 1828" />
 
-              <p className="c1">Email: </p>
-              <p className="c2 dec">Jhondoe@mail.com </p>
-            </div>
+                <p className="c1">Email: </p>
+                <input type="mail" className="c2" placeholder="mail" />
+              </div>
+            </form>
           </div>
         </ProfileInfo>
       </ProfileContainer>

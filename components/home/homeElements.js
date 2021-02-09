@@ -1,27 +1,51 @@
 // Libraires imports
 import styled from 'styled-components'
 
-const frame = styled.div`
+export const frame = styled.div`
   position: relative;
 
   min-height: 90vh;
   min-width: 80vw;
   max-width: 80vw;
 
+  padding-top: 10px;
+
   margin: 200px auto;
 
-  background: ${props => props.theme.body_bg1};;
-  overflow: hidden;
+  background: ${props => props.theme.body_bg1};
 
-  .title p {
+  .title{
+    font-size: 4rem;
+    color: ${props => props.theme.blue};
+    
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+  }
+
+  p {
     text-align: justify;
     font-weight: 300;
     font-size: 1.5rem;
   }
 
-  h1 {
-    font-size: 4rem;
-    color: ${props => props.theme.blue};;
+  &:nth-last-of-type(1){
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(1){
+    margin-top: 60px;
+  }
+
+  @media (min-width: 320px) and (max-width: 768px){
+    .title{
+      font-size: 2.5rem;
+    }
+
+    p{
+      font-size: 1.2rem;
+    }
   }
 `
 
@@ -35,20 +59,7 @@ export const HomeWrapper = styled.div`
   width: 100%;
 
   background: ${props => props.theme.body_bg1};;
-  overflow-x: hidden;
-
-  .bg {
-    position: absolute;
-    top: 50%;
-    left: -20%;
-    z-index: -1;
-
-    height: 500px;
-
-    @media (max-width: 768px) {
-      top: 25%;
-    }
-  }
+  overflow: hidden;
 `
 
 export const Header = styled(frame)`
@@ -57,22 +68,20 @@ export const Header = styled(frame)`
 
   height: 120vh;
 
-  margin-top: 3rem;
+  margin-top: 60px;
 
-  .title {
+  .header-title {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    height: 40%;
+    height: 30%;
 
     h1 {
       color: ${props => props.theme.text};;
 
       span {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
         gap: 10px;
 
         @media (max-width: 320px){
@@ -84,7 +93,7 @@ export const Header = styled(frame)`
           }
         }
 
-        @media (min-width: 321px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: 767px) {
           div {
             font-size: 3rem;
 
@@ -93,12 +102,12 @@ export const Header = styled(frame)`
           }
         }
 
-        @media (min-width: 768px) and (max-width: 1024px){
+        @media (min-width: 768px) and (max-width: 1023px){
           div{
             font-size: 5rem;
 
             height: 100px;
-            width: 30px;
+            width: 34px;
           }
         }
 
@@ -108,7 +117,7 @@ export const Header = styled(frame)`
             font-size: 7rem;
 
             height: 100px;
-            width: 60px;
+            width: 50px;
           }
         }
 
@@ -118,7 +127,7 @@ export const Header = styled(frame)`
             font-size: 10rem;
 
             height: 140px;
-            width: 75px;
+            width: 80px;
           }
         }
       }
@@ -131,7 +140,7 @@ export const Header = styled(frame)`
     right: 0;
     z-index: -1;
 
-    min-height: 60%;
+    min-height: 70%;
     width: 100%;
 
     background: url('/comite.jpg');
@@ -146,31 +155,44 @@ export const Header = styled(frame)`
 `
 
 export const About = styled(frame)`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
 
   min-height: auto;
 
-  div {
-    font-size: 1.5rem;
-    font-weight: 300;
-    flex: 2;
-
-    &:nth-of-type(1) {
-      flex: 1;
-    }
+  .desc{
+    grid-column: 1 / 3;
+    grid-row: 1;
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 1.5rem;
+  span{
+    font-weight: bold;
+    color: ${props => props.theme.blue};
+
+    display: block;
+  }
+
+  @media (min-width: 320px) and (max-width: 768px){
+    grid-template-rows: auto;
+
+    .vision{
+      grid-column: 1 / 3;
+      grid-row: 2;
+    }
+
+    .mision{
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
   }
 `
 
 export const Committees = styled(frame)`
   position: relative;
+
+  min-height: auto;
 
   .scroll{
     position: absolute;
@@ -181,7 +203,7 @@ export const Committees = styled(frame)`
 
     animation: 2s infinite scroll;
 
-    @media (min-width: 1220px){
+    @media (min-width: 1024px){
       display: none;
     }
   }
@@ -206,8 +228,9 @@ export const Committees = styled(frame)`
     margin-top: 100px;
     overflow-x: scroll;
 
-    @media (min-width: 1366px) {
+    @media (min-width: 1024px) {
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .card {
@@ -229,7 +252,7 @@ export const Committees = styled(frame)`
       border-radius: 20px;
       background: ${props => props.theme.body_bg2};;
 
-      .title{
+      .card-title{
         font-size: 1.5rem;
         font-weight: bolder;
         text-align: center;
@@ -256,6 +279,8 @@ export const Committees = styled(frame)`
         position: absolute;
         right: 30px;
         bottom: 30px;
+
+        cursor: pointer;
       }
     }
   }
@@ -267,14 +292,18 @@ export const Secretaries = styled(frame)`
 
   max-height: 60vh;
   min-height: 60vh;
+  min-width: 100%;
 
-  min-width: 100vw;
+  .title{
+    left: 10%;
+  }
+
 
   ul{
     font-size: 3rem;
     letter-spacing: 3px;
     color: ${props => props.theme.blue};
-    min-width: 850px;
+    min-width: 80%;
 
     li{
       transition: all .3s ease-in-out;
@@ -310,10 +339,16 @@ export const Secretaries = styled(frame)`
       margin-left: 120px;
     }
 
-    @media (min-width: 321px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 768px){
       font-size: 1.5rem;
+      height: 100%;
+      min-width: 100%;
 
-        li:nth-of-type(1){
+      li{
+        margin-bottom: 15px;
+      }
+
+      li:nth-of-type(1){
         margin-left: 0px;
       }
       li:nth-of-type(2){
@@ -338,7 +373,11 @@ export const Secretaries = styled(frame)`
         margin-left: 35px;
       }
     }
+
+    @media (min-width: 1024px) and (max-width: 1366px){
+      font-size: 3rem;
+      height: 100%;
+      min-width: 100%;
+    }
   }
 `
-
-export const Footer = styled(frame)``

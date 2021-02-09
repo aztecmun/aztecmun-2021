@@ -10,5 +10,9 @@ const GlobalStyle = createGlobalStyle`
     textarea{ font: 400 1rem 'Roboto Condensed', sans-serif; color: #000;}
 
     html, body, #root { height: 100%; li{list-style: none;}}
+
+    *{
+        transition: background-color .3s ease-in-out;
+    }
 `
 export default GlobalStyle

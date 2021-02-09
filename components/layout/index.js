@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 // Local components imports
 import Menu from '../menu'
 
-// Libraries imports
-import { motion } from 'framer-motion'
+//Libraries imports
+import { AnimatePresence } from 'framer-motion'
 
 // Styles
 import { LayoutWrapper, Switch } from './layoutElements'
@@ -34,16 +34,19 @@ export default function index({ children }) {
   }
 
   return (
-    <ThemeProvider theme={themes[theme]}>
-      <LayoutWrapper>
-        <Menu>
-          <Switch data-isOn={isOn} onClick={changeTheme}>
-            <div className="handle"></div>
-          </Switch>
-        </Menu>
+    <AnimatePresence exitBeforeEnter>
+      <ThemeProvider theme={themes[theme]}>
+        <LayoutWrapper>
+          <Menu>
+            <Switch data-isOn={isOn} onClick={changeTheme}>
+              <div className="handle"></div>
+            </Switch>
+          </Menu>
 
-        {children}
-      </LayoutWrapper>
-    </ThemeProvider>
+          {children}
+
+        </LayoutWrapper>
+      </ThemeProvider>
+    </AnimatePresence>
   )
 }
