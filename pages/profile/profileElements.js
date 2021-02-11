@@ -49,6 +49,8 @@ export const ProfileInfo = styled.div`
   padding: 2rem;
 
   input{
+    color: ${props => props.theme.text};
+
     width: 150px;
 
     background: transparent;

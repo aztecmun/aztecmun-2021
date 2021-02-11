@@ -10,6 +10,7 @@ import { images } from '../images'
 
 //Styles
 import { GalWrapper } from './galleryElements'
+import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
 
 export default function index() {
   const [[page, direction], setPage] = useState([0, 0])
@@ -38,8 +39,8 @@ export default function index() {
           }}
         />
 
-        <div className="controls left" onClick={() => paginate(-1)}></div>
-        <div className="controls right" onClick={() => paginate(+1)}></div>
+        <BiLeftArrow className="controls left" onClick={() => paginate(-1)} />
+        <BiRightArrow className="controls right" onClick={() => paginate(+1)} />
       </AnimatePresence>
     </GalWrapper>
   )

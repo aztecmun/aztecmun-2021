@@ -17,19 +17,22 @@ export const GalWrapper = styled(frame)`
   }
 
   .controls{
+    font-size: 2rem;
+
     position: absolute;
     top: 0;
 
-    height: 100%;
-    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    opacity: .1;
+    height: 100%;
+    width: 10%;
+
     cursor: pointer;
 
-    background: ${props => props.theme.text};
-
     &:hover{
-      opacity: .2;
+      background: ${props => props.theme.body_bg2};
     }
   }
 

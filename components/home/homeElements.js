@@ -10,7 +10,7 @@ export const frame = styled.div`
 
   padding-top: 10px;
 
-  margin: 200px auto;
+  margin: 300px auto;
 
   background: ${props => props.theme.body_bg1};
 
