@@ -51,7 +51,7 @@ export const ProfileInfo = styled.div`
   input{
     color: ${props => props.theme.text};
 
-    width: 150px;
+    width: 300px;
 
     background: transparent;
     border: 1px solid transparent;

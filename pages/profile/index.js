@@ -26,19 +26,19 @@ export default function index() {
         </ProfilePic>
 
         <ProfileInfo>
-          <div className="top">
-            <input type="text" className="name" placeholder="Username" />
-            <input type="text" className="school" placeholder="School" />
-            <input type="text" className="committee" placeholder="Committee" />
-          </div>
-
-          <div className="about">
-            <div className="icon">
-              {' '}
-              <About /> About <Pencil className="edit" />
+          <form>
+            <div className="top">
+              <input type="text" className="name" placeholder="Username" />
+              <input type="text" className="school" placeholder="School" />
+              <input type="range" className="committee" placeholder="Committee" />
             </div>
 
-            <form>
+            <div className="about">
+              <div className="icon">
+                {' '}
+                <About /> About <Pencil className="edit" />
+              </div>
+
               <div className="contact">
                 <p className="c1">Grade: </p>
                 <input type="text" className="c2" placeholder="5" />
@@ -47,7 +47,7 @@ export default function index() {
                 <input type="text" className="c2" placeholder="623" />
 
                 <p className="c1">Age: </p>
-                <input type="text" className="c2" placeholder="18" />
+                <input type="number" className="c2" placeholder="18" />
 
                 <p className="c1">Phone: </p>
                 <input type="number" className="c2" placeholder="+52 56 1185 1828" />
@@ -55,8 +55,8 @@ export default function index() {
                 <p className="c1">Email: </p>
                 <input type="mail" className="c2" placeholder="mail" />
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </ProfileInfo>
       </ProfileContainer>
     </ProfileWrapper>

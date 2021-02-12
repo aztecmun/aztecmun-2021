@@ -39,9 +39,9 @@ export default function index() {
           }}
         />
 
-        <BiLeftArrow className="controls left" onClick={() => paginate(-1)} />
-        <BiRightArrow className="controls right" onClick={() => paginate(+1)} />
       </AnimatePresence>
+      <BiLeftArrow className="controls left" onClick={() => paginate(-1)} />
+      <BiRightArrow className="controls right" onClick={() => paginate(+1)} />
     </GalWrapper>
   )
 }

@@ -22,7 +22,7 @@ export const Nav = styled.nav`
   padding: 0 40px;
 
   background: ${props => props.theme.body_bg1};
-  animation: fade-in 3s;
+  /* animation: fade-in 3s; */
 
   @keyframes fade-in{
     0%, 50%{
