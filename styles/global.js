@@ -1,28 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-@font-face {
-    font-family: 'helvetica' ;
-    src: url('/HelveticaNeueBd.ttf') format('truetype');
-}   
-* {
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    color: inherit;
-}   
-html, body {
-    font-family: helvetica;
+    *{ text-decoration: none; color: inherit; margin: 0; padding: 0; box-sizing: border-box; ::-webkit-scrollbar{width: 0px} }
 
-    -webkit-user-select: none;
+    body,
+    input, 
+    button,
+    select, 
+    textarea{ font: 400 1rem 'Roboto Condensed', sans-serif; color: #000;}
 
-    &::-webkit-scrollbar {
-        width: 0px;
+    html, body, #root { height: 100%; li{list-style: none;}}
+
+    *{
+        transition: background-color .3s ease-in-out;
     }
-}
 `
 export default GlobalStyle

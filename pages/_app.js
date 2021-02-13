@@ -1,16 +1,18 @@
 // React import
-import React from 'react'
+import React, { useState } from 'react'
 
-import Layout from 'components/Layout'
+// Local components import
+import Layout from '../components/layout'
+
+// Global Styles import
 import GlobalStyles from 'styles/global'
 
 export default function MyApp({ Component, pageProps }) {
+
   return (
-    <>
-      <Layout>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </Layout>
-    </>
+    <Layout>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </Layout>
   )
 }

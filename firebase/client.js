@@ -3,7 +3,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 
-// SweetAlert import
+// SweetAlert imports
 import Swal from 'sweetalert2'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -19,6 +19,7 @@ const firebaseConfig = {
 
 !firebase.apps.length && firebase.initializeApp(firebaseConfig)
 
+// Firestore datadase initialization
 const db = firebase.firestore()
 
 export const onAuthStateChanged = (onChange) => {
@@ -53,31 +54,31 @@ export const loginWithEmailAndPass = (email, password) => {
     })
 }
 
-export const createAccountWithEmail = (email, password, name) => {
+export const createAccountWithEmail = (email, password) => {
   return firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((result) => {
-      result.user.updateProfile({
-        displayName: name,
-      })
-
       createUserProfile({
         userId: result.user.uid,
-        name: result.user.displayName,
-        age: '',
+        name: '',
         school: '',
+        committee: '',
         grade: '',
         group: '',
+        age: '',
+        phone: '',
+        email: result.user.email,
       })
 
-      const emailConfig = { url: 'http://localhost:3000/users/profile' }
+      const emailConfig = { url: 'https://localhost:3000/profile' }
 
       result.user.sendEmailVerification(emailConfig).catch((error) => {
         Swal.fire({
           icon: 'error',
-          title: 'Error al enviar el email',
-          text: error.message,
+          title: 'Error al enviar email',
+          text:
+            'Ha ocurrido un error al enviar el email de verificación. Por favor, contacta a la secretaría digital.',
         })
         console.error(error)
       })
@@ -92,21 +93,17 @@ export const createAccountWithEmail = (email, password, name) => {
     })
 }
 
-export const createUserProfile = ({
-  userId,
-  name,
-  age,
-  school,
-  grade,
-  group,
-}) => {
+const createUserProfile = (obj) => {
   return db.collection('usersProfiles').add({
-    userId: userId,
-    name: name,
-    age: age,
-    school: school,
-    grade: grade,
-    group: group,
+    userId: obj.userId,
+    name: obj.name,
+    school: obj.school,
+    committee: obj.committee,
+    grade: obj.grade,
+    group: obj.group,
+    age: obj.age,
+    phone: obj.phone,
+    email: obj.email,
     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
   })
 }
@@ -125,19 +122,15 @@ export const queryUserProfile = (userId, callback) => {
     })
 }
 
-export const updateUserProfile = ({
-  profileId,
-  name,
-  age,
-  school,
-  grade,
-  group,
-}) => {
-  return db.collection('usersProfiles').doc(profileId).update({
-    name: name,
-    age: age,
-    school: school,
-    grade: grade,
-    group: group,
+export const updateUserProfile = (obj) => {
+  return db.collection('usersProfiles').doc(obj.profileId).update({
+    name: obj.name,
+    school: obj.school,
+    committee: obj.committee,
+    grade: obj.grade,
+    group: obj.group,
+    age: obj.age,
+    phone: obj.phone,
+    email: obj.email,
   })
 }
