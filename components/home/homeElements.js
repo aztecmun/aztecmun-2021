@@ -246,7 +246,6 @@ export const Committees = styled(frame)`
             justify-content: flex-start;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
-    gap: 20px;
 
     margin-top: 100px;
     overflow-x: scroll;
@@ -275,6 +274,8 @@ export const Committees = styled(frame)`
       max-width: 300px;
 
       padding: 20px;
+
+      margin: 0 20px;
 
       border-radius: 20px;
       background: ${props => props.theme.body_bg2};;
@@ -319,7 +320,7 @@ export const Committees = styled(frame)`
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: flex-start;
-        gap: 15px;
+        margin: 0 15px;
 
         min-height: 350px;
         max-height: 350px;

@@ -49,7 +49,7 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 30px;
+    margin: 0 30px;
 
     width: 100%;
     height: 100%;
@@ -59,7 +59,7 @@ export const Nav = styled.nav`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 5px;
+      margin: 0 5px;
 
       height: 60%;
       width: 30px;
@@ -85,13 +85,14 @@ export const MenuWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    margin: 0 20px;
 
     transition: all .3s ease-in-out;
 
     button{
       color: #EDEDED;
 
+      margin: 0 10px;
       padding: 10px 25px;
 
       border: 1px solid transparent;
@@ -168,7 +169,7 @@ export const User = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  margin: 0 10px;
 `
 
 export const UserIcon = styled(BiUserCircle)`
