@@ -92,6 +92,7 @@ export const ProfileInfo = styled.div`
   }
 
   .about {
+
     .icon {
       font-size: 1.2rem;
 
@@ -114,7 +115,7 @@ export const ProfileInfo = styled.div`
 
     .contact {
       display: grid;
-      grid-template-columns: 50px 1fr;
+      grid-template-columns: 60px 1fr;
       grid-template-rows: auto;
 
       .c1 {
@@ -138,7 +139,7 @@ export const ProfileInfo = styled.div`
   }
 
   @media (max-width: 768px){
-      padding: .5rem;
+      padding: 1rem;
 
       .top{
         grid-template-columns: 1fr;

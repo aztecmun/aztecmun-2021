@@ -166,7 +166,7 @@ export default function index() {
                 </div>
 
                 <div className="contact">
-                  <p className="c1">Graddo: </p>
+                  <p className="c1">Grado: </p>
                   <input
                     name="grade"
                     className="c2"
@@ -199,7 +199,7 @@ export default function index() {
                     autoComplete="off"
                     value={profileData.age}
                   />
-                  <p className="c1">Phone: </p>
+                  <p className="c1">Teléfono: </p>
                   <input
                     name="phone"
                     className="c2"

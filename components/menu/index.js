@@ -16,7 +16,9 @@ export default function index({ children }) {
   const user = useUser()
 
   const [userOpen, setUserOpen] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
+
+  const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
     <Nav>
@@ -28,7 +30,7 @@ export default function index({ children }) {
         {children}
 
         {user === USER_STATES.NOT_LOGGED && (
-          <div className="hamburguer" onClick={() => setOpen(!open)}>
+          <div className="hamburguer" onClick={toggleMenu}>
             <div className="bars"></div>
             <div className="bars"></div>
             <div className="bars"></div>
@@ -36,13 +38,17 @@ export default function index({ children }) {
         )}
 
         {user === USER_STATES.NOT_LOGGED && (
-          <MenuWrapper open={open}>
+          <MenuWrapper data-isOpen={isOpen}>
+            <div className="close" onClick={toggleMenu}>
+              <div className="bars"></div>
+              <div className="bars"></div>
+            </div>
             <Link href="/signup">
-              <button onClick={() => setOpen(!open)}>Registrarse</button>
+              <button onClick={toggleMenu}>Registrarse</button>
             </Link>
 
             <Link href="/login">
-              <button className="ghost" onClick={() => setOpen(!open)}>Inicia Sesión</button>
+              <button className="ghost" onClick={toggleMenu}>Inicia Sesión</button>
             </Link>
           </MenuWrapper>
         )}
@@ -67,8 +73,8 @@ export default function index({ children }) {
           </User>
         )}
 
-        <Scrollbar />
       </div>
+      <Scrollbar />
     </Nav>
   )
 }

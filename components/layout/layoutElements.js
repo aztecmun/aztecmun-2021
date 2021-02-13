@@ -11,8 +11,8 @@ export const Switch = styled(motion.div)`
   justify-content: flex-end;
   align-items: center;
 
-  height: 20px;
-  width: 35px;
+  height: minmax(20px, 20px);
+  width: minmax(35px, 35px);
 
   padding: 4px;
 
