@@ -63,7 +63,7 @@ export const createAccountWithEmail = (email, password) => {
         userId: result.user.uid,
         name: '',
         school: '',
-        comitte: '',
+        committee: '',
         grade: '',
         group: '',
         age: '',
@@ -98,7 +98,7 @@ const createUserProfile = (obj) => {
     userId: obj.userId,
     name: obj.name,
     school: obj.school,
-    comitte: obj.comitte,
+    committee: obj.committee,
     grade: obj.grade,
     group: obj.group,
     age: obj.age,
@@ -122,19 +122,15 @@ export const queryUserProfile = (userId, callback) => {
     })
 }
 
-export const updateUserProfile = ({
-  profileId,
-  name,
-  age,
-  school,
-  grade,
-  group,
-}) => {
-  return db.collection('usersProfiles').doc(profileId).update({
-    name: name,
-    age: age,
-    school: school,
-    grade: grade,
-    group: group,
+export const updateUserProfile = (obj) => {
+  return db.collection('usersProfiles').doc(obj.profileId).update({
+    name: obj.name,
+    school: obj.school,
+    committee: obj.committee,
+    grade: obj.grade,
+    group: obj.group,
+    age: obj.age,
+    phone: obj.phone,
+    email: obj.email,
   })
 }

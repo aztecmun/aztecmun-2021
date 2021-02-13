@@ -11,6 +11,7 @@ import {
   ProfilePic,
   ProfileInfo,
 } from './profileElements'
+import { Button } from 'pages/login/loginElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
 import { FaUserAlt as About } from 'react-icons/fa'
 import { BsPencil as Pencil } from 'react-icons/bs'
@@ -27,7 +28,7 @@ export default function index() {
     profileId: '',
     name: '',
     school: '',
-    comitte: '',
+    committee: '',
     grade: '',
     group: '',
     age: '',
@@ -50,7 +51,7 @@ export default function index() {
             profileId: profile.profileId,
             name: profile.name,
             school: profile.school,
-            comitte: profile.comitte,
+            committee: profile.committee,
             grade: profile.grade,
             group: profile.group,
             age: profile.age,
@@ -85,7 +86,7 @@ export default function index() {
       profileId: profileData.profileId,
       name: profileData.name,
       school: profileData.school,
-      comitte: profileData.comitte,
+      committee: profileData.committee,
       grade: profileData.grade,
       group: profileData.group,
       age: profileData.age,
@@ -150,17 +151,16 @@ export default function index() {
                   value={profileData.school}
                 />
                 <input
-                  name="comitte"
+                  name="committee"
                   className="committee"
                   type="text"
                   placeholder="Comité de interés"
                   onChange={handleInputChange}
                   required
                   autoComplete="off"
-                  value={profileData.comitte}
+                  value={profileData.committee}
                 />
               </div>
-
               <div className="about">
                 <div className="icon">
                   <About /> Información <Pencil className="edit" />
@@ -224,6 +224,7 @@ export default function index() {
                   />
                 </div>
               </div>
+              <Button>Actualizar perfil</Button>
             </form>
           </ProfileInfo>
         </ProfileContainer>
