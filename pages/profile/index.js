@@ -26,11 +26,13 @@ export default function index() {
   const [profileData, setProfileData] = useState({
     profileId: '',
     name: '',
-    age: '',
     school: '',
+    comitte: '',
     grade: '',
     group: '',
+    age: '',
     phone: '',
+    email: '',
   })
 
   useEffect(() => {
@@ -47,11 +49,13 @@ export default function index() {
             ...profileData,
             profileId: profile.profileId,
             name: profile.name,
-            age: profile.age,
             school: profile.school,
+            comitte: profile.comitte,
             grade: profile.grade,
             group: profile.group,
+            age: profile.age,
             phone: profile.phone,
+            email: profile.email,
           })
         }
       })
@@ -79,19 +83,26 @@ export default function index() {
     event.preventDefault()
     updateUserProfile({
       profileId: profileData.profileId,
-      name: user.displayName,
-      age: profileData.age,
+      name: profileData.name,
       school: profileData.school,
+      comitte: profileData.comitte,
       grade: profileData.grade,
       group: profileData.group,
+      age: profileData.age,
+      phone: profileData.phone,
+      email: profileData.email,
     })
-      .then(
+      .then(() => {
+        user.updateProfile({
+          displayName: profileData.name,
+        })
+
         Swal.fire({
           icon: 'success',
           title: 'Datos guardados con éxito',
           text: '¡Ahora tu perfil está actualizado!',
         })
-      )
+      })
       .catch((error) => {
         Swal.fire({
           icon: 'error',
@@ -119,25 +130,34 @@ export default function index() {
             <form onSubmit={handleSubmit}>
               <div className="top">
                 <input
-                  type="text"
+                  name="name"
                   className="name"
-                  placeholder="Usuario"
+                  type="text"
+                  placeholder="Nombre completo"
                   onChange={handleInputChange}
-                  value={user.displayName}
+                  required
+                  autoComplete="off"
+                  value={profileData.name}
                 />
                 <input
-                  type="text"
+                  name="school"
                   className="school"
+                  type="text"
                   placeholder="Escuela"
                   onChange={handleInputChange}
+                  required
+                  autoComplete="off"
                   value={profileData.school}
                 />
                 <input
-                  type="text"
+                  name="comitte"
                   className="committee"
-                  placeholder="Comité"
+                  type="text"
+                  placeholder="Comité de interés"
                   onChange={handleInputChange}
-                  value={profileData.committee}
+                  required
+                  autoComplete="off"
+                  value={profileData.comitte}
                 />
               </div>
 
@@ -149,45 +169,65 @@ export default function index() {
                 <div className="contact">
                   <p className="c1">Graddo: </p>
                   <input
-                    type="text"
+                    name="grade"
                     className="c2"
-                    placeholder="5"
+                    type="text"
+                    placeholder="Quinto semestre"
                     onChange={handleInputChange}
+                    required
+                    autoComplete="off"
                     value={profileData.grade}
                   />
                   <p className="c1">Grupo: </p>
                   <input
-                    type="text"
+                    name="group"
                     className="c2"
+                    type="text"
                     placeholder="623"
                     onChange={handleInputChange}
+                    required
+                    autoComplete="off"
                     value={profileData.group}
                   />
-
                   <p className="c1">Edad: </p>
                   <input
-                    type="number"
+                    name="age"
                     className="c2"
+                    type="number"
                     placeholder="18"
                     onChange={handleInputChange}
+                    required
+                    autoComplete="off"
                     value={profileData.age}
                   />
                   <p className="c1">Phone: </p>
                   <input
-                    type="number"
+                    name="phone"
                     className="c2"
+                    type="number"
                     placeholder="+52 56 1185 1828"
                     onChange={handleInputChange}
+                    required
+                    autoComplete="off"
                     value={profileData.phone}
                   />
                   <p className="c1">Email: </p>
-                  <input type="mail" className="c2" placeholder="mail" />
+                  <input
+                    name="email"
+                    className="c2"
+                    type="email"
+                    placeholder="mail@example.com"
+                    onChange={handleInputChange}
+                    required
+                    autoComplete="off"
+                    value={profileData.email}
+                  />
                 </div>
               </div>
             </form>
           </ProfileInfo>
         </ProfileContainer>
       )}
-    </ProfileWrapper >
+    </ProfileWrapper>
   )
 }

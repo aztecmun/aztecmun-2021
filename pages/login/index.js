@@ -66,6 +66,7 @@ export default function login() {
                   name="email"
                   type="email"
                   onChange={handleInputChange}
+                  autoComplete="off"
                   required
                 />
               </Input>
@@ -75,6 +76,7 @@ export default function login() {
                   name="password"
                   type="password"
                   onChange={handleInputChange}
+                  autoComplete="off"
                   required
                 />
               </Input>

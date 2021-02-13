@@ -54,22 +54,21 @@ export const loginWithEmailAndPass = (email, password) => {
     })
 }
 
-export const createAccountWithEmail = (email, password, name) => {
+export const createAccountWithEmail = (email, password) => {
   return firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((result) => {
-      result.user.updateProfile({
-        displayName: name,
-      })
-
       createUserProfile({
         userId: result.user.uid,
-        name: result.user.displayName,
-        age: '',
+        name: '',
         school: '',
+        comitte: '',
         grade: '',
         group: '',
+        age: '',
+        phone: '',
+        email: result.user.email,
       })
 
       const emailConfig = { url: 'https://localhost:3000/profile' }
@@ -94,14 +93,17 @@ export const createAccountWithEmail = (email, password, name) => {
     })
 }
 
-const createUserProfile = ({ userId, name, age, school, grade, group }) => {
+const createUserProfile = (obj) => {
   return db.collection('usersProfiles').add({
-    userId: userId,
-    name: name,
-    age: age,
-    school: school,
-    grade: grade,
-    group: group,
+    userId: obj.userId,
+    name: obj.name,
+    school: obj.school,
+    comitte: obj.comitte,
+    grade: obj.grade,
+    group: obj.group,
+    age: obj.age,
+    phone: obj.phone,
+    email: obj.email,
     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
   })
 }

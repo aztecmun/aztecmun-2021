@@ -6,23 +6,23 @@ export const ProfileWrapper = styled.div`
 
   padding: 5rem 2rem;
 
-  background: ${props => props.theme.body_bg2};
+  background: ${(props) => props.theme.body_bg2};
   overflow: hidden;
 
-  @media (min-width: 320px) and (max-width: 768px){
+  @media (min-width: 320px) and (max-width: 768px) {
     padding: 5rem 0rem;
   }
 `
 
 export const ProfileContainer = styled.div`
-  color: ${props => props.theme.text};
+  color: ${(props) => props.theme.text};
 
   display: flex;
 
   height: 100%;
   width: 100vw;
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
@@ -30,15 +30,15 @@ export const ProfileContainer = styled.div`
 export const ProfilePic = styled.div`
   flex: 2;
 
-  .pic{
-    color: ${props => props.theme.text};
+  .pic {
+    color: ${(props) => props.theme.text};
 
     width: 100%;
     height: 400px;
 
     margin-bottom: 20px;
 
-    background: ${props => props.theme.body_bg1};
+    background: ${(props) => props.theme.body_bg1};
     border-radius: 20px;
   }
 `
@@ -48,21 +48,21 @@ export const ProfileInfo = styled.div`
 
   padding: 2rem;
 
-  input{
-    color: ${props => props.theme.text};
+  input {
+    color: ${(props) => props.theme.text};
 
     width: 300px;
 
     background: transparent;
     border: 1px solid transparent;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
-    &:hover{
-      border: 1px solid ${props => props.theme.blue};
+    &:hover {
+      border: 1px solid ${(props) => props.theme.blue};
     }
   }
 
-  .top{
+  .top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -70,12 +70,12 @@ export const ProfileInfo = styled.div`
 
     margin-bottom: 20px;
 
-    .name{
+    .name {
       font-size: 2rem;
     }
 
-    .school{
-      color: ${props => props.theme.text};
+    .school {
+      color: ${(props) => props.theme.text};
       font-size: 1.2rem;
       align-self: flex-end;
 
@@ -85,55 +85,54 @@ export const ProfileInfo = styled.div`
       margin-left: 20px;
     }
 
-    .committee{
+    .committee {
       font-size: 1.2rem;
-      color: ${props => props.theme.blue};
+      color: ${(props) => props.theme.blue};
     }
   }
 
-  .about{
-
-    .icon{
+  .about {
+    .icon {
       font-size: 1.2rem;
 
       margin-bottom: 20px;
 
-      border-bottom: 3px solid ${props => props.theme.blue};
+      border-bottom: 3px solid ${(props) => props.theme.blue};
 
-      .edit{
+      .edit {
         margin-left: 50%;
 
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color .3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
 
-        &:hover{
-          background: ${props => props.theme.body_bg1};
+        &:hover {
+          background: ${(props) => props.theme.body_bg1};
         }
       }
     }
 
-    .contact{
+    .contact {
       display: grid;
       grid-template-columns: 50px 1fr;
       grid-template-rows: auto;
-      
-      .c1{
+
+      .c1 {
         grid-column: 1 / 2;
         justify-self: start;
 
         margin-bottom: 20px;
       }
 
-      .c2{
+      .c2 {
         grid-column: 2 / 3;
 
         margin-bottom: 20px;
       }
 
-      .dec{
+      .dec {
         text-decoration: underline;
-        color: ${props => props.theme.blue};
+        color: ${(props) => props.theme.blue};
       }
     }
   }

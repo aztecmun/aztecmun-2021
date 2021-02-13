@@ -26,7 +26,6 @@ export default function signup() {
   const [data, setData] = useState({
     email: '',
     password: '',
-    name: '',
   })
 
   useEffect(() => {
@@ -42,7 +41,7 @@ export default function signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    createAccountWithEmail(data.email, data.password, data.name)
+    createAccountWithEmail(data.email, data.password)
   }
 
   return (
@@ -63,20 +62,12 @@ export default function signup() {
             <Signup onSubmit={handleSubmit}>
               <h1>Crear Cuenta</h1> <br />
               <Input>
-                Nombre
-                <input
-                  name="name"
-                  type="text"
-                  onChange={handleInputChange}
-                  required
-                />
-              </Input>
-              <Input>
                 Correo Electrónico
                 <input
                   name="email"
                   type="email"
                   onChange={handleInputChange}
+                  autoComplete="off"
                   required
                 />
               </Input>
@@ -86,6 +77,7 @@ export default function signup() {
                   name="password"
                   type="password"
                   onChange={handleInputChange}
+                  autoComplete="off"
                   required
                 />
               </Input>
