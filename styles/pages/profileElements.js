@@ -19,7 +19,7 @@ export const ProfileContainer = styled.div`
 
   display: flex;
 
-  height: 100%;
+  min-height: 100vh;
   width: 100vw;
 
   @media (max-width: 768px) {
@@ -62,6 +62,21 @@ export const ProfileInfo = styled.div`
     }
   }
 
+  select{
+    font-size: 1.2rem;
+    color: ${props => props.theme.blue};
+
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      border: 1px solid ${props => props.theme.text};
+    }
+  }
+
   .top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -83,11 +98,6 @@ export const ProfileInfo = styled.div`
       gap: 2px;
 
       margin-left: 20px;
-    }
-
-    .committee {
-      font-size: 1.2rem;
-      color: ${(props) => props.theme.blue};
     }
   }
 
@@ -115,7 +125,7 @@ export const ProfileInfo = styled.div`
 
     .contact {
       display: grid;
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 70px 1fr;
       grid-template-rows: auto;
 
       .c1 {

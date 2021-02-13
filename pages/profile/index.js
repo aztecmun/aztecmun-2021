@@ -149,16 +149,12 @@ export default function index() {
                   autoComplete="off"
                   value={profileData.school}
                 />
-                <input
-                  name="committee"
-                  className="committee"
-                  type="text"
-                  placeholder="Comité de interés"
-                  onChange={handleInputChange}
-                  required
-                  autoComplete="off"
-                  value={profileData.committee}
-                />
+                <select className="comittee" name="comittees">
+                  <option value="ONU Mujeres">ONU Mujeres</option>
+                  <option value="Corte Internacional de Justicia">Corte Internacional de Justicia</option>
+                  <option value="Senado de la República">Senado de la República</option>
+                  <option value="Worl Tourism Organization">World Tourism Organization</option>
+                </select>
               </div>
               <div className="about">
                 <div className="icon">

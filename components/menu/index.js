@@ -16,7 +16,7 @@ export default function index({ children }) {
   const user = useUser()
 
   const [userOpen, setUserOpen] = useState(false)
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen(!isOpen)
 

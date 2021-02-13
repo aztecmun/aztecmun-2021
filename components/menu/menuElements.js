@@ -12,8 +12,12 @@ export const Nav = styled.nav`
   z-index: 10;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   height: 60px;
   width: 100vw;
@@ -112,7 +116,7 @@ export const MenuWrapper = styled.div`
 
       height: 30px;
       width: 30px;
-      
+
       .bars{
         position: absolute;
         top: 10;
@@ -131,6 +135,10 @@ export const MenuWrapper = styled.div`
           transform: rotate(-70deg)
         }
       }
+
+      @media(min-width: 500px){
+        display: none;
+      }
     }
 
     @media (max-width: 500px){
@@ -145,11 +153,11 @@ export const MenuWrapper = styled.div`
       width: 80%;
 
       background: ${props => props.theme.body_bg2};
-    }
 
-    &[data-isOpen="true"]{
-      transform: translateX(20%);
-  }
+      &[data-isOpen="true"]{
+        transform: translateX(20%);
+    }
+    }
 `
 
 export const User = styled.div`

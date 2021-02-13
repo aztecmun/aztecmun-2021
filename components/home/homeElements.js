@@ -85,15 +85,25 @@ export const Header = styled(frame)`
   margin-top: 60px;
 
   .header-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     height: 30%;
 
     @media (max-width: 768px){
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
 
     h1 {
@@ -205,6 +215,8 @@ export const Committees = styled(frame)`
     bottom: 0px;
     right: 0;
       
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     animation: 2s infinite scroll;
@@ -226,9 +238,14 @@ export const Committees = styled(frame)`
   .slides{
     position: relative;
 
-    display: flex;
-    justify-content: flex-start;
-    scroll-snap-type: x mandatory;
+    display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
     gap: 20px;
 
     margin-top: 100px;
@@ -237,10 +254,19 @@ export const Committees = styled(frame)`
     .card {
       position: relative;
 
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       scroll-snap-align: start;
 
       min-height: 450px;
@@ -290,6 +316,8 @@ export const Committees = styled(frame)`
       margin-top: 50px;
 
       .card{
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         gap: 15px;
 
@@ -313,15 +341,22 @@ export const Committees = styled(frame)`
     }
     
     @media (min-width: 1024px) {
-      flex-wrap: wrap;
-      justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
   }
 `
 
 export const Secretaries = styled(frame)`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   max-height: auto;
   min-height: auto;

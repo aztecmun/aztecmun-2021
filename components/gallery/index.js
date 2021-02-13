@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 
 //Local components import
-import { images } from '../images'
+import { images } from './images'
 
 //Styles
 import { GalWrapper } from './galleryElements'

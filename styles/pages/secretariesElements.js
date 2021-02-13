@@ -13,7 +13,6 @@ export const SecWrapper = styled.div`
 
   background: ${props => props.theme.body_bg1};
 
-
   .header{
     display: flex;
     flex-direction: column;
@@ -34,10 +33,6 @@ export const SecWrapper = styled.div`
       justify-self: flex-start;
       align-self: flex-start;
 
-      @media (min-width: 320px) and (max-width: 768px){
-        font-size: 3rem;
-      }
-
       .header-info{
         font-size: 1.5rem;
 
@@ -51,6 +46,7 @@ export const SecWrapper = styled.div`
 
   .main{
     font-size: 1.5rem;
+    text-align: justify;
 
     display: flex;
     flex-direction: column;
@@ -60,10 +56,6 @@ export const SecWrapper = styled.div`
 
     padding: 3rem;
 
-    .main-info{}
-
-    .memebers{}
-
     span{
         color: ${props => props.theme.blue};
 
@@ -71,5 +63,45 @@ export const SecWrapper = styled.div`
 
         margin-bottom: 20px;
       }
+  }
+
+  @media (min-width: 320px) and (max-width: 768px){
+    .header{
+      padding: 20px;
+
+      .header-title{
+        font-size: 2rem;
+      }
+
+      .header-info{
+        font-size: 1rem;
+      }
+    }
+
+    .main{
+      font-size: 1.3rem;
+
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 320px){
+    .header{
+      padding: 20px;
+
+      .header-title{
+        font-size: 1.5rem;
+      }
+
+      .header-info{
+        font-size: .8rem;
+      }
+    }
+
+    .main{
+      font-size: 1rem;
+
+      padding: 20px;
+    }
   }
 `

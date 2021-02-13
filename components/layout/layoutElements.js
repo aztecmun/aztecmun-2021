@@ -7,12 +7,18 @@ export const LayoutWrapper = styled.div`
 `
 
 export const Switch = styled(motion.div)`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
-  height: minmax(20px, 20px);
-  width: minmax(35px, 35px);
+  min-height: 20px;
+  min-width: 35px;
 
   padding: 4px;
 
@@ -29,6 +35,8 @@ export const Switch = styled(motion.div)`
   }
 
   &[data-isOn="true"]{
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
 `

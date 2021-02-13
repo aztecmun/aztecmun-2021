@@ -24,6 +24,7 @@
     "sweetalert2": "^10.14.0"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-standard": "^16.0.2",

@@ -68,15 +68,8 @@ export default function index() {
       <Committees>
         <h1 className="title">Comités</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          numquam accusamus provident est! Quam iste non voluptas recusandae
-          unde nisi repudiandae ullam perspiciatis error architecto. Quo
-          velit amet praesentium facilis! Distinctio sequi ratione corporis
-          excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
-          enim nam laborum doloremque molestias sapiente similique odit
-          omnis, debitis itaque, iure nemo. Labore doloribus saepe
-          assumenda!
-            </p>
+          La mesa directiva propone la formación de comités en diferentes áreas con el fin de fomentar la participación activa de los miembros de nuestra asociación y de trabajar de forma más eficaz sobre diferentes proyectos.
+        </p>
 
         <div className="slides">
           <div className="card" layout>
