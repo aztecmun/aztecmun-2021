@@ -12,7 +12,7 @@ import {
   LoginWrapper,
   Input,
   Close,
-} from './loginElements'
+} from 'styles/pages/loginElements'
 
 // Firebase users auth client and hook
 import { loginWithEmailAndPass } from 'firebase/client'

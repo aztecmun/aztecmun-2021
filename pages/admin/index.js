@@ -1,14 +1,8 @@
 import React from 'react'
 
-//Styles
-import { AdminWrapper } from './adminElements'
+// Styles
+import { AdminWrapper } from 'styles/pages/adminElements'
 
 export default function index() {
-  return (
-    <AdminWrapper>
-
-      
-
-    </AdminWrapper>
-  )
+  return <AdminWrapper></AdminWrapper>
 }

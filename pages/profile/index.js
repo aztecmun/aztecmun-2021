@@ -10,8 +10,8 @@ import {
   ProfileContainer,
   ProfilePic,
   ProfileInfo,
-} from './profileElements'
-import { Button } from 'pages/login/loginElements'
+} from 'styles/pages/profileElements'
+import { Button } from 'styles/pages/loginElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
 import { FaUserAlt as About } from 'react-icons/fa'
 import { BsPencil as Pencil } from 'react-icons/bs'
