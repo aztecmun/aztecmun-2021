@@ -47,6 +47,20 @@ export const frame = styled.div`
       font-size: 1.2rem;
     }
   }
+
+  @media (max-width: 320px){
+    margin: 100px auto;
+
+    .title{
+      font-size: 1.2rem;
+
+      top: -30px;
+    }
+
+    p{
+      font-size: 1rem;
+    }
+  }
 `
 
 export const HomeWrapper = styled.div`
@@ -77,59 +91,32 @@ export const Header = styled(frame)`
 
     height: 30%;
 
+    @media (max-width: 768px){
+      align-items: center;
+      justify-content: center;
+    }
+
     h1 {
-      color: ${props => props.theme.text};;
+      color: ${props => props.theme.text};
 
-      span {
-        display: flex;
-        gap: 10px;
+      @media (max-width: 320px){
+        font-size: 2rem;
+      }
 
-        @media (max-width: 320px){
-          div{
-            font-size: 2rem;
+      @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 2rem;
+      }
 
-            height: 30px;
-            width: 7px;
-          }
-        }
+      @media (min-width: 768px) and (max-width: 1024px){
+        font-size: 5rem;
+      }
 
-        @media (min-width: 320px) and (max-width: 767px) {
-          div {
-            font-size: 3rem;
+      @media (min-width: 1024px) and (max-width: 1367px) {
+        font-size: 6rem;
+      }
 
-            height: 40px;
-            width: 15px;
-          }
-        }
-
-        @media (min-width: 768px) and (max-width: 1023px){
-          div{
-            font-size: 5rem;
-
-            height: 100px;
-            width: 34px;
-          }
-        }
-
-        @media (min-width: 1024px) and (max-width: 1366px) {
-          div {
-            font-weight: 600;
-            font-size: 7rem;
-
-            height: 100px;
-            width: 50px;
-          }
-        }
-
-        @media (min-width: 1367px){
-          div{
-            font-weight: 600;
-            font-size: 10rem;
-
-            height: 140px;
-            width: 80px;
-          }
-        }
+      @media (min-width: 1367px){
+        font-size: 9rem;
       }
     }
   }
@@ -143,13 +130,14 @@ export const Header = styled(frame)`
     min-height: 70%;
     width: 100%;
 
+    border-radius: 15px;
     background: url('/comite.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  @media (min-width: 321px) and (max-width: 768px){
+  @media (min-width: 320px) and (max-width: 768px){
     max-height: 100vh;
   }
 `
@@ -172,6 +160,24 @@ export const About = styled(frame)`
     color: ${props => props.theme.blue};
 
     display: block;
+  }
+
+  @media (max-width: 320px){
+    grid-template-rows: auto;
+
+    .desc{
+      grid-column: 1 / 4;
+    }
+
+    .vision{
+      grid-column: 1 / 4;
+      grid-row: 2;
+    }
+
+    .mision{
+      grid-column: 1 / 4;
+      grid-row: 3;
+    }
   }
 
   @media (min-width: 320px) and (max-width: 768px){
@@ -228,11 +234,6 @@ export const Committees = styled(frame)`
     margin-top: 100px;
     overflow-x: scroll;
 
-    @media (min-width: 1024px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
     .card {
       position: relative;
 
@@ -266,6 +267,7 @@ export const Committees = styled(frame)`
         font-size: 1.2rem;
         letter-spacing: 1px;
         line-height: 22px;
+        text-align: justify;
 
         height: 70%;
 
@@ -283,6 +285,37 @@ export const Committees = styled(frame)`
         cursor: pointer;
       }
     }
+
+    @media (max-width: 320px){
+      margin-top: 50px;
+
+      .card{
+        justify-content: flex-start;
+        gap: 15px;
+
+        min-height: 350px;
+        max-height: 350px;
+        min-width: 200px;
+        max-width: 200px;
+
+        .card-title{
+          font-size: 1rem;
+          height: 10%;
+        }
+
+        .descrip{
+          font-size: .9rem;
+          letter-spacing: .5px;
+
+          margin-top: 0px;
+        }
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 `
 
@@ -290,14 +323,8 @@ export const Secretaries = styled(frame)`
   display: flex;
   align-items: center;
 
-  max-height: 60vh;
-  min-height: 60vh;
-  min-width: 100%;
-
-  .title{
-    left: 10%;
-  }
-
+  max-height: auto;
+  min-height: auto;
 
   ul{
     font-size: 3rem;
@@ -314,63 +341,11 @@ export const Secretaries = styled(frame)`
       }
     }
 
-    li:nth-of-type(1){
-      margin-left: 15px;
-    }
-    li:nth-of-type(2){
-      margin-left: 30px;
-    }
-    li:nth-of-type(3){
-      margin-left: 45px;
-    }
-    li:nth-of-type(4){
-      margin-left: 60px;
-    }
-    li:nth-of-type(5){
-      margin-left: 75px;
-    }
-    li:nth-of-type(6){
-      margin-left: 90px;
-    }
-    li:nth-of-type(7){
-      margin-left: 105px;
-    }
-    li:nth-of-type(8){
-      margin-left: 120px;
-    }
-
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (max-width: 768px){
       font-size: 1.5rem;
-      height: 100%;
-      min-width: 100%;
 
       li{
-        margin-bottom: 15px;
-      }
-
-      li:nth-of-type(1){
-        margin-left: 0px;
-      }
-      li:nth-of-type(2){
-        margin-left: 5px;
-      }
-      li:nth-of-type(3){
-        margin-left: 10px;
-      }
-      li:nth-of-type(4){
-        margin-left: 15px;
-      }
-      li:nth-of-type(5){
-        margin-left: 20px;
-      }
-      li:nth-of-type(6){
-        margin-left: 25px;
-      }
-      li:nth-of-type(7){
-        margin-left: 30px;
-      }
-      li:nth-of-type(8){
-        margin-left: 35px;
+        margin-bottom: 10px;
       }
     }
 

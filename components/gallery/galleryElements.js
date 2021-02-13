@@ -17,8 +17,6 @@ export const GalWrapper = styled(frame)`
   }
 
   .controls{
-    font-size: 2rem;
-
     position: absolute;
     top: 0;
 
@@ -27,20 +25,27 @@ export const GalWrapper = styled(frame)`
     justify-content: center;
 
     height: 100%;
-    width: 10%;
+    width: 5%;
 
     cursor: pointer;
 
     &:hover{
       background: ${props => props.theme.body_bg2};
     }
+
+    @media (max-width: 768px){
+      top: 80%;
+
+      height: 50px;
+      width: 20%;
+    }
   }
 
   .left{
-    left: 0;
+    left: 50px;
   }
 
   .right{
-    right: 0;
+    right: 50px;
   }
 `

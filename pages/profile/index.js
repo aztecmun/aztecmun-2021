@@ -14,7 +14,6 @@ import {
 import { Button } from 'styles/pages/loginElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
 import { FaUserAlt as About } from 'react-icons/fa'
-import { BsPencil as Pencil } from 'react-icons/bs'
 
 // Firebase and user auth
 import useUser, { USER_STATES } from 'hooks/useUser'
@@ -163,7 +162,7 @@ export default function index() {
               </div>
               <div className="about">
                 <div className="icon">
-                  <About /> Información <Pencil className="edit" />
+                  <About /> Información
                 </div>
 
                 <div className="contact">

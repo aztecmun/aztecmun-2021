@@ -22,21 +22,8 @@ export const Nav = styled.nav`
   padding: 0 40px;
 
   background: ${props => props.theme.body_bg1};
-  /* animation: fade-in 3s; */
 
-  @keyframes fade-in{
-    0%, 50%{
-      opacity: 0;
-      top: -200px;
-    }
-
-    100%{
-      opacity: 1;
-      top: 0;
-    }
-  }
-
-  a{
+  .title{
     font-size: 1.5rem;
 
     position: relative;
@@ -52,15 +39,40 @@ export const Nav = styled.nav`
     }
   }
 
-  @media (min-width: 320px) and (max-width: 768px){
-    padding: 0 5px;
+  .menu{
+    position: relative;
 
-    a{
-      font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+
+    width: 100%;
+    height: 100%;
+    
+    .hamburguer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      height: 60%;
+      width: 30px;
+
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      .bars{
+        height: 3px;
+        width: 100%;
+
+        background: ${props => props.theme.text};
+      }
     }
   }
 
-  .menu{
+  .menu-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,16 +97,60 @@ export const Nav = styled.nav`
       border: 1px solid ${props => props.theme.blue};
     }
 
-    @media (min-width: 320px) and (max-width: 768px){
-      gap: 15px;
+    @media (max-width: 500px){
+      position: absolute;
+      top: 0;
+      right: ${({ open }) => open ? '-1000px' : '-1000px'};
 
-      button{
-        font-size: .8rem;
+      display: flex;
+      flex-direction: column;
 
-        padding: 5px 12px;
-      }
+      height: 100vh;
+      width: 80%;
+
+      background: ${props => props.theme.body_bg2};
     }
   }
+`
+
+export const MenuWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button{
+      color: #EDEDED;
+
+      padding: 10px 25px;
+
+      border: 1px solid transparent;
+      background: ${props => props.theme.blue};
+      border-radius: 15px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .ghost{
+      color: ${props => props.theme.text};
+
+      background: transparent;
+      border: 1px solid ${props => props.theme.blue};
+    }
+
+    @media (max-width: 500px){
+      position: absolute;
+      top: 0;
+      right: ${({ open }) => open ? '-1000px' : '-1000px'};
+
+      display: flex;
+      flex-direction: column;
+
+      height: 100vh;
+      width: 80%;
+
+      background: ${props => props.theme.body_bg2};
+    }
 `
 
 export const User = styled.div`
@@ -106,8 +162,6 @@ export const User = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-
-  padding: 1rem 2rem;
 `
 
 export const UserIcon = styled(BiUserCircle)`
@@ -163,7 +217,7 @@ export const Option = styled.li`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: ${props => props.theme.body_bg1 };
+    background: ${props => props.theme.body_bg1};
   }
 `
 

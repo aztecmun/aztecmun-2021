@@ -9,8 +9,8 @@ export const ProfileWrapper = styled.div`
   background: ${(props) => props.theme.body_bg2};
   overflow: hidden;
 
-  @media (min-width: 320px) and (max-width: 768px) {
-    padding: 5rem 0rem;
+  @media (max-width: 768px) {
+    padding: 6rem 0rem;
   }
 `
 
@@ -135,5 +135,22 @@ export const ProfileInfo = styled.div`
         color: ${(props) => props.theme.blue};
       }
     }
+  }
+
+  @media (max-width: 768px){
+      padding: .5rem;
+
+      .top{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        margin-bottom: 40px;
+
+        .school{
+          align-self: flex-start;
+
+          margin-left: 0;
+        }
+      }
   }
 `
