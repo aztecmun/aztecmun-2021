@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-//Libraries imports 
+// Libraries imports
 import { motion } from 'framer-motion'
 
 // Local components imports
@@ -22,7 +22,6 @@ import {
 import { BsArrowRightShort as Arrow } from 'react-icons/bs'
 
 export default function index() {
-
   const l1 = useRef(null)
   const l2 = useRef(null)
   const l3 = useRef(null)
@@ -54,7 +53,6 @@ export default function index() {
   return (
     <ScrollContainer>
       <HomeWrapper>
-
         <Head>
           <title>Aztecmun 2021 | Inicio</title>
         </Head>
@@ -105,7 +103,7 @@ export default function index() {
               <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: .3 }}
+                transition={{ duration: 1, delay: 0.3 }}
               >
                 <ParallaxElement dataPercent="60">
                   <div ref={l11}> H </div>
@@ -155,23 +153,31 @@ export default function index() {
           <About ref={l23}>
             <h1 className="title">¿Quiénes somos?</h1>
 
-            <p className="desc">AZTECMUN es un modelo de Naciones Unidas, proyecto educativo de Plantel Azteca que busca fomentar y desarrollar habilidades académicas para ayudar al fortalecimiento profesional y personal de los participantes, siendo así el comienzo para lograr el bien común en la sociedad a través de la concientización de los  problemas nacionales e internacionales
-            AZTECMUN parte de un proyecto con 17 años de trayectoria, logrando, reinventándose e implementando el debate en idioma inglés.</p>
+            <p className="desc">
+              AZTECMUN es un modelo de Naciones Unidas, proyecto educativo de
+              Plantel Azteca que busca fomentar y desarrollar habilidades
+              académicas para ayudar al fortalecimiento profesional y personal
+              de los participantes, siendo así el comienzo para lograr el bien
+              común en la sociedad a través de la concientización de los
+              problemas nacionales e internacionales AZTECMUN parte de un
+              proyecto con 17 años de trayectoria, logrando, reinventándose e
+              implementando el debate en idioma inglés.
+            </p>
 
             <p className="mision">
               <span>Misión</span>
-                Promover la participación de los jóvenes al debate y desarrollar en
-                ellos el pensamiento crítico-analítico a través de un foro
-                constructivo, donde el diálogo abierto sea la principal herramienta
-                para solucionar conflictos planteados.
-              </p>
+              Promover la participación de los jóvenes al debate y desarrollar
+              en ellos el pensamiento crítico-analítico a través de un foro
+              constructivo, donde el diálogo abierto sea la principal
+              herramienta para solucionar conflictos planteados.
+            </p>
 
             <p className="vision">
               <span>Visión</span>
-                Catalogarse como un modelo de las Naciones Unidas con alto impacto
-                social, impulsando el idioma inglés y la formación de líderes
-                estudiantes dentro de México.
-              </p>
+              Catalogarse como un modelo de las Naciones Unidas con alto impacto
+              social, impulsando el idioma inglés y la formación de líderes
+              estudiantes dentro de México.
+            </p>
           </About>
         </ParallaxElement>
 
@@ -181,56 +187,84 @@ export default function index() {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               numquam accusamus provident est! Quam iste non voluptas recusandae
-              unde nisi repudiandae ullam perspiciatis error architecto. Quo velit
-              amet praesentium facilis! Distinctio sequi ratione corporis
+              unde nisi repudiandae ullam perspiciatis error architecto. Quo
+              velit amet praesentium facilis! Distinctio sequi ratione corporis
               excepturi aspernatur cum sint saepe quis, eligendi pariatur velit
-              enim nam laborum doloremque molestias sapiente similique odit omnis,
-              debitis itaque, iure nemo. Labore doloribus saepe assumenda!
+              enim nam laborum doloremque molestias sapiente similique odit
+              omnis, debitis itaque, iure nemo. Labore doloribus saepe
+              assumenda!
             </p>
 
             <div className="slides">
-              <div className="card" layout >
+              <div className="card" layout>
                 <div className="card-title">ONU MUJERES</div>
                 <div className="descrip">
-                  ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
-                    </div>
+                  ONU Mujeres fue establecida para acelerar el proceso de mejora
+                  de las condiciones de vida de mujeres y niñas, buscando
+                  resolver sus necesidades y aumentando su calidad de vida.
+                </div>
                 <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                  <div className="enroll">
+                    {' '}
+                    <a> PARTICIPA </a>{' '}
+                  </div>
                 </Link>
               </div>
 
               <div className="card">
-                <div className="card-title">CORTE INTERNACIONAL DE JUSTICIA</div>
+                <div className="card-title">
+                  CORTE INTERNACIONAL DE JUSTICIA
+                </div>
                 <div className="descrip">
-                  También conocido como Tribunal Internacional de Justicia, busca emitir opiniones consultivas relacionadas a órganos o instituciones espcializados de la ONU.
-                    </div>
+                  También conocido como Tribunal Internacional de Justicia,
+                  busca emitir opiniones consultivas relacionadas a órganos o
+                  instituciones espcializados de la ONU.
+                </div>
                 <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                  <div className="enroll">
+                    {' '}
+                    <a> PARTICIPA </a>{' '}
+                  </div>
                 </Link>
               </div>
 
               <div className="card">
                 <div className="card-title">SENADO DE LA REPÚBLICA</div>
                 <div className="descrip">
-                  El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia. La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa.
+                  El Senado de la República es una institución fundamental que
+                  coordina el ejercicio de la democracia. La Cámara de Senadores
+                  nos garantiza que dicha representatividad vele por los
+                  intereses de cada entidad federativa.
                 </div>
                 <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                  <div className="enroll">
+                    {' '}
+                    <a> PARTICIPA </a>{' '}
+                  </div>
                 </Link>
               </div>
 
               <div className="card">
                 <div className="card-title">World Tourism Organization </div>
                 <div className="descrip">
-                  Is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, with 159 Member States, 6 Associate Members, 2 Observers and more than 500 Affiliated Members.
+                  Is the United Nations agency responsible for promoting
+                  responsible, sustainable and accessible tourism for all
+                  created in 1975, with 159 Member States, 6 Associate Members,
+                  2 Observers and more than 500 Affiliated Members.
                 </div>
                 <Link href="/signup">
-                  <div className="enroll"> <a> PARTICIPA </a> </div>
+                  <div className="enroll">
+                    {' '}
+                    <a> PARTICIPA </a>{' '}
+                  </div>
                 </Link>
               </div>
             </div>
 
-            <div className="scroll"> <Arrow /> Desliza </div>
+            <div className="scroll">
+              {' '}
+              <Arrow /> Desliza{' '}
+            </div>
           </Committees>
         </ParallaxElement>
 
@@ -240,35 +274,65 @@ export default function index() {
 
             <ParallaxElement dataPx="130" dataDirection="x">
               <ul ref={l26}>
-                <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
-                <Link href="secretaries/general"><li>Secretaría General</li></Link>
-                <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
-                <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
-                <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
-                <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
-                <Link href="secretaries/desarrollo"><li>Secretaría de Logística</li></Link>
-                <Link href="secretaries/desarrollo"><li>Secretaría de Desarrollo Sostenible</li></Link>
+                <Link href="secretaries/digital">
+                  <li>Secretaría Digital</li>
+                </Link>
+                <Link href="secretaries/general">
+                  <li>Secretaría General</li>
+                </Link>
+                <Link href="secretaries/ingles">
+                  <li>Secretaría de Ingles</li>
+                </Link>
+                <Link href="secretaries/finanzas">
+                  <li>Secretaría de Finanzas</li>
+                </Link>
+                <Link href="secretaries/academica">
+                  <li>Secretaría Académica</li>
+                </Link>
+                <Link href="secretaries/protocolo">
+                  <li>Secretaría de Protocolo</li>
+                </Link>
+                <Link href="secretaries/desarrollo">
+                  <li>Secretaría de Logística</li>
+                </Link>
+                <Link href="secretaries/desarrollo">
+                  <li>Secretaría de Desarrollo Sostenible</li>
+                </Link>
               </ul>
             </ParallaxElement>
 
             <ParallaxElement dataPx="130" dataDirection="x">
               <ul ref={l27}>
-                <Link href="secretaries/digital"><li>Secretaría Digital</li></Link>
-                <Link href="secretaries/general"><li>Secretaría General</li></Link>
-                <Link href="secretaries/ingles"><li>Secretaría de Ingles</li></Link>
-                <Link href="secretaries/finanzas"><li>Secretaría de Finanzas</li></Link>
-                <Link href="secretaries/academica"><li>Secretaría Académica</li></Link>
-                <Link href="secretaries/protocolo"><li>Secretaría de Protocolo</li></Link>
-                <Link href="secretaries/desarrollo"><li>Secretaría de Logística</li></Link>
-                <Link href="secretaries/desarrollo"><li>Secretaría de Desarrollo Sostenible</li></Link>
+                <Link href="secretaries/digital">
+                  <li>Secretaría Digital</li>
+                </Link>
+                <Link href="secretaries/general">
+                  <li>Secretaría General</li>
+                </Link>
+                <Link href="secretaries/ingles">
+                  <li>Secretaría de Ingles</li>
+                </Link>
+                <Link href="secretaries/finanzas">
+                  <li>Secretaría de Finanzas</li>
+                </Link>
+                <Link href="secretaries/academica">
+                  <li>Secretaría Académica</li>
+                </Link>
+                <Link href="secretaries/protocolo">
+                  <li>Secretaría de Protocolo</li>
+                </Link>
+                <Link href="secretaries/desarrollo">
+                  <li>Secretaría de Logística</li>
+                </Link>
+                <Link href="secretaries/desarrollo">
+                  <li>Secretaría de Desarrollo Sostenible</li>
+                </Link>
               </ul>
             </ParallaxElement>
-
           </Secretaries>
         </ParallaxElement>
 
         <Gallery />
-
       </HomeWrapper>
     </ScrollContainer>
   )
