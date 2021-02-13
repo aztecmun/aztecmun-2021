@@ -1,21 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "aztecmun-2021",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "author": "Armando Alamilla Cuéllar",
-  "license": "ISC",
-  "dependencies": {
-    "next": "^10.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-=======
   "name": "aztecmun",
   "version": "0.1.0",
   "private": true,
@@ -53,6 +36,5 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
->>>>>>> Development
   }
 }
