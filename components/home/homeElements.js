@@ -266,7 +266,7 @@ export const HomeCommittees = styled(Frame)`
   min-width: 100%;
 
   background: ${props => props.theme.c_orange};
-  background-image: url('./committees_bg.png');
+  background-image: url('./committees_bg.svg');
   background-position: center;
   background-size: cover;
 
@@ -378,6 +378,8 @@ export const HomeCommittees = styled(Frame)`
 `
 
 export const HomeSecretaries = styled(Frame)`
+  min-height: auto;
+
   .title{
     text-align: center;
 
@@ -389,7 +391,7 @@ export const HomeSecretaries = styled(Frame)`
     grid-template-columns: 40% 60%;
     grid-template-rows: 10% 60%;
 
-    height: 70vh;
+    height: 50vh;
     width: 100%;
 
     .photo{
@@ -419,22 +421,19 @@ export const HomeSecretaries = styled(Frame)`
     ._5{ color: ${props => props.theme.c_greenAqua}; }
   }
 
-  .rec.rec-arrow { border-radius: 0; }
-
-  .rec.rec-arrow:hover { border-radius: 50%; }
-
-  .rec.rec-arrow:disabled { visibility: hidden; }
-
   .rec-carousel-item:focus { outline: none; }
+
+  .rec.rec-arrow{ display: none; }
 
   @media (max-width: 768px){
     .secretarie{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 10% 90%;
 
-    height: 70vh;
-    width: 100%;
+      height: 70vh;
+      width: 100%;
+      overflow-y: scroll;
 
     .photo{
       grid-column: 0;
@@ -452,8 +451,19 @@ export const HomeSecretaries = styled(Frame)`
       grid-column: 1;
       grid-row: 2;
     }
+  } 
   }
+`
 
-    .rec.rec-arrow{ display: none; }
+export const HomeGallery = styled(Frame)`
+  min-height: 70vh;
+  max-height: 70vh;
+
+  h1{ text-align: center; color: ${props => props.theme.c_blue} }
+
+  img{
+    display: block;
+    max-height: 90%;
+    max-width: 90%;
   }
 `

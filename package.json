@@ -20,6 +20,7 @@
     "react-elastic-carousel": "^0.11.1",
     "react-icons": "^4.1.0",
     "react-is": "^17.0.1",
+    "react-responsive-carousel": "^3.2.12",
     "react-scroll": "^1.8.1",
     "react-theme-switch": "^0.1.7",
     "react-three-fiber": "^5.3.18",

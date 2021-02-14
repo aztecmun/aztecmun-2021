@@ -5,12 +5,14 @@ import Link from 'next/link'
 
 //Libraries imports
 import Carousel from 'react-elastic-carousel'
+import { Carousel as Carousel2 } from 'react-responsive-carousel';
 
 //Local styles imports
 import Menu from '../menu'
 
 //Styles
-import { HomeWrapper, HomeHeader, HomeAbout, HomeCommittees, HomeSecretaries } from './homeElements'
+import { HomeWrapper, HomeHeader, HomeAbout, HomeCommittees, HomeSecretaries, HomeGallery } from './homeElements'
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export default function index() {
   return (
@@ -177,6 +179,47 @@ export default function index() {
           </div>
         </Carousel>
       </HomeSecretaries>
+
+      <HomeGallery id="gallery">
+        <div className="title"> <h1> Galería </h1> </div>
+        <Carousel2>
+          <div>
+            <img src="/s1.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s2.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s3.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s4.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s5.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s6.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s7.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s8.jpg" className="yours-custom-class" />
+          </div>
+
+          <div>
+            <img src="/s9.jpg" className="yours-custom-class" />
+          </div>
+        </Carousel2>
+      </HomeGallery>
 
     </HomeWrapper>
   )

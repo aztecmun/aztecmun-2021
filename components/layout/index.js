@@ -22,21 +22,21 @@ export default function index({ children }) {
     <ThemeProvider theme={colors}>
       <LayoutWrapper>
         {children}
-        
+
         <SidebarWrapper>
           <ul>
             <LinkSmooth smooth={true} to="about">
-              <li className="_1"> <AiOutlineQuestion /> </li>
+              <li className="_1"> <AiOutlineQuestion /> <p className="text">Quiénes Somos</p> </li>
             </LinkSmooth>
             <LinkSmooth smooth={true} to="committees">
-              <li className="_2"> <IoPeopleOutline /> </li>
+              <li className="_2"> <IoPeopleOutline /> <p className="text">Comités</p> </li>
             </LinkSmooth>
-            <li className="_3"> <TiKeyOutline /> </li>
+            <li className="_3"> <TiKeyOutline /> <p className="text">Inicia Sesión</p> </li>
             <LinkSmooth smooth={true} to="secretaries">
-              <li className="_4"> <GiPublicSpeaker /> </li>
+              <li className="_4"> <GiPublicSpeaker /> <p className="text">Secretarías</p> </li>
             </LinkSmooth>
             <LinkSmooth smooth={true} to="gallery">
-              <li className="_5"> <TiCameraOutline /> </li>
+              <li className="_5"> <TiCameraOutline /> <p className="text">Galería</p> </li>
             </LinkSmooth>
           </ul>
         </SidebarWrapper>

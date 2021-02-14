@@ -13,7 +13,7 @@ export const SidebarWrapper = styled.nav`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -43,7 +43,34 @@ export const SidebarWrapper = styled.nav`
       width: 50px;
       
       border-radius: 15px;
-      transform: translateX(20px)
+      transform: translateX(20px);
+      cursor: pointer;
+
+      &:hover .text{ opacity: 1; }
+
+      .text{
+        font-size: 1rem;
+        color: ${props => props.theme.c_white};
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 15%;
+
+        height: 30px;
+        width: 150px;
+
+        padding: 0 1rem;
+
+        opacity: 0;
+
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        transform: translateX(-80%);
+        transition: ${props => props.theme.trans};
+      }
     }
 
     ._1{ background: ${props => props.theme.c_greenAqua}; }
@@ -73,11 +100,15 @@ export const SidebarWrapper = styled.nav`
       width: 100%;
       
       li{
+        position: relative;
+
         display: flex;
         align-items: center;
         justify-content: center;
         
         transform: translateX(0);
+
+        .text{ display: none; }
       }
     }
   }
