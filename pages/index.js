@@ -65,7 +65,6 @@ export default function index() {
       </Sidebar>
 
       <HomeHeader>
-        <Menu />
         <div className="title">
           <h1>BIENVENIDOS A</h1>
           <img src="/logo.png" alt="logo_aztecmun" />

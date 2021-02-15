@@ -3,10 +3,18 @@ import styled from 'styled-components'
 export const AdminWrapper = styled.div`
   display: grid;
 
-  min-height: 100vh;
-  width: 100%;
+  max-height: 100vh;
+  min-width: 100%;
 
-  padding: 120px 60px;
+  padding: 3rem;
+
+  h1{ margin-bottom: 20px; }
+
+  .table{
+    max-height: 80vh;
+
+    overflow-y: scroll;
+  }
 
   table {
   display: grid;
@@ -21,8 +29,6 @@ export const AdminWrapper = styled.div`
     minmax(150px, 2fr);
     grid-template-rows: auto;
   border-collapse: collapse;
-  
-  min-width: 100%;
 }
 
 thead,
@@ -62,7 +68,7 @@ th:last-child {
 }
 
 td {
-  color: #808080;
+  color: #000000;
 
   padding-top: 10px;
   padding-bottom: 10px;

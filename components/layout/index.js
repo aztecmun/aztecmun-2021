@@ -12,7 +12,6 @@ export default function index({ children }) {
     <ThemeProvider theme={colors}>
       <LayoutWrapper>
         {children}
-
       </LayoutWrapper>
     </ThemeProvider>
   )

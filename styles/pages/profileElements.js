@@ -1,14 +1,19 @@
 import styled from 'styled-components'
+import { AiOutlineClose } from 'react-icons/ai'
 
 export const ProfileWrapper = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  height: 100%;
+  height: 100vh;
   width: 100%;
 
   padding: 5rem 2rem;
 
   overflow: hidden;
+  background: url('./profiles_bg.svg');
+  background-size: contain;
 
   @media (max-width: 768px) {
     padding: 6rem 0rem;
@@ -16,9 +21,19 @@ export const ProfileWrapper = styled.div`
 `
 
 export const ProfileContainer = styled.div`
+  position: relative;
+
   display: flex;
 
-  width: 100vw;
+  height: 80vh;
+  width: 90vw;
+
+  margin: auto;
+
+  border-radius: 20px;
+  background: rgba(224, 224, 224, 0.8);
+  backdrop-filter: blur(5px);
+  overflow-y: scroll;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -143,4 +158,19 @@ export const ProfileInfo = styled.div`
         }
       }
   }
+`
+
+export const Close = styled(AiOutlineClose)`
+  color: ${props => props.theme.c_greenAqua};
+
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 10;
+
+  height: 50px;
+  width: 50px;
+
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 `

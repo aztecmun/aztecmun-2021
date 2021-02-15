@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Swal from 'sweetalert2'
+import Link from 'next/link'
 
 // Styles
 import {
@@ -10,6 +11,7 @@ import {
   ProfileContainer,
   ProfilePic,
   ProfileInfo,
+  Close
 } from 'styles/pages/profileElements'
 import { Button } from 'styles/pages/loginElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
@@ -122,6 +124,11 @@ export default function index() {
 
       {user && (
         <ProfileContainer>
+
+          <Link href="/">
+            <Close />
+          </Link>
+
           <ProfilePic>
             <User className="pic" />
           </ProfilePic>
