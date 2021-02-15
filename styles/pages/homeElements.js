@@ -204,7 +204,16 @@ export const HomeAbout = styled(Frame)`
     }
 
     .sec2{
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0%;
+
+      background: red;
+
+      img{
+        height: 50px;
+        width: 50px;
+      }
     }
 
     .sec3{
@@ -456,14 +465,14 @@ export const HomeSecretaries = styled(Frame)`
 `
 
 export const HomeGallery = styled(Frame)`
-  min-height: 70vh;
-  max-height: 70vh;
+  min-height: 60vh;
+  max-height: 60vh;
 
   h1{ text-align: center; color: ${props => props.theme.c_blue} }
 
   img{
     display: block;
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 100%;
+    max-width: 100%;
   }
 `
