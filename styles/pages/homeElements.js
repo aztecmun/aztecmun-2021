@@ -205,16 +205,7 @@ export const HomeAbout = styled(Frame)`
     }
 
     .sec2 {
-      position: absolute;
-      top: 0;
-      left: 0%;
-
-      background: red;
-
-      img {
-        height: 50px;
-        width: 50px;
-      }
+      display: none;
     }
 
     .sec3 {
