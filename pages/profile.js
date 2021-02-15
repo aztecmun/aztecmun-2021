@@ -138,7 +138,7 @@ export default function index() {
                   name="name"
                   className="name"
                   type="text"
-                  placeholder="Nombre completo"
+                  placeholder="Ingresa tu nombre"
                   onChange={handleInputChange}
                   required
                   autoComplete="off"
@@ -245,7 +245,7 @@ export default function index() {
                     name="group"
                     className="c2"
                     type="text"
-                    placeholder="623"
+                    placeholder="Ingresa tu grupo"
                     onChange={handleInputChange}
                     required
                     autoComplete="off"
@@ -257,7 +257,7 @@ export default function index() {
                     name="age"
                     className="c2"
                     type="number"
-                    placeholder="18"
+                    placeholder="Ingresa tu edad"
                     onChange={handleInputChange}
                     required
                     autoComplete="off"
@@ -269,7 +269,7 @@ export default function index() {
                     name="phone"
                     className="c2"
                     type="number"
-                    placeholder="+52 56 1185 1828"
+                    placeholder="Ingresa tu teléfono"
                     onChange={handleInputChange}
                     required
                     autoComplete="off"
@@ -281,7 +281,7 @@ export default function index() {
                     name="email"
                     className="c2"
                     type="email"
-                    placeholder="mail@example.com"
+                    placeholder="Ingresa tu email"
                     onChange={handleInputChange}
                     required
                     autoComplete="off"
