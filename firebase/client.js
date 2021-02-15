@@ -134,3 +134,20 @@ export const updateUserProfile = (obj) => {
     email: obj.email,
   })
 }
+
+const mapProfilesFormFirebaseToObject = (doc) => {
+  const data = doc.data()
+  const profileId = doc.id
+
+  return { profileId, ...data }
+}
+
+export const queryAllProfiles = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .orderBy('createdAt', 'desc')
+    .onSnapshot(({ docs }) => {
+      const newProfile = docs.map(mapProfilesFormFirebaseToObject)
+      callback(newProfile)
+    })
+}
