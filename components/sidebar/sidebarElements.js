@@ -101,6 +101,4 @@ export const Sidebar = styled.nav`
       }
     }
   }
-
-  @media
 `
