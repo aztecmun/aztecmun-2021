@@ -181,6 +181,9 @@ export default function index() {
                   <option value="Worl Tourism Organization">
                     World Tourism Organization
                   </option>
+                  <option value="United Nations Children's Fund">
+                    United Natios Children's Fund
+                  </option>
 
                   {profileData.committee !== '' && (
                     <option

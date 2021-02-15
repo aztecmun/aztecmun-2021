@@ -13,7 +13,7 @@ import useUser, { USER_STATES } from 'hooks/useUser'
 import { signOut } from 'firebase/client'
 
 // Styles
-import { Sidebar } from 'components/menu/menuElements'
+import { Sidebar } from 'styles/pages/menuElements'
 import {
   HomeWrapper,
   HomeHeader,
@@ -176,6 +176,24 @@ export default function index() {
               <div className="button">PARTICIPA</div>
             </Link>
           </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src="/img/unicef.png" alt="unwto" />
+            </div>
+            <div className="desc">
+              <h1>United Nations Children's Fund</h1>
+              <p>
+                UNICEF is the driving force contributing to the creation of a world where
+                the rights of each and every child are respected. Therefore, we are a world organization like
+                no other working with young people.
+              </p>
+            </div>
+            <Link href="signup">
+              <div className="button">PARTICIPA</div>
+            </Link>
+          </div>
+
 
           <div className="card">
             <div className="logo">
@@ -369,6 +387,21 @@ export default function index() {
                 para el modelo, a través delcontacto con patrocinadores, quienes
                 tienen el interés de aportar al modelo, además de llevar un
                 seguimiento del presupuesto conseguido con cada aportación.
+              </p>
+            </div>
+          </div>
+
+
+          <div className="secretarie">
+            <div className="title">
+              <h1 className="_2">Secretaría Digital</h1>
+            </div>
+            <div className="photo">
+              <img src="/svg/secretaria digital.svg" alt="" />
+            </div>
+            <div className="desc">
+              <p>
+                La secretaria general es la encargada de diseñar, programar y desarrollar la pagina web, teniendo en cuenta los parametros necesarios para una excelente experiencia de usuario. Además, participa el manejo de las redes sociales.
               </p>
             </div>
           </div>
