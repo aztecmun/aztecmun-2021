@@ -48,27 +48,23 @@ export default function index() {
           </LinkSmooth>
           <LinkSmooth smooth={true} to="committees">
             <li className="_2">
-              {' '}
-              <IoPeopleOutline /> <p className="text">Comités</p>{' '}
+              <IoPeopleOutline /> <p className="text">Comités</p>
             </li>
           </LinkSmooth>
           <LinkSmooth smooth={true} to="secretaries">
             <li className="_3">
-              {' '}
-              <GiPublicSpeaker /> <p className="text">Secretarías</p>{' '}
+              <GiPublicSpeaker /> <p className="text">Secretarías</p>
             </li>
           </LinkSmooth>
           <LinkSmooth smooth={true} to="gallery">
             <li className="_4">
-              {' '}
-              <TiCameraOutline /> <p className="text">Galería</p>{' '}
+              <TiCameraOutline /> <p className="text">Galería</p>
             </li>
           </LinkSmooth>
           {user === USER_STATES.NOT_LOGGED && (
             <Link href="/signup">
               <li className="_5">
-                {' '}
-                <TiKeyOutline /> <p className="text">Crear Cuenta</p>{' '}
+                <TiKeyOutline /> <p className="text">Crear Cuenta</p>
               </li>
             </Link>
           )}
@@ -76,13 +72,11 @@ export default function index() {
             <>
               <Link href="/profile">
                 <li className="_5">
-                  {' '}
-                  <HiUserCircle /> <p className="text">Perfil</p>{' '}
+                  <HiUserCircle /> <p className="text">Perfil</p>
                 </li>
               </Link>
               <li className="_6" onClick={signOut}>
-                {' '}
-                <FiLogOut /> <p className="text"> Cerrar Sesión </p>{' '}
+                <FiLogOut /> <p className="text"> Cerrar Sesión </p>
               </li>
             </>
           )}
@@ -92,11 +86,11 @@ export default function index() {
       <HomeHeader>
         <div className="title">
           <h1>BIENVENIDOS A</h1>
-          <img src="./img/logo.png" alt="logo_aztecmun" />
+          <img src="/img/logo.png" alt="logo_aztecmun" />
         </div>
       </HomeHeader>
 
-      <img src="./img/div.png" alt="aztecmun 2021" className="div" />
+      <img src="/img/div.png" alt="aztecmun 2021" className="div" />
 
       <HomeAbout>
         <div className="sec1" id="about">
@@ -131,7 +125,7 @@ export default function index() {
         </div>
 
         <div className="sec2">
-          <img src="./svg/about.svg" alt="logo_aztecmun" />
+          <img src="/svg/about.svg" alt="logo_aztecmun" />
         </div>
 
         <div className="sec3">
@@ -157,19 +151,17 @@ export default function index() {
         <div className="title">
           <h1>Comités</h1>
           <p>
-            {' '}
             Un comité es un grupo de estudiantes que investigan y debaten acerca
             de una problemática específica, simulan ser una organización miembro
             de las naciones unidas, exponiendo soluciones a problemáticas
-            mundiales.{' '}
+            mundiales.
           </p>
         </div>
 
         <div className="committees">
           <div className="card">
             <div className="logo">
-              {' '}
-              <img src="./img/unwto.png" alt="unwto" />
+              <img src="/img/unwto.png" alt="unwto" />
             </div>
             <div className="desc">
               <h1>Worl Tourism Organiation</h1>
@@ -187,8 +179,7 @@ export default function index() {
 
           <div className="card">
             <div className="logo">
-              {' '}
-              <img src="./img/onu.png" alt="onu mujeress" />{' '}
+              <img src="/img/onu.png" alt="onu mujeress" />
             </div>
             <div className="desc">
               <h1>ONU Mujeres</h1>
@@ -205,8 +196,7 @@ export default function index() {
 
           <div className="card">
             <div className="logo">
-              {' '}
-              <img src="./img/senado.png" alt="senado de la republica" />{' '}
+              <img src="/img/senado.png" alt="senado de la republica" />
             </div>
             <div className="desc">
               <h1>Senado de la República</h1>
@@ -223,11 +213,10 @@ export default function index() {
 
           <div className="card">
             <div className="logo">
-              {' '}
               <img
-                src="./img/comite.png"
+                src="/img/comite.png"
                 alt="comité internacional de justicia"
-              />{' '}
+              />
             </div>
             <div className="desc">
               <h1>Corte Nacional de Justicia</h1>
@@ -247,19 +236,16 @@ export default function index() {
 
       <HomeSecretaries id="secretaries">
         <div className="title">
-          {' '}
-          <h1>Secretarías</h1>{' '}
+          <h1>Secretarías</h1>
         </div>
 
         <Carousel itemsToShow={1}>
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_1">Secretaría Académica</h1>{' '}
+              <h1 className="_1">Secretaría Académica</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria academica.svg" alt="" />{' '}
+              <img src="/svg/secretaria academica.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -280,12 +266,10 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_2">Secretaría de Desarrollo</h1>{' '}
+              <h1 className="_2">Secretaría de Desarrollo</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria desarrollo.svg" alt="" />{' '}
+              <img src="/svg/secretaria desarrollo.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -308,12 +292,10 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_3">Secretaría de Protocolo</h1>{' '}
+              <h1 className="_3">Secretaría de Protocolo</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria protocolo.svg" alt="" />{' '}
+              <img src="/svg/secretaria protocolo.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -327,12 +309,10 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_4">Secretaría de Inglés</h1>{' '}
+              <h1 className="_4">Secretaría de Inglés</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria ingles.svg" alt="" />{' '}
+              <img src="/svg/secretaria ingles.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -356,12 +336,10 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_5">Secretaría Logística</h1>{' '}
+              <h1 className="_5">Secretaría Logística</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria academica.svg" alt="" />{' '}
+              <img src="/svg/secretaria academica.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -379,12 +357,10 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title">
-              {' '}
-              <h1 className="_1">Secretaría Finanzas</h1>{' '}
+              <h1 className="_1">Secretaría Finanzas</h1>
             </div>
             <div className="photo">
-              {' '}
-              <img src="./svg/secretaria finanzas.svg" alt="" />{' '}
+              <img src="/svg/secretaria finanzas.svg" alt="" />
             </div>
             <div className="desc">
               <p>
@@ -392,7 +368,7 @@ export default function index() {
                 estrategias para conseguir los recursos económicos necesarios
                 para el modelo, a través delcontacto con patrocinadores, quienes
                 tienen el interés de aportar al modelo, además de llevar un
-                seguimiento del presupuesto conseguido con cada aportación.{' '}
+                seguimiento del presupuesto conseguido con cada aportación.
               </p>
             </div>
           </div>
@@ -401,44 +377,43 @@ export default function index() {
 
       <HomeGallery id="gallery">
         <div className="title">
-          {' '}
-          <h1> Galería </h1>{' '}
+          <h1> Galería </h1>
         </div>
         <Carousel2>
           <div>
-            <img src="./img/s1.jpg" className="yours-custom-class" />
+            <img src="/img/s1.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s2.jpg" className="yours-custom-class" />
+            <img src="/img/s2.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s3.jpg" className="yours-custom-class" />
+            <img src="/img/s3.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s4.jpg" className="yours-custom-class" />
+            <img src="/img/s4.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s5.jpg" className="yours-custom-class" />
+            <img src="/img/s5.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s6.jpg" className="yours-custom-class" />
+            <img src="/img/s6.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s7.jpg" className="yours-custom-class" />
+            <img src="/img/s7.JPG" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s8.jpg" className="yours-custom-class" />
+            <img src="/img/s8.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="./img/s9.jpg" className="yours-custom-class" />
+            <img src="/img/s9.JPG" className="yours-custom-class" />
           </div>
         </Carousel2>
       </HomeGallery>

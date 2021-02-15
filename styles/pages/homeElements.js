@@ -8,16 +8,16 @@ export const Frame = styled.div`
 
   margin: 5vh auto 0 auto;
 
-  h1{
+  h1 {
     font-size: 3rem;
 
     margin-bottom: 20px;
   }
 
-  p{
+  p {
     font-size: 1.3rem;
     line-height: 30px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 
     margin-bottom: 30px;
   }
@@ -29,7 +29,7 @@ export const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  .div{
+  .div {
     max-height: 50px;
     width: 100%;
   }
@@ -40,8 +40,8 @@ export const HomeHeader = styled(Frame)`
   align-items: center;
   justify-content: center;
 
-  .title{
-    color: ${props => props.theme.c_blue};
+  .title {
+    color: ${(props) => props.theme.c_blue};
 
     position: relative;
 
@@ -52,61 +52,57 @@ export const HomeHeader = styled(Frame)`
 
     max-width: 80%;
 
-    img{
+    img {
       width: 100%;
     }
 
-    h1{
+    h1 {
       position: absolute;
       top: 15%;
       right: 0;
     }
   }
 
-  @media (max-width: 320px){
-
+  @media (max-width: 320px) {
     min-height: 20vh;
 
-    .title{
+    .title {
       max-width: 90%;
 
-      h1{
+      h1 {
         font-size: 1rem;
         top: -5%;
       }
     }
   }
 
-  @media (min-width: 320px) and (max-width: 768px){
+  @media (min-width: 320px) and (max-width: 768px) {
     min-height: 30vh;
 
-    .title{
-      
-      h1{
+    .title {
+      h1 {
         font-size: 1rem;
         top: 5%;
       }
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1023px){
+  @media (min-width: 768px) and (max-width: 1023px) {
     height: 80vh;
 
-    .title{
-      
-      h1{
+    .title {
+      h1 {
         font-size: 1.8rem;
         top: 0;
       }
     }
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     height: 90vh;
 
-    .title{
-      
-      h1{
+    .title {
+      h1 {
         font-size: 1.8rem;
         top: 0;
       }
@@ -122,76 +118,81 @@ export const HomeAbout = styled(Frame)`
 
   min-height: auto;
 
-  .sec1{
+  .sec1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
-    h1{ color: ${props => props.theme.c_red}; }
+    h1 {
+      color: ${(props) => props.theme.c_red};
+    }
 
-    .button{
-      color: ${props => props.theme.c_white};
+    .button {
+      color: ${(props) => props.theme.c_white};
       font-size: 1.2rem;
 
       display: inline-block;
-    
-      margin-right: 20px;
-      padding: .5rem 1.5rem;
 
-      border: 3px solid ${props => props.theme.c_greenAqua};
-      background: ${props => props.theme.c_greenAqua};
+      margin-right: 20px;
+      padding: 0.5rem 1.5rem;
+
+      border: 3px solid ${(props) => props.theme.c_greenAqua};
+      background: ${(props) => props.theme.c_greenAqua};
       border-radius: 10px;
-      transition: ${props => props.theme.trans};
+      transition: ${(props) => props.theme.trans};
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         transform: scale(1.05);
       }
     }
 
-    .ghost{
-      color: ${props => props.theme.c_greenAqua};
+    .ghost {
+      color: ${(props) => props.theme.c_greenAqua};
 
-      border: 3px solid ${props => props.theme.c_greenAqua};
+      border: 3px solid ${(props) => props.theme.c_greenAqua};
       background: transparent;
     }
   }
 
-  .sec2{
+  .sec2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     justify-self: center;
 
-    img{
+    img {
       height: 500px;
       width: 500px;
     }
   }
 
-  .sec3{
+  .sec3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
-    h1{ color: ${props => props.theme.c_orange}; }
-
+    h1 {
+      color: ${(props) => props.theme.c_orange};
+    }
   }
 
-  .sec4{
+  .sec4 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    h1{ color: ${props => props.theme.c_blue}; }
+    h1 {
+      color: ${(props) => props.theme.c_blue};
+    }
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
     gap: 50px;
 
-    .sec1{
+    .sec1 {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
 
-      .button{
+      .button {
         font-size: 1rem;
         text-align: center;
 
@@ -203,63 +204,63 @@ export const HomeAbout = styled(Frame)`
       }
     }
 
-    .sec2{
+    .sec2 {
       position: absolute;
       top: 0;
       left: 0%;
 
       background: red;
 
-      img{
+      img {
         height: 50px;
         width: 50px;
       }
     }
 
-    .sec3{
+    .sec3 {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
     }
 
-    .sec4{
+    .sec4 {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1024px){
+  @media (min-width: 768px) and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 75px;
 
     min-height: auto;
 
-    .sec1{
+    .sec1 {
       grid-column: 1 / 3;
       grid-row: 1 / 2;
 
-      .button{
+      .button {
         font-size: 1rem;
         text-align: center;
 
         display: inline-block;
-        
+
         min-width: 30%;
 
         margin: 0 10%;
       }
     }
 
-    .sec2{
+    .sec2 {
       display: none;
     }
 
-    .sec3{
-      grid-column: 1 ;
+    .sec3 {
+      grid-column: 1;
       grid-row: 2 / 3;
     }
 
-    .sec4{
+    .sec4 {
       grid-column: 2;
       grid-row: 2 / 3;
     }
@@ -274,18 +275,23 @@ export const HomeCommittees = styled(Frame)`
 
   min-width: 100%;
 
-  background: ${props => props.theme.c_orange};
-  background-image: url('./committees_bg.svg');
+  background: ${(props) => props.theme.c_orange};
+  background-image: url('/svg/committees_bg.svg');
   background-position: center;
   background-size: cover;
 
-  .title{
-    h1{ color: ${props => props.theme.c_white}; text-align: center; }
+  .title {
+    h1 {
+      color: ${(props) => props.theme.c_white};
+      text-align: center;
+    }
 
-    p { color: ${props => props.theme.c_white}; }
+    p {
+      color: ${(props) => props.theme.c_white};
+    }
   }
 
-  .committees{
+  .committees {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,7 +299,7 @@ export const HomeCommittees = styled(Frame)`
 
     overflow-x: scroll;
 
-    .card{
+    .card {
       height: 450px;
       width: 300px;
 
@@ -303,7 +309,7 @@ export const HomeCommittees = styled(Frame)`
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.85);
 
-      .logo{
+      .logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -313,7 +319,7 @@ export const HomeCommittees = styled(Frame)`
 
         margin-bottom: 20px;
 
-        img{
+        img {
           display: block;
 
           max-height: 100%;
@@ -321,81 +327,88 @@ export const HomeCommittees = styled(Frame)`
         }
       }
 
-      .desc{
+      .desc {
         height: 50%;
         width: 100%;
 
         margin-bottom: 20px;
 
-        h1{
+        h1 {
           font-size: 1.5rem;
         }
 
-        p{
-          color: ${props => props.theme.c_black};
+        p {
+          color: ${(props) => props.theme.c_black};
           font-size: 1rem;
           letter-spacing: 0;
           line-height: 25px;
-
         }
       }
 
-      .button{
+      .button {
         text-align: center;
-        color: ${props => props.theme.c_white};
+        color: ${(props) => props.theme.c_white};
 
         width: 100%;
 
         padding: 1rem;
 
-        background: ${props => props.theme.c_blue};
+        background: ${(props) => props.theme.c_blue};
         border-radius: 12px;
         cursor: pointer;
       }
     }
-
   }
-  @media(min-width: 320px) and (max-width: 1023px){
-
+  @media (min-width: 320px) and (max-width: 1023px) {
     min-height: auto;
 
-    .title{
-      p { display: none; }
+    .title {
+      p {
+        display: none;
+      }
     }
 
-    .committees{
-    flex-wrap: no-wrap;
-    justify-content: flex-start;
+    .committees {
+      flex-wrap: no-wrap;
+      justify-content: flex-start;
 
-      .card{
+      .card {
         margin: 10px;
         scroll-snap-align: start;
 
         min-height: 400px;
         min-width: 260px;
 
-        .logo{ height: 20%; }
+        .logo {
+          height: 20%;
+        }
 
-        .desc{
+        .desc {
           height: 60%;
         }
       }
     }
   }
 
-  @media (min-width: 1024px){ .committees{ flex-wrap: wrap; } }
+  @media (min-width: 1024px) {
+    .committees {
+      flex-wrap: wrap;
+    }
+  }
 `
 
 export const HomeSecretaries = styled(Frame)`
   min-height: auto;
 
-  .title{
+  .title {
     text-align: center;
 
-    h1{ color: ${props => props.theme.c_orange}; }
+    h1 {
+      color: ${(props) => props.theme.c_orange};
+    }
   }
 
-  .secretarie{
+  .secretarie {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 10% 60%;
@@ -403,39 +416,55 @@ export const HomeSecretaries = styled(Frame)`
     height: 50vh;
     width: 100%;
 
-    .photo{
+    .photo {
       grid-column: 1;
       grid-row: 1 / 3;
     }
 
-    .title{
+    .title {
       text-align: start;
 
       grid-column: 2;
       grid-row: 1;
 
-      h1{ font-size: 2rem; }
+      h1 {
+        font-size: 2rem;
+      }
     }
 
-    .desc{
+    .desc {
       grid-column: 2;
       grid-row: 2;
       align-self: start;
     }
 
-    ._1{ color: ${props => props.theme.c_red}; }
-    ._2{ color: ${props => props.theme.c_blue}; }
-    ._3{ color: ${props => props.theme.c_green}; }
-    ._4{ color: ${props => props.theme.c_orange}; }
-    ._5{ color: ${props => props.theme.c_greenAqua}; }
+    ._1 {
+      color: ${(props) => props.theme.c_red};
+    }
+    ._2 {
+      color: ${(props) => props.theme.c_blue};
+    }
+    ._3 {
+      color: ${(props) => props.theme.c_green};
+    }
+    ._4 {
+      color: ${(props) => props.theme.c_orange};
+    }
+    ._5 {
+      color: ${(props) => props.theme.c_greenAqua};
+    }
   }
 
-  .rec-carousel-item:focus { outline: none; }
+  .rec-carousel-item:focus {
+    outline: none;
+  }
 
-  .rec.rec-arrow{ display: none; }
+  .rec.rec-arrow {
+    display: none;
+  }
 
-  @media (max-width: 768px){
-    .secretarie{
+  @media (max-width: 768px) {
+    .secretarie {
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 10% 90%;
@@ -444,23 +473,23 @@ export const HomeSecretaries = styled(Frame)`
       width: 100%;
       overflow-y: scroll;
 
-    .photo{
-      grid-column: 0;
-      grid-row: 0;
+      .photo {
+        grid-column: 0;
+        grid-row: 0;
 
-      display: none;
-    }
+        display: none;
+      }
 
-    .title{
-      grid-column: 1;
-      grid-row: 1;
-    }
+      .title {
+        grid-column: 1;
+        grid-row: 1;
+      }
 
-    .desc{
-      grid-column: 1;
-      grid-row: 2;
+      .desc {
+        grid-column: 1;
+        grid-row: 2;
+      }
     }
-  } 
   }
 `
 
@@ -468,9 +497,12 @@ export const HomeGallery = styled(Frame)`
   min-height: 60vh;
   max-height: 60vh;
 
-  h1{ text-align: center; color: ${props => props.theme.c_blue} }
+  h1 {
+    text-align: center;
+    color: ${(props) => props.theme.c_blue};
+  }
 
-  img{
+  img {
     display: block;
     max-height: 100%;
     max-width: 100%;
