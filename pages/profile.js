@@ -11,7 +11,7 @@ import {
   ProfileContainer,
   ProfilePic,
   ProfileInfo,
-  Close
+  Close,
 } from 'styles/pages/profileElements'
 import { Button } from 'styles/pages/loginElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
@@ -124,7 +124,6 @@ export default function index() {
 
       {user && (
         <ProfileContainer>
-
           <Link href="/">
             <Close />
           </Link>
@@ -134,7 +133,7 @@ export default function index() {
           </ProfilePic>
 
           <ProfileInfo>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} autoComplete="off">
               <div className="top">
                 <input
                   name="name"
@@ -156,11 +155,30 @@ export default function index() {
                   autoComplete="off"
                   value={profileData.school}
                 />
-                <select className="comittee" name="comittees">
+                <select
+                  className="comittee"
+                  name="committee"
+                  onChange={handleInputChange}
+                >
+                  <option disabled selected value="">
+                    Selecciona un comité
+                  </option>
                   <option value="ONU Mujeres">ONU Mujeres</option>
-                  <option value="Corte Internacional de Justicia">Corte Internacional de Justicia</option>
-                  <option value="Senado de la República">Senado de la República</option>
-                  <option value="Worl Tourism Organization">World Tourism Organization</option>
+                  <option value="Corte Internacional de Justicia">
+                    Corte Internacional de Justicia
+                  </option>
+                  <option value="Senado de la República">
+                    Senado de la República
+                  </option>
+                  <option value="Worl Tourism Organization">
+                    World Tourism Organization
+                  </option>
+
+                  {profileData.committee !== '' && (
+                    <option selected value={profileData.committee}>
+                      {profileData.committee}
+                    </option>
+                  )}
                 </select>
               </div>
               <div className="about">

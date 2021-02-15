@@ -1,7 +1,7 @@
 // React import
 import React from 'react'
 
-//Local components imports
+// Local components imports
 import Layout from '../components/layout'
 
 // Global Styles import
