@@ -171,7 +171,7 @@ export const Sidebar = styled.nav`
     }
 
     ._1{ background: ${props => props.theme.c_red}; }
-    ._2{ background: url('./committees_bg.svg'); background-size: cover; }
+    ._2{ background: url('./svg/committees_bg.svg'); background-size: cover; }
     ._3{ background: ${props => props.theme.c_orange}; }
     ._4{ background: ${props => props.theme.c_red}; }
     ._5{ background: ${props => props.theme.c_greenAqua}; }

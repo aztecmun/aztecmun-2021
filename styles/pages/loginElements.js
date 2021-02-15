@@ -13,7 +13,7 @@ export const LoginWrapper = styled.div`
   width: 100vw;
 
   overflow-y: scroll;
-  background: url('/committees_bg.svg');
+  background: url('./svg/committees_bg.svg');
   background-size: cover;
 `
 

@@ -12,7 +12,7 @@ export const ProfileWrapper = styled.div`
   padding: 5rem 2rem;
 
   overflow: hidden;
-  background: url('./profiles_bg.svg');
+  background: url('./svg/profiles_bg.svg');
   background-size: contain;
 
   @media (max-width: 768px) {
