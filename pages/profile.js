@@ -118,8 +118,7 @@ export default function index() {
   return (
     <ProfileWrapper>
       <Head>
-        {' '}
-        <title> Perfil | Aztecmun </title>{' '}
+        <title> Perfil | Aztecmun </title>
       </Head>
 
       {user && (
@@ -151,12 +150,14 @@ export default function index() {
                   name="school"
                   onChange={handleInputChange}
                 >
-                  <option disabled selected value=""> Selecciona tu escuela </option>
+                  <option disabled selected value="">
+                    Selecciona tu escuela
+                  </option>
                   <option value="Plantel Azteca"> Plantel Azteca </option>
                   <option value="Otra"> Otra </option>
 
                   {profileData.school !== '' && (
-                    <option selected value={profileData.school}>
+                    <option hidden disabled selected value={profileData.school}>
                       {profileData.school}
                     </option>
                   )}
@@ -167,19 +168,31 @@ export default function index() {
                   name="committee"
                   onChange={handleInputChange}
                 >
-                  <option disabled selected value=""> Selecciona un comité </option>
+                  <option disabled selected value="">
+                    Selecciona un comité
+                  </option>
                   <option value="ONU Mujeres"> ONU Mujeres </option>
-                  <option value="Corte Internacional de Justicia"> Corte Internacional de Justicia </option>
-                  <option value="Senado de la República"> Senado de la República </option>
-                  <option value="Worl Tourism Organization"> World Tourism Organization </option>
+                  <option value="Corte Internacional de Justicia">
+                    Corte Internacional de Justicia
+                  </option>
+                  <option value="Senado de la República">
+                    Senado de la República
+                  </option>
+                  <option value="Worl Tourism Organization">
+                    World Tourism Organization
+                  </option>
 
                   {profileData.committee !== '' && (
-                    <option selected value={profileData.committee}>
+                    <option
+                      hidden
+                      disabled
+                      selected
+                      value={profileData.committee}
+                    >
                       {profileData.committee}
                     </option>
                   )}
                 </select>
-
               </div>
               <div className="about">
                 <div className="icon">
@@ -193,16 +206,35 @@ export default function index() {
                     name="grade"
                     onChange={handleInputChange}
                   >
-                    <option disabled selected value=""> Selecciona un tu grado </option>
-                    <option value="Primero de Secundaria"> Primero de Secundaria </option>
-                    <option value="Segundo de Secundaria"> Segundo de Secundaria </option>
-                    <option value="Tercero de Secundaria"> Tercero de Secundaria </option>
-                    <option value="Segundo semestre de Bachillerato"> Segundo semestre de Bachillerato </option>
-                    <option value="Tercer semestre de Bachillerato"> Tercer semestre de Bachillerato </option>
-                    <option value="Sexto semestre de Bachillerato"> Sexto semestre de Bachillerato </option>
+                    <option disabled selected value="">
+                      Selecciona tu grado
+                    </option>
+                    <option value="Primero de Secundaria">
+                      Primero de Secundaria
+                    </option>
+                    <option value="Segundo de Secundaria">
+                      Segundo de Secundaria
+                    </option>
+                    <option value="Tercero de Secundaria">
+                      Tercero de Secundaria
+                    </option>
+                    <option value="Segundo semestre de Bachillerato">
+                      Segundo semestre de Bachillerato
+                    </option>
+                    <option value="Tercer semestre de Bachillerato">
+                      Tercer semestre de Bachillerato
+                    </option>
+                    <option value="Sexto semestre de Bachillerato">
+                      Sexto semestre de Bachillerato
+                    </option>
 
                     {profileData.grade !== '' && (
-                      <option selected value={profileData.grade}>
+                      <option
+                        hidden
+                        disabled
+                        selected
+                        value={profileData.grade}
+                      >
                         {profileData.grade}
                       </option>
                     )}
@@ -243,7 +275,7 @@ export default function index() {
                     autoComplete="off"
                     value={profileData.phone}
                   />
-                  
+
                   <p className="c1">Email: </p>
                   <input
                     name="email"
