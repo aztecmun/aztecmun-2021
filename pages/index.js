@@ -9,7 +9,6 @@ import { Carousel as Carousel2 } from 'react-responsive-carousel';
 import { Link as LinkSmooth } from "react-scroll";
 
 //Local styles imports
-import Menu from 'components//menu'
 import useUser, { USER_STATES } from 'hooks/useUser'
 import { signOut } from 'firebase/client'
 
@@ -67,11 +66,11 @@ export default function index() {
       <HomeHeader>
         <div className="title">
           <h1>BIENVENIDOS A</h1>
-          <img src="/logo.png" alt="logo_aztecmun" />
+          <img src="./img/logo.png" alt="logo_aztecmun" />
         </div>
       </HomeHeader>
 
-      <img src="/div.png" alt="aztecmun 2021" className="div" />
+      <img src="./img/div.png" alt="aztecmun 2021" className="div" />
 
       <HomeAbout>
         <div className="sec1" id="about">
@@ -89,7 +88,7 @@ export default function index() {
         </div>
 
         <div className="sec2">
-          <img src="/about.svg" alt="logo_aztecmun" />
+          <img src="./svg/about.svg" alt="logo_aztecmun" />
         </div>
 
         <div className="sec3">
@@ -110,7 +109,7 @@ export default function index() {
 
         <div className="committees">
           <div className="card">
-            <div className="logo"> <img src="./unwto.png" alt="unwto" /></div>
+            <div className="logo"> <img src="./img/unwto.png" alt="unwto" /></div>
             <div className="desc">
               <h1>Worl Tourism Organiation</h1>
               <p>The World Tourism Organization (UNWTO) is the United Nations agency responsible for promoting responsible, sustainable and accessible tourism for all created in 1975, the headquarter is in Madrid, Spain.</p>
@@ -121,7 +120,7 @@ export default function index() {
           </div>
 
           <div className="card">
-            <div className="logo"> <img src="./onu.png" alt="onu mujeress" /> </div>
+            <div className="logo"> <img src="./img/onu.png" alt="onu mujeress" /> </div>
             <div className="desc">
               <h1>ONU Mujeres</h1>
               <p>ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.</p>
@@ -132,7 +131,7 @@ export default function index() {
           </div>
 
           <div className="card">
-            <div className="logo"> <img src="./senado.png" alt="senado de la republica" /> </div>
+            <div className="logo"> <img src="./img/senado.png" alt="senado de la republica" /> </div>
             <div className="desc">
               <h1>Senado de la República</h1>
               <p>Es la instancia superior de la Cámara dónde se discute y en su caso, se aprueba el trabajo legislativo. Es una institución fundamental que coordina el ejercicio de la democracia.</p>
@@ -143,7 +142,7 @@ export default function index() {
           </div>
 
           <div className="card">
-            <div className="logo"> <img src="./comite.png" alt="comité internacional de justicia" /> </div>
+            <div className="logo"> <img src="./img/comite.png" alt="comité internacional de justicia" /> </div>
             <div className="desc">
               <h1>Corte Nacional de Justicia</h1>
               <p>Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano judicial de las Naciones Unidas; se encuentra en el Palacio de La Paz en la Haya.</p>
@@ -161,6 +160,7 @@ export default function index() {
         <Carousel itemsToShow={1}>
           <div className="secretarie">
             <div className="title"> <h1 className="_1">Secretaría Académica</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria academica.svg" alt=""/> </div>
             <div className="desc">
               <p>
                 La Secretaría Académica tiene como función coordinar, preparar y evaluar a las mesas, quienes fungirán como mentores de los delegados; para una correcta implementación y desarrollo de los tópicos, buscando siempre que esto sirva para lograr un excelente debate en cada comité.
@@ -171,6 +171,7 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title"> <h1 className="_2">Secretaría de Desarrollo</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria desarrollo.svg" alt="" / > </div>
             <div className="desc">
               <p>
                 La secretaria de desarrollo sostenible tiene como propósito fomentar y crear un trabajo en conjunto de las mesas directivas para la preparación de tópicos enfocados a los Objetivos de Desarrollo Sostenible, así como su difusión con los delegados.
@@ -184,6 +185,7 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title"> <h1 className="_3">Secretaría de Protocolo</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria protocolo.svg" alt="" / > </div>
             <div className="desc">
               <p>
                 Corresponde a la Secretaría de Protocolo: asesorar a las Mesas Directivas, resolver disputas o preguntas protocolarias durante el debate y revisar el empleo correcto del protocolo en la cuarta edición del Modelo de Naciones Unidas del Plantel Azteca.
@@ -193,6 +195,7 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title"> <h1 className="_4">Secretaría de Inglés</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria ingles.svg" alt="" / > </div>
             <div className="desc">
               <p>
                 The English Secretary is responsible for impulsing the English language in the United Nations Model "AztecMUN" committees and demolishing every communication barrier within languages.
@@ -206,6 +209,7 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title"> <h1 className="_5">Secretaría Logística</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria academica.svg" alt="" / > </div>
             <div className="desc">
               <p>
                 La secretaria de logística se encarga principalmente de la organización de las actividades en los días del modelo y de las sesiones previas a él. Organizan los horarios y las salas donde se realizarán las sesiones de trabajo correspondientes del modelo. También como secretaría de logística, nos encargamos de llevar a cabo el registro de los delegados y personas que deseen ser parte del modelo, para así llevar el control de nuestros participantes.
@@ -215,6 +219,7 @@ export default function index() {
 
           <div className="secretarie">
             <div className="title"> <h1 className="_1">Secretaría Finanzas</h1> </div>
+            <div className="photo"> <img src="./svg/secretaria finanzas.svg" alt="" /> </div>
             <div className="desc">
               <p>
                 Esta secretaria se encarga principalmente de la generación de estrategias para conseguir los recursos económicos necesarios para el modelo, a través delcontacto con patrocinadores, quienes tienen el interés de aportar al modelo, además de llevar un seguimiento del presupuesto conseguido con cada aportación.              </p>
@@ -227,39 +232,39 @@ export default function index() {
         <div className="title"> <h1> Galería </h1> </div>
         <Carousel2>
           <div>
-            <img src="/s1.jpg" className="yours-custom-class" />
+            <img src="./img/s1.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s2.jpg" className="yours-custom-class" />
+            <img src="./img/s2.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s3.jpg" className="yours-custom-class" />
+            <img src="./img/s3.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s4.jpg" className="yours-custom-class" />
+            <img src="./img/s4.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s5.jpg" className="yours-custom-class" />
+            <img src="./img/s5.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s6.jpg" className="yours-custom-class" />
+            <img src="./img/s6.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s7.jpg" className="yours-custom-class" />
+            <img src="./img/s7.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s8.jpg" className="yours-custom-class" />
+            <img src="./img/s8.jpg" className="yours-custom-class" />
           </div>
 
           <div>
-            <img src="/s9.jpg" className="yours-custom-class" />
+            <img src="./img/s9.jpg" className="yours-custom-class" />
           </div>
         </Carousel2>
       </HomeGallery>
