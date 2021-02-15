@@ -8,6 +8,4 @@ export const LayoutWrapper = styled.div`
 
   overflow-x: hidden;
   overflow-y: scroll;
-
-  border: 1px solid red;
 `

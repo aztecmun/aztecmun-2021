@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 // Libraries imports
 import Carousel from 'react-elastic-carousel'
-import { Carousel as Carousel2 } from 'react-responsive-carousel'
 
 // Local styles imports
 import useUser, { USER_STATES } from 'hooks/useUser'
@@ -360,43 +359,17 @@ export default function index() {
         <div className="title">
           <h1> Galería </h1>
         </div>
-        <Carousel2>
-          <div>
-            <img src="/img/s1.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s2.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s3.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s4.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s5.jpg" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s6.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s7.JPG" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s8.jpg" className="yours-custom-class" />
-          </div>
-
-          <div>
-            <img src="/img/s9.JPG" className="yours-custom-class" />
-          </div>
-        </Carousel2>
+        <Carousel>
+            <img src="/img/s1.JPG" />
+            <img src="/img/s2.JPG" />
+            <img src="/img/s3.JPG" />
+            <img src="/img/s4.JPG" />
+            <img src="/img/s5.jpg" />
+            <img src="/img/s6.JPG" />
+            <img src="/img/s7.JPG" />
+            <img src="/img/s8.jpg" />
+            <img src="/img/s9.JPG" />
+        </Carousel>
       </HomeGallery>
     </HomeWrapper>
   )

@@ -463,46 +463,31 @@ export const HomeSecretaries = styled(Frame)`
 
   @media (max-width: 768px) {
     .secretarie {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 10% 90%;
+      display: flex;
+      flex-direction: column;
 
-      height: 70vh;
-      width: 100%;
-      overflow-y: scroll;
+      height: auto;
 
-      .photo {
-        grid-column: 0;
-        grid-row: 0;
-
-        display: none;
-      }
-
-      .title {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      .desc {
-        grid-column: 1;
-        grid-row: 2;
-      }
+      .photo{ display: none; }
     }
   }
 `
 
 export const HomeGallery = styled(Frame)`
-  min-height: 60vh;
-  max-height: 60vh;
+  height: auto;
+  width: 80%;
 
-  h1 {
-    text-align: center;
-    color: ${(props) => props.theme.c_blue};
+  img{
+    height: 100%;
+    width: 100%;
+
+    pointer-events: none;
   }
 
-  img {
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
+  @media (max-width: 768px){
+    max-height: 50vh;
+    min-height: 50vh;
+
+    .rec.rec-arrow { display: none; }
   }
 `
