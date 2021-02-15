@@ -163,7 +163,7 @@ export default function index() {
                 </select>
 
                 <select
-                  className="comittee"
+                  className="committee"
                   name="committee"
                   onChange={handleInputChange}
                 >

@@ -73,7 +73,6 @@ export const ProfileInfo = styled.div`
   }
   select{
     font-size: 1.2rem;
-    color: ${props => props.theme.c_blue};
 
     max-width: 300px;
 
@@ -100,6 +99,7 @@ export const ProfileInfo = styled.div`
 
     .school {
       font-size: 1.2rem;
+      color: ${props => props.theme.c_blue};
 
       align-self: flex-end;
       display: flex;
@@ -107,6 +107,8 @@ export const ProfileInfo = styled.div`
 
       margin-left: 20px;
     }
+
+    .committee{ color: ${props => props.theme.c_blue}; }
   }
 
   .about {
@@ -124,7 +126,7 @@ export const ProfileInfo = styled.div`
 
     .contact {
       display: grid;
-      grid-template-columns: 70px 1fr;
+      grid-template-columns: 80px 1fr;
       grid-template-rows: auto;
 
       .c1 {
