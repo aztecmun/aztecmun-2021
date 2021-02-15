@@ -339,7 +339,7 @@ export default function index() {
               <h1 className="_5">Secretaría Logística</h1>
             </div>
             <div className="photo">
-              <img src="/svg/secretaria academica.svg" alt="" />
+              <img src="/svg/secretaria logistica.svg" alt="" />
             </div>
             <div className="desc">
               <p>

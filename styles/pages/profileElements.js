@@ -54,6 +54,8 @@ export const ProfilePic = styled.div`
 `
 
 export const ProfileInfo = styled.div`
+  font-size: 1.2rem;
+
   flex: 6;
   padding: 2rem;
 
@@ -72,6 +74,8 @@ export const ProfileInfo = styled.div`
   select{
     font-size: 1.2rem;
     color: ${props => props.theme.c_blue};
+
+    max-width: 300px;
 
     background: none;
     border: 1px solid transparent;

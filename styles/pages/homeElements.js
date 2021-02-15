@@ -419,6 +419,13 @@ export const HomeSecretaries = styled(Frame)`
     .photo {
       grid-column: 1;
       grid-row: 1 / 3;
+
+      pointer-events: none;
+
+      img{
+        height: 100%;
+        width: 100%;
+      }
     }
 
     .title {

@@ -145,34 +145,33 @@ export default function index() {
                   autoComplete="off"
                   value={profileData.name}
                 />
-                <input
-                  name="school"
+
+                <select
                   className="school"
-                  type="text"
-                  placeholder="Escuela"
+                  name="school"
                   onChange={handleInputChange}
-                  required
-                  autoComplete="off"
-                  value={profileData.school}
-                />
+                >
+                  <option disabled selected value=""> Selecciona tu escuela </option>
+                  <option value="Plantel Azteca"> Plantel Azteca </option>
+                  <option value="Otra"> Otra </option>
+
+                  {profileData.school !== '' && (
+                    <option selected value={profileData.school}>
+                      {profileData.school}
+                    </option>
+                  )}
+                </select>
+
                 <select
                   className="comittee"
                   name="committee"
                   onChange={handleInputChange}
                 >
-                  <option disabled selected value="">
-                    Selecciona un comité
-                  </option>
-                  <option value="ONU Mujeres">ONU Mujeres</option>
-                  <option value="Corte Internacional de Justicia">
-                    Corte Internacional de Justicia
-                  </option>
-                  <option value="Senado de la República">
-                    Senado de la República
-                  </option>
-                  <option value="Worl Tourism Organization">
-                    World Tourism Organization
-                  </option>
+                  <option disabled selected value=""> Selecciona un comité </option>
+                  <option value="ONU Mujeres"> ONU Mujeres </option>
+                  <option value="Corte Internacional de Justicia"> Corte Internacional de Justicia </option>
+                  <option value="Senado de la República"> Senado de la República </option>
+                  <option value="Worl Tourism Organization"> World Tourism Organization </option>
 
                   {profileData.committee !== '' && (
                     <option selected value={profileData.committee}>
@@ -180,6 +179,7 @@ export default function index() {
                     </option>
                   )}
                 </select>
+
               </div>
               <div className="about">
                 <div className="icon">
@@ -188,16 +188,26 @@ export default function index() {
 
                 <div className="contact">
                   <p className="c1">Grado: </p>
-                  <input
-                    name="grade"
+                  <select
                     className="c2"
-                    type="text"
-                    placeholder="Quinto semestre"
+                    name="grade"
                     onChange={handleInputChange}
-                    required
-                    autoComplete="off"
-                    value={profileData.grade}
-                  />
+                  >
+                    <option disabled selected value=""> Selecciona un tu grado </option>
+                    <option value="Primero de Secundaria"> Primero de Secundaria </option>
+                    <option value="Segundo de Secundaria"> Segundo de Secundaria </option>
+                    <option value="Tercero de Secundaria"> Tercero de Secundaria </option>
+                    <option value="Segundo semestre de Bachillerato"> Segundo semestre de Bachillerato </option>
+                    <option value="Tercer semestre de Bachillerato"> Tercer semestre de Bachillerato </option>
+                    <option value="Sexto semestre de Bachillerato"> Sexto semestre de Bachillerato </option>
+
+                    {profileData.grade !== '' && (
+                      <option selected value={profileData.grade}>
+                        {profileData.grade}
+                      </option>
+                    )}
+                  </select>
+
                   <p className="c1">Grupo: </p>
                   <input
                     name="group"
@@ -209,6 +219,7 @@ export default function index() {
                     autoComplete="off"
                     value={profileData.group}
                   />
+
                   <p className="c1">Edad: </p>
                   <input
                     name="age"
@@ -220,6 +231,7 @@ export default function index() {
                     autoComplete="off"
                     value={profileData.age}
                   />
+
                   <p className="c1">Teléfono: </p>
                   <input
                     name="phone"
@@ -231,6 +243,7 @@ export default function index() {
                     autoComplete="off"
                     value={profileData.phone}
                   />
+                  
                   <p className="c1">Email: </p>
                   <input
                     name="email"
