@@ -111,7 +111,7 @@ export default function index() {
               <img src="/img/unwto.png" alt="unwto" />
             </div>
             <div className="desc">
-              <h1>Worl Tourism Organiation</h1>
+              <h1>World Tourism Organization</h1>
               <p>
                 The World Tourism Organization (UNWTO) is the United Nations
                 agency responsible for promoting responsible, sustainable and
@@ -184,7 +184,7 @@ export default function index() {
               />
             </div>
             <div className="desc">
-              <h1>Corte Nacional de Justicia</h1>
+              <h1>Corte Inernacional de Justicia</h1>
               <p>
                 Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó
                 a funcionar en 1946, es el principal órgano judicial de las
