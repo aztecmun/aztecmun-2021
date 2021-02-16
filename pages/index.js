@@ -39,8 +39,8 @@ export default function index() {
 
       <img src="/img/div.png" alt="aztecmun 2021" className="div" />
 
-      <HomeAbout>
-        <div className="sec1" id="about">
+      <HomeAbout id="about">
+        <div className="sec1">
           <h1> Quiénes Somos</h1>
           <p>
             AZTECMUN es un modelo de Naciones Unidas, proyecto educativo de
@@ -360,15 +360,15 @@ export default function index() {
           <h1> Galería </h1>
         </div>
         <Carousel>
-            <img src="/img/s1.JPG" />
-            <img src="/img/s2.JPG" />
-            <img src="/img/s3.JPG" />
-            <img src="/img/s4.JPG" />
-            <img src="/img/s5.jpg" />
-            <img src="/img/s6.JPG" />
-            <img src="/img/s7.JPG" />
-            <img src="/img/s8.jpg" />
-            <img src="/img/s9.JPG" />
+          <img src="/img/s1.JPG" />
+          <img src="/img/s2.JPG" />
+          <img src="/img/s3.JPG" />
+          <img src="/img/s4.JPG" />
+          <img src="/img/s5.jpg" />
+          <img src="/img/s6.JPG" />
+          <img src="/img/s7.JPG" />
+          <img src="/img/s8.jpg" />
+          <img src="/img/s9.JPG" />
         </Carousel>
       </HomeGallery>
     </HomeWrapper>

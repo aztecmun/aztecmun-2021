@@ -24,26 +24,26 @@ export default function index() {
   return (
     <Sidebar>
       <ul>
-        <LinkSmooth smooth={true} to="about">
+        <a href="#about">
           <li className="_1">
             <AiOutlineQuestion /> <p className="text">Quiénes Somos</p>
           </li>
-        </LinkSmooth>
-        <LinkSmooth smooth={true} to="committees">
+        </a>
+        <a href="#committees">
           <li className="_2">
             <IoPeopleOutline /> <p className="text">Comités</p>
           </li>
-        </LinkSmooth>
-        <LinkSmooth smooth={true} to="secretaries">
+        </a>
+        <a href="#secretaries">
           <li className="_3">
             <GiPublicSpeaker /> <p className="text">Secretarías</p>
           </li>
-        </LinkSmooth>
-        <LinkSmooth smooth={true} to="gallery">
+        </a>
+        <a href="#gallery">
           <li className="_4">
             <TiCameraOutline /> <p className="text">Galería</p>
           </li>
-        </LinkSmooth>
+        </a>
         {user === USER_STATES.NOT_LOGGED && (
           <Link href="/signup">
             <li className="_5">
