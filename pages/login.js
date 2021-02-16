@@ -46,7 +46,7 @@ export default function login() {
   return (
     <LoginWrapper>
       <Head>
-        <title>Ingresar - AztecMUN 2021</title>
+        <title>Iniciar sesión - AztecMUN 2021</title>
       </Head>
 
       {user === USER_STATES.NOT_LOGGED && (
@@ -82,7 +82,7 @@ export default function login() {
               </Input>
               <Button>Iniciar Sesión</Button>
               <p>
-                ¿Aún no tienes cuenta?{' '}
+                ¿Aún no tienes cuenta?
                 <span>
                   <Link href="signup"> ¡Crea Una! </Link>
                 </span>

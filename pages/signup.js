@@ -47,7 +47,7 @@ export default function signup() {
   return (
     <LoginWrapper>
       <Head>
-        <title>Ingresar - AztecMUN 2021</title>
+        <title>Crear cuenta - AztecMUN 2021</title>
       </Head>
 
       {user === USER_STATES.NOT_LOGGED && (
@@ -60,7 +60,8 @@ export default function signup() {
             </Link>
 
             <Signup onSubmit={handleSubmit}>
-              <h1>Crear Cuenta</h1> <br />
+              <h1>Crear Cuenta</h1>
+              <br />
               <Input>
                 Correo Electrónico
                 <input
@@ -81,9 +82,9 @@ export default function signup() {
                   required
                 />
               </Input>
-              <Button>Iniciar Sesión</Button>
+              <Button>Crear cuenta</Button>
               <p>
-                ¿Ya tienes cuenta?{' '}
+                ¿Ya tienes cuenta?
                 <span>
                   <Link href="/login"> ¡Inicia Sesión! </Link>
                 </span>

@@ -118,7 +118,7 @@ export default function index() {
   return (
     <ProfileWrapper>
       <Head>
-        <title> Perfil | Aztecmun </title>
+        <title> Perfil | Aztecmun 2021 </title>
       </Head>
 
       {user && (
