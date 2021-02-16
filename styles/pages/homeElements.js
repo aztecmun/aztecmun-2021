@@ -485,8 +485,8 @@ export const HomeGallery = styled(Frame)`
   }
 
   @media (max-width: 768px){
-    max-height: 50vh;
-    min-height: 50vh;
+    max-height: 70vh;
+    min-height: 70vh;
 
     .rec.rec-arrow { display: none; }
   }
