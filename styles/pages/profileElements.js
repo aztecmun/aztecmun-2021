@@ -178,5 +178,7 @@ export const Close = styled(AiOutlineClose)`
   width: 50px;
 
   cursor: pointer;
-  transition: all .3s ease-in-out;
+
+  background: red;
+  border: 1px solid red;
 `

@@ -29,10 +29,12 @@ export const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  .div {
-    max-height: 50px;
-    width: 100%;
-  }
+  max-height: 100%;
+
+  overflow-y: scroll;
+  overflow-x: hide;
+
+  @media (max-width: 768px){ max-height: 100vh; }
 `
 
 export const HomeHeader = styled(Frame)`
@@ -264,6 +266,7 @@ export const HomeCommittees = styled(Frame)`
 
   padding: 10px 5%;
 
+  height: 100%;
   min-width: 100%;
 
   background: ${(props) => props.theme.c_orange};

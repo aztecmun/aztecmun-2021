@@ -71,7 +71,7 @@ export const Sidebar = styled.nav`
     ._6{ background: ${props => props.theme.c_blue}; }
   }
 
-  @media (min-width: 300px) and (max-width: 768px){
+  @media (min-width: 320px) and (max-width: 768px){
     position: fixed;
     top: calc(100% - 60px);
     left: 0;

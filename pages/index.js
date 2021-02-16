@@ -8,6 +8,7 @@ import Carousel from 'react-elastic-carousel'
 
 // Local styles imports
 import useUser, { USER_STATES } from 'hooks/useUser'
+import Sidebar from 'components/sidebar'
 
 // Styles
 import {
@@ -18,16 +19,15 @@ import {
   HomeSecretaries,
   HomeGallery,
 } from '../styles/pages/homeElements'
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export default function index() {
   const user = useUser()
 
   return (
     <HomeWrapper>
-      <Head>
-        <title> AztecMUN | Inicio </title>
-      </Head>
+      <Head> <title> AztecMUN | Inicio </title> </Head>
+
+      <Sidebar />
 
       <HomeHeader>
         <div className="title">

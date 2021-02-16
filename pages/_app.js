@@ -1,17 +1,16 @@
 // React import
 import React from 'react'
 
-// Local components imports
-import Layout from '../components/layout'
-
 // Global Styles import
 import GlobalStyles from 'styles/global'
+import { colors } from 'components/theme'
+import { ThemeProvider } from 'styled-components'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <ThemeProvider theme={colors}>
       <GlobalStyles />
       <Component {...pageProps} />
-    </Layout>
+    </ThemeProvider>
   )
 }
