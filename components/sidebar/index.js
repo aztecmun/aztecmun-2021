@@ -2,9 +2,6 @@
 import React from 'react'
 import Link from 'next/link'
 
-//Libraries imports
-import { Link as LinkSmooth } from 'react-scroll'
-
 // Local styles imports
 import useUser, { USER_STATES } from '../../hooks/useUser'
 import { signOut } from '../../firebase/client'
