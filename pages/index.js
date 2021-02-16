@@ -20,7 +20,6 @@ import {
 } from '../styles/pages/homeElements'
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-
 export default function index() {
   const user = useUser()
 
@@ -119,8 +118,8 @@ export default function index() {
                 in Madrid, Spain.
               </p>
             </div>
-            <Link href="signup">
-              <div className="button">PARTICIPA</div>
+            <Link href="/comites/unwto">
+              <div className="button">VER MÁS</div>
             </Link>
           </div>
 
@@ -131,16 +130,16 @@ export default function index() {
             <div className="desc">
               <h1>United Nations Children's Fund</h1>
               <p>
-                UNICEF is the driving force contributing to the creation of a world where
-                the rights of each and every child are respected. Therefore, we are a world organization like
-                no other working with young people.
+                UNICEF is the driving force contributing to the creation of a
+                world where the rights of each and every child are respected.
+                Therefore, we are a world organization like no other working
+                with young people.
               </p>
             </div>
-            <Link href="signup">
-              <div className="button">PARTICIPA</div>
+            <Link href="/comites/unicef">
+              <div className="button">VER MÁS</div>
             </Link>
           </div>
-
 
           <div className="card">
             <div className="logo">
@@ -154,8 +153,8 @@ export default function index() {
                 sus necesidades y aumentando su calidad de vida.
               </p>
             </div>
-            <Link href="signup">
-              <div className="button">PARTICIPA</div>
+            <Link href="/comites/onu-mujeres">
+              <div className="button">VER MÁS</div>
             </Link>
           </div>
 
@@ -171,8 +170,8 @@ export default function index() {
                 fundamental que coordina el ejercicio de la democracia.
               </p>
             </div>
-            <Link href="signup">
-              <div className="button">PARTICIPA</div>
+            <Link href="/comites/senado">
+              <div className="button">VER MÁS</div>
             </Link>
           </div>
 
@@ -192,8 +191,8 @@ export default function index() {
                 Haya.
               </p>
             </div>
-            <Link href="signup">
-              <div className="button">PARTICIPA</div>
+            <Link href="/comites/corte-internacional">
+              <div className="button">VER MÁS</div>
             </Link>
           </div>
         </div>
@@ -338,7 +337,6 @@ export default function index() {
             </div>
           </div>
 
-
           <div className="secretarie">
             <div className="title">
               <h1 className="_2">Secretaría Digital</h1>
@@ -348,7 +346,10 @@ export default function index() {
             </div>
             <div className="desc">
               <p>
-                La secretaria general es la encargada de diseñar, programar y desarrollar la pagina web, teniendo en cuenta los parametros necesarios para una excelente experiencia de usuario. Además, participa el manejo de las redes sociales.
+                La secretaria general es la encargada de diseñar, programar y
+                desarrollar la pagina web, teniendo en cuenta los parametros
+                necesarios para una excelente experiencia de usuario. Además,
+                participa el manejo de las redes sociales.
               </p>
             </div>
           </div>
