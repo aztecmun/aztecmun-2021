@@ -72,8 +72,8 @@ export const Sidebar = styled.nav`
   }
 
   @media (min-width: 300px) and (max-width: 768px){
-    position: sticky;
-    bottom: 0;
+    position: fixed;
+    top: calc(100% - 60px);
     left: 0;
 
     width: 100%;
