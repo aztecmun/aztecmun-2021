@@ -11,12 +11,11 @@ export const ProfileWrapper = styled.div`
 
   padding: 5rem 2rem;
 
-  overflow: hidden;
   background: url('./svg/profiles_bg.svg');
   background-size: contain;
 
   @media (max-width: 768px) {
-    padding: 6rem 0rem;
+    padding: 2rem 0rem;
   }
 `
 
@@ -33,15 +32,18 @@ export const ProfileContainer = styled.div`
   border-radius: 20px;
   background: rgba(224, 224, 224, 0.8);
   backdrop-filter: blur(5px);
-  overflow-y: scroll;
 
   @media (max-width: 768px) {
+    height: 90vh;
+
     flex-direction: column;
   }
 `
 
 export const ProfilePic = styled.div`
   flex: 2;
+
+  border-radius: 50%;
 
   .pic {
     width: 100%;
@@ -50,6 +52,25 @@ export const ProfilePic = styled.div`
     margin-bottom: 20px;
 
     border-radius: 50%;
+  }
+
+  @media (max-width: 768px){
+    position: sticky;
+    top: -75px;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 150px;
+
+    border: 1px;
+
+    .pic{
+      height: 100%;
+      width: 150px;
+    }
   }
 `
 

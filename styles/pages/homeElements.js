@@ -492,7 +492,7 @@ export const HomeGallery = styled(Frame)`
   }
 
   @media (max-width: 768px){
-    height: 60vh;
+    height: 80vh;
 
     img{
       height: 100%;
