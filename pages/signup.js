@@ -7,13 +7,11 @@ import { useRouter } from 'next/router'
 // Styled Components imports
 import {
   Form,
-  FormContainer,
-  Signup,
   Button,
-  LoginWrapper,
+  FormWrapper,
   Input,
   Close,
-} from 'styles/pages/loginElements'
+} from 'styles/pages/formElements'
 
 // Firebase users auth client and hook
 import { createAccountWithEmail } from 'firebase/client'
@@ -45,54 +43,47 @@ export default function signup() {
   }
 
   return (
-    <LoginWrapper>
+    <FormWrapper>
       <Head>
         <title>Crear cuenta - AztecMUN 2021</title>
       </Head>
 
       {user === USER_STATES.NOT_LOGGED && (
-        <Form>
-          <FormContainer>
-            <Link href="/">
-              <Close>
-                <div className="icon"></div>
-              </Close>
-            </Link>
+        <Form onSubmit={handleSubmit}>
+          <Link href="/">
+            <Close />
+          </Link>
 
-            <Signup onSubmit={handleSubmit}>
-              <h1>Crear Cuenta</h1>
-              <br />
-              <Input>
-                Correo Electrónico
+          <h1>Crear Cuenta</h1>
+          <Input>
+            Correo Electrónico
                 <input
-                  name="email"
-                  type="email"
-                  onChange={handleInputChange}
-                  autoComplete="off"
-                  required
-                />
-              </Input>
-              <Input>
-                Contraseña
+              name="email"
+              type="email"
+              onChange={handleInputChange}
+              autoComplete="off"
+              required
+            />
+          </Input>
+          <Input>
+            Contraseña
                 <input
-                  name="password"
-                  type="password"
-                  onChange={handleInputChange}
-                  autoComplete="off"
-                  required
-                />
-              </Input>
-              <Button>Crear cuenta</Button>
-              <p>
-                ¿Ya tienes cuenta?
+              name="password"
+              type="password"
+              onChange={handleInputChange}
+              autoComplete="off"
+              required
+            />
+          </Input>
+          <Button>Crear cuenta</Button>
+          <p>
+            ¿Ya tienes cuenta?
                 <span>
-                  <Link href="/login"> ¡Inicia Sesión! </Link>
-                </span>
-              </p>
-            </Signup>
-          </FormContainer>
+              <Link href="/login"> ¡Inicia Sesión! </Link>
+            </span>
+          </p>
         </Form>
       )}
-    </LoginWrapper>
+    </FormWrapper>
   )
 }

@@ -477,20 +477,34 @@ export const HomeSecretaries = styled(Frame)`
 `
 
 export const HomeGallery = styled(Frame)`
-  height: auto;
-  width: 80%;
+  height: 80vh;
+  max-width: 80%;
 
   img{
-    height: 100%;
-    width: 100%;
+    max-height: 80vh;
+    width: auto;
 
     pointer-events: none;
   }
 
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+
   @media (max-width: 768px){
-    max-height: 70vh;
-    min-height: 70vh;
+    height: 60vh;
+
+    img{
+      height: 100%;
+      width: 100%;
+    }
+
+    border: 1px solid red;
 
     .rec.rec-arrow { display: none; }
+  }
+
+  @media (min-height: 360px) and (max-height: 550px){
+    margin-bottom: 120px;
   }
 `

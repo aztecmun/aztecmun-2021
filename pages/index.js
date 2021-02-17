@@ -380,6 +380,9 @@ export default function index() {
           <img src="/img/s7.JPG" />
           <img src="/img/s8.jpg" />
           <img src="/img/s9.JPG" />
+          <img src="/img/s10.PNG" />
+          <img src="/img/s11.jpg" />
+          <img src="/img/s12.jpg" />
         </Carousel>
       </HomeGallery>
     </HomeWrapper>

@@ -6,13 +6,11 @@ import { useRouter } from 'next/router'
 // Styled Components imports
 import {
   Form,
-  FormContainer,
-  Login,
   Button,
-  LoginWrapper,
+  FormWrapper,
   Input,
   Close,
-} from 'styles/pages/loginElements'
+} from 'styles/pages/formElements'
 
 // Firebase users auth client and hook
 import { loginWithEmailAndPass } from 'firebase/client'
@@ -44,53 +42,47 @@ export default function login() {
   }
 
   return (
-    <LoginWrapper>
+    <FormWrapper>
       <Head>
         <title>Iniciar sesión - AztecMUN 2021</title>
       </Head>
 
       {user === USER_STATES.NOT_LOGGED && (
-        <Form>
-          <FormContainer>
-            <Link href="/">
-              <Close>
-                <div className="icon"></div>
-              </Close>
-            </Link>
+        <Form onSubmit={handleSubmit}>
+          <Link href="/">
+            <Close />
+          </Link>
 
-            <Login onSubmit={handleSubmit}>
-              <h1>Inicia Sesión</h1> <br />
-              <Input>
-                Correo Electrónico
+          <h1>Inicia Sesión</h1>
+          <Input>
+            Correo Electrónico
                 <input
-                  name="email"
-                  type="email"
-                  onChange={handleInputChange}
-                  autoComplete="off"
-                  required
-                />
-              </Input>
-              <Input>
-                Contraseña
+              name="email"
+              type="email"
+              onChange={handleInputChange}
+              autoComplete="off"
+              required
+            />
+          </Input>
+          <Input>
+            Contraseña
                 <input
-                  name="password"
-                  type="password"
-                  onChange={handleInputChange}
-                  autoComplete="off"
-                  required
-                />
-              </Input>
-              <Button>Iniciar Sesión</Button>
-              <p>
-                ¿Aún no tienes cuenta?
-                <span>
-                  <Link href="signup"> ¡Crea Una! </Link>
-                </span>
-              </p>
-            </Login>
-          </FormContainer>
+              name="password"
+              type="password"
+              onChange={handleInputChange}
+              autoComplete="off"
+              required
+            />
+          </Input>
+          <Button>Iniciar Sesión</Button>
+          <p>
+            ¿Aún no tienes cuenta?
+              <span>
+              <Link href="signup"> ¡Crea Una! </Link>
+            </span>
+          </p>
         </Form>
       )}
-    </LoginWrapper>
+    </FormWrapper>
   )
 }

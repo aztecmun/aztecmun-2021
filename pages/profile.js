@@ -13,7 +13,7 @@ import {
   ProfileInfo,
   Close,
 } from 'styles/pages/profileElements'
-import { Button } from 'styles/pages/loginElements'
+import { Button } from 'styles/pages/formElements'
 import { AiOutlineUser as User } from 'react-icons/ai'
 import { FaUserAlt as About } from 'react-icons/fa'
 
