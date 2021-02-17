@@ -29,7 +29,7 @@ export default function index() {
         <title> AztecMUN 2021 | Inicio </title>
 
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/img/about.png" />
+        <meta property="og:image" content="/img/logo.png" />
         <meta property="og:title" content="AztecMUN 2021" />
         <meta
           property="og:description"
