@@ -74,7 +74,7 @@ export const ProfileInfo = styled.div`
   select{
     font-size: 1.2rem;
 
-    max-width: 300px;
+    max-width: 75%;
 
     background: none;
     border: 1px solid transparent;
@@ -152,6 +152,8 @@ export const ProfileInfo = styled.div`
   @media (max-width: 768px){
       padding: 1rem;
 
+      overflow-x: hidden;
+
       .top{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -178,7 +180,4 @@ export const Close = styled(AiOutlineClose)`
   width: 50px;
 
   cursor: pointer;
-
-  background: red;
-  border: 1px solid red;
 `

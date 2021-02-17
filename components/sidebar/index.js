@@ -1,13 +1,12 @@
-//React and Next imports
+// React and Next imports
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 // Local styles imports
 import useUser, { USER_STATES } from '../../hooks/useUser'
 import { signOut } from '../../firebase/client'
 
-//Styles
+// Styles
 import { Sidebar } from './sidebarElements'
 import { AiOutlineQuestion } from 'react-icons/ai'
 import { IoPeopleOutline } from 'react-icons/io5'
@@ -18,9 +17,6 @@ import { FiLogOut } from 'react-icons/fi'
 
 export default function index() {
   const user = useUser()
-  const route = useRouter()
-
-  console.log(route.path)
 
   return (
     <Sidebar>
