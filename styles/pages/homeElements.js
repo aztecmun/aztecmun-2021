@@ -499,8 +499,6 @@ export const HomeGallery = styled(Frame)`
       width: 100%;
     }
 
-    border: 1px solid red;
-
     .rec.rec-arrow { display: none; }
   }
 
