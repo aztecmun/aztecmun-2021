@@ -29,12 +29,12 @@ export const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  max-height: 100%;
-
   overflow-y: scroll;
   overflow-x: hide;
 
-  @media (max-width: 768px){ max-height: 100vh; }
+  border: 1px solid red;
+
+  @media (max-width: 768px) { max-height: 100vh; }
 `
 
 export const HomeHeader = styled(Frame)`

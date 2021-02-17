@@ -57,7 +57,8 @@ export const Sidebar = styled.nav`
         padding: 0 1rem;
 
         opacity: 0;
-        border-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
         background: rgba(0, 0, 0, 0.5);
         transition: ${props => props.theme.trans};
       }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 // Libraries imports
 import Carousel from 'react-elastic-carousel'
+import { AnimateSharedLayout } from 'framer-motion'
 
 // Local styles imports
 import useUser, { USER_STATES } from 'hooks/useUser'

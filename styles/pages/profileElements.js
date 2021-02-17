@@ -90,8 +90,8 @@ export const ProfileInfo = styled.div`
     &:hover {
       border: 1px solid ${(props) => props.theme.c_blue};
     }
-
   }
+
   select{
     font-size: 1.2rem;
 
@@ -106,6 +106,7 @@ export const ProfileInfo = styled.div`
       border: 1px solid ${props => props.theme.c_blue};
     }
   }
+
   .top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -174,6 +175,16 @@ export const ProfileInfo = styled.div`
       padding: 1rem;
 
       overflow-x: hidden;
+
+      input{
+        text-overflow: ellipsis;
+
+        max-width: 50%;
+
+        &:nth-of-type(1){
+          max-width: 75%;
+        }
+      }
 
       .top{
         grid-template-columns: 1fr;
