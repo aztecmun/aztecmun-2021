@@ -176,14 +176,11 @@ export const ProfileInfo = styled.div`
 
       overflow-x: hidden;
 
-      input{
+      input,
+      select{
         text-overflow: ellipsis;
 
-        max-width: 50%;
-
-        &:nth-of-type(1){
-          max-width: 75%;
-        }
+        max-width: 60%;
       }
 
       .top{
