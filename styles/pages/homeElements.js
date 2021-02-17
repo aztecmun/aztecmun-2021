@@ -32,7 +32,7 @@ export const HomeWrapper = styled.div`
   overflow-y: scroll;
   overflow-x: hide;
 
-  border: 1px solid red;
+  height: 100vh;
 
   @media (max-width: 768px) { max-height: 100vh; }
 `
@@ -266,7 +266,7 @@ export const HomeCommittees = styled(Frame)`
 
   padding: 10px 5%;
 
-  height: 100%;
+  min-height: fit-content;
   min-width: 100%;
 
   background: ${(props) => props.theme.c_orange};

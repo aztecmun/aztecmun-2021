@@ -194,7 +194,7 @@ export const ProfileInfo = styled.div`
           margin-left: 0;
         }
       }
-  }
+    }
 `
 
 export const Close = styled(AiOutlineClose)`
