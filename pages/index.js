@@ -25,7 +25,17 @@ export default function index() {
 
   return (
     <HomeWrapper>
-      <Head> <title> AztecMUN | Inicio </title> </Head>
+      <Head>
+        <title> AztecMUN 2021 | Inicio </title>
+
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/img/logo.png" />
+        <meta property="og:title" content="AztecMUN 2021" />
+        <meta
+          property="og:description"
+          content="Modelo de Naciones Unidas de Plantel Azteca que busca lograr el bien común en la sociedad a través de la concientización de los problemas nacionales e internacionales."
+        />
+      </Head>
 
       <Sidebar />
 
