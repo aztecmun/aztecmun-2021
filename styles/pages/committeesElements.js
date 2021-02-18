@@ -7,7 +7,7 @@ export const ComContainer = styled(motion.div)`
   height: auto;
   width: 100%;
 
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 
   .video{
     height: 50vh;
@@ -139,7 +139,7 @@ export const ComContainer = styled(motion.div)`
 
         p{
           font-weight: bolder;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
 
         &__img{
@@ -233,12 +233,15 @@ export const ComContainer = styled(motion.div)`
 
         background: none;
 
-      &__dots{
-        width: 100%;
-        left: 0;
-      }
+    }
+
+    &__dots{
+      width: 100%;
+      left: 0;
+      right: 0;
     }
   }
+}
 `
 
 export const Close = styled(AiOutlineClose)`
