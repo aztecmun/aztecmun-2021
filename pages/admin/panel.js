@@ -1,5 +1,6 @@
 // React and Next imports
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -9,13 +10,18 @@ import { Close } from 'styles/pages/profileElements'
 
 // Firebase and user hook
 import { queryAllProfiles } from 'firebase/client'
-import useUser from 'hooks/useUser'
+import useUser, { USER_STATES } from 'hooks/useUser'
 
 import Delegate from 'components/admin/Delegate'
 
 export default function index() {
   const [profiles, setProfiles] = useState([])
   const user = useUser()
+  const router = useRouter()
+
+  useEffect(() => {
+    user === USER_STATES.NOT_LOGGED && router.push('/login')
+  }, [user])
 
   useEffect(() => {
     if (user) {

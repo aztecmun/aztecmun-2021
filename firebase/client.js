@@ -69,6 +69,7 @@ export const createAccountWithEmail = (email, password) => {
         age: '',
         phone: '',
         email: result.user.email,
+        role: 'delegate',
       })
 
       const emailConfig = { url: 'https://localhost:3000/profile' }
@@ -104,6 +105,7 @@ const createUserProfile = (obj) => {
     age: obj.age,
     phone: obj.phone,
     email: obj.email,
+    role: obj.role,
     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
   })
 }
@@ -145,7 +147,7 @@ const mapProfilesFormFirebaseToObject = (doc) => {
 export const queryAllProfiles = (callback) => {
   return db
     .collection('usersProfiles')
-    .orderBy('createdAt', 'desc')
+    .where('role', '==', 'delegate')
     .onSnapshot(({ docs }) => {
       const newProfile = docs.map(mapProfilesFormFirebaseToObject)
       callback(newProfile)
