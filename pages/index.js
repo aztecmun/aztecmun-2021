@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 // Libraries imports
 import Carousel from 'react-elastic-carousel'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 // Local styles imports
 import useUser, { USER_STATES } from 'hooks/useUser'
@@ -117,23 +117,23 @@ export default function index() {
 
         <AnimatePresence>
           <div className="committees">
-            <motion.div className="card" layoutId="container">
-              <motion.div className="logo" layoutId="logo">
+            <div className="card">
+              <div className="logo">
                 <img src="/img/unwto.png" alt="unwto" />
-              </motion.div>
+              </div>
               <div className="desc">
-                <motion.h1 layoutId="title">World Tourism Organization</motion.h1>
-                <motion.p layoutId="content">
+                <h1>World Tourism Organization</h1>
+                <p>
                   The World Tourism Organization (UNWTO) is the United Nations
                   agency responsible for promoting responsible, sustainable and
                   accessible tourism for all created in 1975, the headquarter is
                   in Madrid, Spain.
-              </motion.p>
+              </p>
               </div>
               <Link href="/comites/unwto">
                 <div className="button">VER MÁS</div>
               </Link>
-            </motion.div>
+            </div>
 
             <div className="card">
               <div className="logo">

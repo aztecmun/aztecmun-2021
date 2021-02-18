@@ -11,7 +11,12 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function unicef() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer 
+    layoutId="container"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0, x: -200}}
+    >
       <Head> <title>UNITED NATIONS CHILDREN'S FUND | AztecMUN 2021</title> </Head>
 
       <Link href="/" scroll={false}>
@@ -41,7 +46,7 @@ export default function unicef() {
           young people.
         </motion.p>
 
-        <div className="content__topics">
+        <motion.div className="content__topics">
           <h1 className="content__topics__title">Topics</h1>
           <div className="content__topics__1">
             <h1 className="content__topics--red">Topic A: </h1>
@@ -58,26 +63,26 @@ export default function unicef() {
             reduce child sexual abuse during the pandemic.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <h1 className="content__members__title"> Members </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Chairman</h1>
             <p>Ximena Esperanza Rojas Torres.</p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>First Moderator</h1>
             <p>Samantha Guzmán Domínguez</p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--3">
             <Icon className="content__members__member__img" />
             <h1>Second Moderator</h1>
             <p>Danna Paola Barrera Montalvo</p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--4">
             <Icon className="content__members__member__img" />
             <h1>Advisor</h1>
             <p>Luz María Rivera Sánchez</p>

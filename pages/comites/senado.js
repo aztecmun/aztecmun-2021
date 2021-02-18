@@ -53,12 +53,12 @@ export default function unicef() {
 
         <h1 className="content__members__title"> Miembros </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Presidente</h1>
             <p>Zitlalli Belém Morales López </p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente </h1>
             <p>Frida Castillo Juarez </p>

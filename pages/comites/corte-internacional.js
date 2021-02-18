@@ -50,19 +50,19 @@ export default function corteInernacional() {
 
         <h1 className="content__members__title"> Miembros </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Presidente</h1>
             <p>Alessandra Ortiz Espinosa </p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente</h1>
             <p>Carolina Rangel Monterrubio </p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--3">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente</h1>
             <p>Ximena Denise Macias Mateos </p>
