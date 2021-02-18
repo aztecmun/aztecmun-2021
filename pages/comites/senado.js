@@ -1,15 +1,71 @@
 // React and Next imports
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
-export default function senado() {
+// Libraries imports 
+import { motion } from 'framer-motion'
+
+// Styles
+import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
+
+export default function unicef() {
   return (
-    <>
-      <Head>
-        <title>Senado de la República | AztecMUN 2021</title>
-      </Head>
+    <ComContainer layoutId="container">
+      <Head> <title>Senado de la República | AztecMUN 2021</title> </Head>
 
-      <h1>Senado de la República</h1>
-    </>
+      <Link href="/" scroll={false}>
+        <Close />
+      </Link>
+
+      <div className="video"></div>
+
+      <img src="/img/div.png" alt="aztecmun" className="div" />
+
+      <motion.div className="content">
+        <div className="content__title">
+          <div className="content__title__logo" >
+            <img src="/img/senado.png" alt="senado logo" />
+          </div>
+          <motion.h1 layoutId="title">Senado de la República</motion.h1>
+          <p>Fecha de creación: 1 de Febrero 2020</p>
+        </div>
+
+        <motion.p className="content__main" layoutId="content">
+          Es la instancia superior de la Cámara dónde se discute y en su caso, se aprueba el trabajo legislativo que se ponga a su consideración. El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia.
+          <br /> <br />
+          La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa que nos conforman como país.
+
+        </motion.p>
+
+        <div className="content__topics">
+          <h1 className="content__topics__title">Tópicos</h1>
+          <div className="content__topics__1">
+            <h1 className="content__topics--red">Tópico A: </h1>
+            <p>Proyecto de decreto para la suspensión definitiva del Tren Maya. </p>
+          </div>
+
+          <div className="content__topics__2">
+            <h1 className="content__topics--green">Tópico B: </h1>
+            <p>Financiamiento de la educación para la eliminación de la inseguridad y la pobreza</p>
+          </div>
+        </div>
+
+        <h1 className="content__members__title"> Miembros </h1>
+        <div className="content__members">
+          <div className="content__members__member">
+            <Icon className="content__members__member__img" />
+            <h1>Presidente</h1>
+            <p>Zitlalli Belém Morales López </p>
+          </div>
+          <div className="content__members__member">
+            <Icon className="content__members__member__img" />
+            <h1>Vicepresidente </h1>
+            <p>Frida Castillo Juarez </p>
+          </div>
+        </div>
+      </motion.div>
+
+    </ComContainer>
   )
 }

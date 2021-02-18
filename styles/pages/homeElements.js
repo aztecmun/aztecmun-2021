@@ -350,6 +350,11 @@ export const HomeCommittees = styled(Frame)`
         background: ${(props) => props.theme.c_blue};
         border-radius: 12px;
         cursor: pointer;
+        transition: ${props => props.theme.trans};
+
+        &:hover{
+          transform: scale(1.02);
+        }
       }
     }
   }

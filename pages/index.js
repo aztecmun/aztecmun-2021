@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 // Libraries imports
 import Carousel from 'react-elastic-carousel'
-import { AnimateSharedLayout } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 // Local styles imports
 import useUser, { USER_STATES } from 'hooks/useUser'
@@ -115,98 +115,100 @@ export default function index() {
           </p>
         </div>
 
-        <div className="committees">
-          <div className="card">
-            <div className="logo">
-              <img src="/img/unwto.png" alt="unwto" />
-            </div>
-            <div className="desc">
-              <h1>World Tourism Organization</h1>
-              <p>
-                The World Tourism Organization (UNWTO) is the United Nations
-                agency responsible for promoting responsible, sustainable and
-                accessible tourism for all created in 1975, the headquarter is
-                in Madrid, Spain.
-              </p>
-            </div>
-            <Link href="/comites/unwto">
-              <div className="button">VER MÁS</div>
-            </Link>
-          </div>
+        <AnimatePresence>
+          <div className="committees">
+            <motion.div className="card" layoutId="container">
+              <motion.div className="logo" layoutId="logo">
+                <img src="/img/unwto.png" alt="unwto" />
+              </motion.div>
+              <div className="desc">
+                <motion.h1 layoutId="title">World Tourism Organization</motion.h1>
+                <motion.p layoutId="content">
+                  The World Tourism Organization (UNWTO) is the United Nations
+                  agency responsible for promoting responsible, sustainable and
+                  accessible tourism for all created in 1975, the headquarter is
+                  in Madrid, Spain.
+              </motion.p>
+              </div>
+              <Link href="/comites/unwto">
+                <div className="button">VER MÁS</div>
+              </Link>
+            </motion.div>
 
-          <div className="card">
-            <div className="logo">
-              <img src="/img/unicef.png" alt="unwto" />
-            </div>
-            <div className="desc">
-              <h1>United Nations Children's Fund</h1>
-              <p>
-                UNICEF is the driving force contributing to the creation of a
-                world where the rights of each and every child are respected.
-                Therefore, we are a world organization like no other working
-                with young people.
+            <div className="card">
+              <div className="logo">
+                <img src="/img/unicef.png" alt="unwto" />
+              </div>
+              <div className="desc">
+                <h1>United Nations Children's Fund</h1>
+                <p>
+                  UNICEF is the driving force contributing to the creation of a
+                  world where the rights of each and every child are respected.
+                  Therefore, we are a world organization like no other working
+                  with young people.
               </p>
+              </div>
+              <Link href="/comites/unicef">
+                <div className="button">VER MÁS</div>
+              </Link>
             </div>
-            <Link href="/comites/unicef">
-              <div className="button">VER MÁS</div>
-            </Link>
-          </div>
 
-          <div className="card">
-            <div className="logo">
-              <img src="/img/onu.png" alt="onu mujeress" />
-            </div>
-            <div className="desc">
-              <h1>ONU Mujeres</h1>
-              <p>
-                ONU Mujeres fue establecida para acelerar el proceso de mejora
-                de las condiciones de vida de mujeres y niñas, buscando resolver
-                sus necesidades y aumentando su calidad de vida.
+            <div className="card">
+              <div className="logo">
+                <img src="/img/onu.png" alt="onu mujeress" />
+              </div>
+              <div className="desc">
+                <h1>ONU Mujeres</h1>
+                <p>
+                  ONU Mujeres fue establecida para acelerar el proceso de mejora
+                  de las condiciones de vida de mujeres y niñas, buscando resolver
+                  sus necesidades y aumentando su calidad de vida.
               </p>
+              </div>
+              <Link href="/comites/onu-mujeres">
+                <div className="button">VER MÁS</div>
+              </Link>
             </div>
-            <Link href="/comites/onu-mujeres">
-              <div className="button">VER MÁS</div>
-            </Link>
-          </div>
 
-          <div className="card">
-            <div className="logo">
-              <img src="/img/senado.png" alt="senado de la republica" />
-            </div>
-            <div className="desc">
-              <h1>Senado de la República</h1>
-              <p>
-                Es la instancia superior de la Cámara dónde se discute y en su
-                caso, se aprueba el trabajo legislativo. Es una institución
-                fundamental que coordina el ejercicio de la democracia.
+            <div className="card">
+              <div className="logo">
+                <img src="/img/senado.png" alt="senado de la republica" />
+              </div>
+              <div className="desc">
+                <h1>Senado de la República</h1>
+                <p>
+                  Es la instancia superior de la Cámara dónde se discute y en su
+                  caso, se aprueba el trabajo legislativo. Es una institución
+                  fundamental que coordina el ejercicio de la democracia.
               </p>
+              </div>
+              <Link href="/comites/senado">
+                <div className="button">VER MÁS</div>
+              </Link>
             </div>
-            <Link href="/comites/senado">
-              <div className="button">VER MÁS</div>
-            </Link>
-          </div>
 
-          <div className="card">
-            <div className="logo">
-              <img
-                src="/img/comite.png"
-                alt="comité internacional de justicia"
-              />
-            </div>
-            <div className="desc">
-              <h1>Corte Inernacional de Justicia</h1>
-              <p>
-                Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó
-                a funcionar en 1946, es el principal órgano judicial de las
-                Naciones Unidas; se encuentra en el Palacio de La Paz en la
-                Haya.
+            <div className="card">
+              <div className="logo">
+                <img
+                  src="/img/comite.png"
+                  alt="comité internacional de justicia"
+                />
+              </div>
+              <div className="desc">
+                <h1>Corte Inernacional de Justicia</h1>
+                <p>
+                  Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó
+                  a funcionar en 1946, es el principal órgano judicial de las
+                  Naciones Unidas; se encuentra en el Palacio de La Paz en la
+                  Haya.
               </p>
+              </div>
+              <Link href="/comites/corte-internacional">
+                <div className="button">VER MÁS</div>
+              </Link>
             </div>
-            <Link href="/comites/corte-internacional">
-              <div className="button">VER MÁS</div>
-            </Link>
           </div>
-        </div>
+        </AnimatePresence>
       </HomeCommittees>
 
       <HomeSecretaries id="secretaries">
