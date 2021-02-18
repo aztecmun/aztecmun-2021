@@ -101,11 +101,6 @@ export const ComContainer = styled(motion.div)`
 
       margin: 50px 0;
 
-      background-image: url('/svg/miembros_bg.svg');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-
       &__title{
         color: ${props => props.theme.c_blue};
       }
@@ -117,12 +112,39 @@ export const ComContainer = styled(motion.div)`
         flex-direction: column;
         align-items: center;
 
+        &--1,
+        &--2,
+        &--3,
+        &--4{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &--1{
+          color: ${props => props.theme.c_green};
+        }
+
+        &--2{
+          color: ${props => props.theme.c_red};
+        }
+
+        &--3{
+          color: ${props => props.theme.c_blue};
+        }
+
+        &--4{
+          color: ${props => props.theme.c_orange};
+        }
+
         p{
           font-weight: bolder;
           font-size: 1.2rem;
         }
 
         &__img{
+          color: black;
+
           height: 150px;
           width: 150px;
 
@@ -210,39 +232,6 @@ export const ComContainer = styled(motion.div)`
         height: auto;
 
         background: none;
-
-        &__member{
-
-          &__img{
-            color: black;
-          }
-          
-          &--1,
-          &--2,
-          &--3,
-          &--4{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-
-          &--1{
-            color: ${props => props.theme.c_green};
-          }
-
-          &--2{
-            color: ${props => props.theme.c_red};
-          }
-
-          &--3{
-            color: ${props => props.theme.c_blue};
-          }
-
-          &--4{
-            color: ${props => props.theme.c_orange};
-          }
-        }
-      }
 
       &__dots{
         width: 100%;
