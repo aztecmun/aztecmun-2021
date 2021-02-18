@@ -10,7 +10,6 @@ export default function Delegate(props) {
         <td>{props.school}</td>
         <td>{props.grade}</td>
         <td>{props.group}</td>
-        <td>{props.phone}</td>
         <td>{props.age}</td>
         <td>{props.email}</td>
       </tr>

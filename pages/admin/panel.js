@@ -51,7 +51,6 @@ export default function index() {
                 <th>Escuela</th>
                 <th>Grado</th>
                 <th>Grupo</th>
-                <th>Teléfono</th>
                 <th>Edad</th>
                 <th>Email</th>
               </tr>
@@ -65,7 +64,6 @@ export default function index() {
                   school={profileObject.school}
                   grade={profileObject.grade}
                   group={profileObject.group}
-                  phone={profileObject.phone}
                   age={profileObject.age}
                   email={profileObject.email}
                 />

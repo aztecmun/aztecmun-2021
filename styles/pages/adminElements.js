@@ -18,7 +18,7 @@ export const AdminWrapper = styled.div`
 
   table {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: auto;
   border-collapse: collapse;
 }
