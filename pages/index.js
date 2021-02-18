@@ -375,7 +375,7 @@ export default function index() {
           <h1> Galería </h1>
         </div>
         <Carousel>
-          <img src="/img/s1.JPEG" alt="aztecmun plantel azteca" />
+          <img src="/img/s1.jpeg" alt="aztecmun plantel azteca" />
           <img src="/img/s2.JPG" alt="aztecmun auditorio" />
           <img src="/img/s3.JPG" alt="aztecmun comité" />
           <img src="/img/s4.JPG" alt="aztecmun medalla" />
