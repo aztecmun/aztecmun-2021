@@ -37,7 +37,7 @@ export default function unicef() {
       </Link>
 
       <div className="video">
-        <iframe src="https://www.youtube.com/embed/MblmGQX0jf8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <iframe src="https://www.youtube.com/embed/CKXk6SCEYW8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
@@ -45,7 +45,7 @@ export default function unicef() {
       <Link href="/signup">
         <div className="button">Participa</div>
       </Link>
-      
+
       <motion.div className="content">
         <div className="content__title">
           <div className="content__title__logo">

@@ -36,7 +36,7 @@ export default function unwto() {
       </Link>
 
       <div className="video">
-        <iframe src="https://www.youtube.com/embed/H5_mNFdSnFA" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <iframe width="1903" height="772" src="https://www.youtube.com/embed/z7D1U5-XH6g" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
