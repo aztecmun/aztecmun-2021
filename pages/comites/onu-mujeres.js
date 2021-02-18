@@ -11,7 +11,12 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function onuMujeres() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
+    >
       <Head>
         <title>ONU Mujeres | AztecMUN 2021</title>
 
@@ -70,19 +75,19 @@ export default function onuMujeres() {
 
         <h1 className="content__members__title"> Miembros </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Presidente</h1>
             <p>Valeria Roxana Cortés Flores</p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>Moderador</h1>
             <p>María Xareny Méndez Ruiz</p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--3">
             <Icon className="content__members__member__img" />
             <h1>Asesor</h1>
             <p>Alexia Fernanda González Rangel</p>

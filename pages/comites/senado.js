@@ -11,7 +11,12 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function unicef() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
+    >
       <Head>
         <title>Senado de la República | AztecMUN 2021</title>
 
@@ -75,12 +80,12 @@ export default function unicef() {
 
         <h1 className="content__members__title"> Miembros </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Presidente</h1>
             <p>Zitlalli Belém Morales López </p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente </h1>
             <p>Frida Castillo Juarez </p>

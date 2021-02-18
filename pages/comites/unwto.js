@@ -11,10 +11,14 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function unwto() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
+    >
       <Head>
         <title>World Tourism Organization | AztecMUN 2021</title>
-
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/img/unwto.png" />
         <meta
@@ -79,22 +83,22 @@ export default function unwto() {
 
         <h1 className="content__members__title"> Members </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Chairman</h1>
             <p>Fatima Betsabé Díaz Ríos</p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>First Moderator</h1>
             <p>Danna Itzel Sosa Sánchez </p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--3">
             <Icon className="content__members__member__img" />
             <h1>Second Moderator</h1>
             <p>Hanzel Emanuel Castellanos Pérez</p>
           </div>
-          <div className="content__members__member">
+          <div className="content__members__member--4">
             <Icon className="content__members__member__img" />
             <h1>Advisor</h1>
             <p>Melody Angeli Johanna Ledesma Negrete</p>

@@ -4,7 +4,7 @@ import { ImUser } from 'react-icons/im'
 import { AiOutlineClose } from 'react-icons/ai'
 
 export const ComContainer = styled(motion.div)`
-  min-height: 100vh;
+  height: auto;
   width: 100%;
 
   padding-bottom: 50px;
@@ -37,6 +37,8 @@ export const ComContainer = styled(motion.div)`
     }
 
     &__title{
+      color: ${props => props.theme.c_blue};
+
       text-align: center;
 
       width: 100%;
@@ -192,6 +194,8 @@ export const ComContainer = styled(motion.div)`
   }
 
   @media (max-width: 768px){
+    min-height: fit-content;
+
     .content{
       width: 90%;
 
@@ -203,12 +207,41 @@ export const ComContainer = styled(motion.div)`
         display: flex;
         flex-direction: column;
 
+        height: auto;
+
         background: none;
 
-        &--1{ color: ${props => props.theme.c_red}; }
-        &--2{ color: ${props => props.theme.c_green}; }
-        &--3{ color: ${props => props.theme.c_blue}; }
-        &--4{ color: ${props => props.theme.c_orange}; }
+        &__member{
+
+          &__img{
+            color: black;
+          }
+          
+          &--1,
+          &--2,
+          &--3,
+          &--4{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          &--1{
+            color: ${props => props.theme.c_green};
+          }
+
+          &--2{
+            color: ${props => props.theme.c_red};
+          }
+
+          &--3{
+            color: ${props => props.theme.c_blue};
+          }
+
+          &--4{
+            color: ${props => props.theme.c_orange};
+          }
+        }
       }
 
       &__dots{

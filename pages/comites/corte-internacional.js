@@ -11,7 +11,12 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function corteInernacional() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
+    >
       <Head>
         <title>Corte Internacional de Justicia | AztecMUN 2021</title>
 
@@ -23,7 +28,7 @@ export default function corteInernacional() {
         />
         <meta
           property="og:description"
-          content="Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano judicial de las Naciones Unidas; se encuentra en el Palacio de La Paz en la Haya."
+          content="Es el principal órgano judicial de las Naciones Unidas; se encuentra en el Palacio de La Paz en la Haya."
         />
       </Head>
 
@@ -76,19 +81,19 @@ export default function corteInernacional() {
 
         <h1 className="content__members__title"> Miembros </h1>
         <div className="content__members">
-          <div className="content__members__member">
+          <div className="content__members__member--1">
             <Icon className="content__members__member__img" />
             <h1>Presidente</h1>
             <p>Alessandra Ortiz Espinosa </p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--2">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente</h1>
             <p>Carolina Rangel Monterrubio </p>
           </div>
 
-          <div className="content__members__member">
+          <div className="content__members__member--3">
             <Icon className="content__members__member__img" />
             <h1>Vicepresidente</h1>
             <p>Ximena Denise Macias Mateos </p>
