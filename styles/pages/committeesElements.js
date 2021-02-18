@@ -293,6 +293,14 @@ export const Close = styled(AiOutlineClose)`
   width: 50px;
 
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  transition: ${props => props.theme.trans};
+  border-radius: 10px;
+
+  &:hover{
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05)
+  }
 
   @media(max-width: 768px){
     height: 30px;

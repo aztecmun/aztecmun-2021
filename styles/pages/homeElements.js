@@ -165,6 +165,10 @@ export const HomeAbout = styled(Frame)`
       height: 500px;
       width: 500px;
     }
+
+    .img-2{
+      display: none;
+    }
   }
 
   .sec3 {
@@ -185,14 +189,22 @@ export const HomeAbout = styled(Frame)`
     }
   }
 
+  @media (max-width: 340px){
+    .sec1{
+      h1{
+        font-size: 2rem;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 200px repeat(3, auto);
     gap: 50px;
 
     .sec1 {
       grid-column: 1 / 2;
-      grid-row: 1 / 2;
+      grid-row: 2 / 2;
 
       .button {
         font-size: 1rem;
@@ -206,31 +218,43 @@ export const HomeAbout = styled(Frame)`
       }
     }
 
-    .sec2 {
-      display: none;
+    .sec2{
+      grid-column: 1;
+      grid-row: 1;
+
+      img{
+        height: 100%;
+        width: 100%;
+      }
+
+      .img-1{
+        display: none;
+      }
     }
+
 
     .sec3 {
       grid-column: 1 / 2;
-      grid-row: 2 / 3;
+      grid-row: 3;
     }
 
     .sec4 {
       grid-column: 1 / 2;
-      grid-row: 3 / 4;
+      grid-row: 4;
     }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 75px;
+    grid-template-rows: 300px auto;
 
     min-height: auto;
 
     .sec1 {
       grid-column: 1 / 3;
-      grid-row: 1 / 2;
+      grid-row: 2;
+
+      margin-bottom: 75px; 
 
       .button {
         font-size: 1rem;
@@ -244,18 +268,28 @@ export const HomeAbout = styled(Frame)`
       }
     }
 
-    .sec2 {
-      display: none;
+    .sec2{
+      grid-column: 1 / 3;
+      grid-row: 1;
+
+      img{
+        height: 100%;
+        width: 100%;
+      }
+      
+      .img-1{
+        display: none;
+      }
     }
 
     .sec3 {
       grid-column: 1;
-      grid-row: 2 / 3;
+      grid-row: 3;
     }
 
     .sec4 {
       grid-column: 2;
-      grid-row: 2 / 3;
+      grid-row: 3;
     }
   }
 `
