@@ -128,7 +128,7 @@ export default function index() {
                   agency responsible for promoting responsible, sustainable and
                   accessible tourism for all created in 1975, the headquarter is
                   in Madrid, Spain.
-              </p>
+                </p>
               </div>
               <Link href="/comites/unwto">
                 <div className="button">VER MÁS</div>
@@ -146,7 +146,7 @@ export default function index() {
                   world where the rights of each and every child are respected.
                   Therefore, we are a world organization like no other working
                   with young people.
-              </p>
+                </p>
               </div>
               <Link href="/comites/unicef">
                 <div className="button">VER MÁS</div>
@@ -161,9 +161,9 @@ export default function index() {
                 <h1>ONU Mujeres</h1>
                 <p>
                   ONU Mujeres fue establecida para acelerar el proceso de mejora
-                  de las condiciones de vida de mujeres y niñas, buscando resolver
-                  sus necesidades y aumentando su calidad de vida.
-              </p>
+                  de las condiciones de vida de mujeres y niñas, buscando
+                  resolver sus necesidades y aumentando su calidad de vida.
+                </p>
               </div>
               <Link href="/comites/onu-mujeres">
                 <div className="button">VER MÁS</div>
@@ -180,7 +180,7 @@ export default function index() {
                   Es la instancia superior de la Cámara dónde se discute y en su
                   caso, se aprueba el trabajo legislativo. Es una institución
                   fundamental que coordina el ejercicio de la democracia.
-              </p>
+                </p>
               </div>
               <Link href="/comites/senado">
                 <div className="button">VER MÁS</div>
@@ -195,13 +195,13 @@ export default function index() {
                 />
               </div>
               <div className="desc">
-                <h1>Corte Inernacional de Justicia</h1>
+                <h1>Corte Internacional de Justicia</h1>
                 <p>
-                  Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó
-                  a funcionar en 1946, es el principal órgano judicial de las
-                  Naciones Unidas; se encuentra en el Palacio de La Paz en la
-                  Haya.
-              </p>
+                  Fue creada en 1945 por la Carta de las Naciones Unidas y
+                  comenzó a funcionar en 1946, es el principal órgano judicial
+                  de las Naciones Unidas; se encuentra en el Palacio de La Paz
+                  en la Haya.
+                </p>
               </div>
               <Link href="/comites/corte-internacional">
                 <div className="button">VER MÁS</div>
