@@ -52,9 +52,7 @@ export default function corteInernacional() {
         </div>
 
         <motion.p className="content__main" layoutId="content">
-          ONU Mujeres fue establecida para acelerar el proceso de mejora de las
-          condiciones de vida de mujeres y niñas, buscando resolver sus
-          necesidades y aumentando su calidad de vida.
+          La Corte Internacional de Justicia también conocida como Tribunal Internacional de Justicia fue creada en 1945 por la Carta de las Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano judicial de las Naciones Unidas; su sede se encuentra en el Palacio de La Paz en la Haya (países bajos). Una de sus funciones principales es emitir opiniones consultivas sobre cuestiones que pueden someterse órganos o instituciones especializadas de la ONU. Se compone de quince magistrados (jueces), elegidos por la Asamblea General y el Consejo de Seguridad, los cuales cumplen mandatos de nueve años. La Corte desempeña una doble misión: el arreglo de las controversias de orden jurídico entre los Estados que le sean sometidas por estos (procedimiento contencioso) y la emisión de dictámenes consultivos sobre cuestiones jurídicas que le sometan los órganos u organismos de las Naciones Unidas (procedimiento consultivo).
         </motion.p>
 
         <div className="content__topics">

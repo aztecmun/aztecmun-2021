@@ -197,14 +197,18 @@ export const ComContainer = styled(motion.div)`
           color: ${props => props.theme.c_white};
           
           position: absolute;
-          right: -500%;
+          right: -80px;
           top: -15px;
+          z-index: 2;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           height: auto;
-          width: auto;
+          width: 75px;
 
-          padding: 5px;
-          margin-left: -50%;
+          padding: 5px 0;
 
           opacity: 0;
           border: none;
@@ -217,6 +221,8 @@ export const ComContainer = styled(motion.div)`
 
   @media (max-width: 768px){
     min-height: fit-content;
+
+    padding-bottom: 50px;
 
     .content{
       width: 90%;
@@ -232,7 +238,6 @@ export const ComContainer = styled(motion.div)`
         height: auto;
 
         background: none;
-
     }
 
     &__dots{
