@@ -11,7 +11,12 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function unicef() {
   return (
-    <ComContainer layoutId="container">
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
+    >
       <Head> <title>Senado de la República | AztecMUN 2021</title> </Head>
 
       <Link href="/" scroll={false}>

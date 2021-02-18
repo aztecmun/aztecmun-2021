@@ -11,11 +11,11 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 
 export default function unicef() {
   return (
-    <ComContainer 
-    layoutId="container"
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    exit={{opacity: 0, x: -200}}
+    <ComContainer
+      layoutId="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, x: -200 }}
     >
       <Head> <title>UNITED NATIONS CHILDREN'S FUND | AztecMUN 2021</title> </Head>
 
