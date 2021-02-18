@@ -18,16 +18,8 @@ export const AdminWrapper = styled.div`
 
   table {
   display: grid;
-  grid-template-columns: 
-    minmax(150px, 1fr)
-    minmax(150px, 2fr)
-    minmax(150px, 2fr)
-    minmax(150px, .5fr)
-    minmax(150px, .5fr)
-    minmax(150px, 1.5fr)
-    minmax(150px, .5fr)
-    minmax(150px, 2fr);
-    grid-template-rows: auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
   border-collapse: collapse;
 }
 

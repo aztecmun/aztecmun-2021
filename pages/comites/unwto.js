@@ -65,7 +65,7 @@ export default function unwto() {
         <div className="content__topics">
           <h1 className="content__topics__title">Topics</h1>
           <div className="content__topics__1">
-            <h1 className="content__topics--red">Topic A: </h1>
+            <h1 className="content__topics--red">Topic A:</h1>
             <p>
               Resolutions and strategies implemented for sustainable tourism in
               accommodation establishments.
@@ -73,7 +73,7 @@ export default function unwto() {
           </div>
 
           <div className="content__topics__2">
-            <h1 className="content__topics--green">Topic B: </h1>
+            <h1 className="content__topics--green">Topic B:</h1>
             <p>
               Implementation of guidelines and measures for the reactivation of
               tourism.

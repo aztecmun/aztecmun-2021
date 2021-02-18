@@ -77,9 +77,14 @@ export const ComContainer = styled(motion.div)`
 
         display: flex;
         align-items: center;
-        gap: 50px;
 
-        margin: 50px auto;
+        margin: 50px 0;
+
+        h1{
+          text-align: start;
+
+          min-width: 30%;
+        }
       }
 
       &--red{
@@ -229,6 +234,19 @@ export const ComContainer = styled(motion.div)`
 
       &__title{
         grid-row: 1;
+      }
+
+      &__topics{
+
+        &__1,
+        &__2{
+          flex-direction: column;
+        }
+
+        h1{
+          min-width: auto;
+          margin-right: 20px;
+        }
       }
 
       &__members{
