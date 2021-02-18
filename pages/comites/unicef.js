@@ -35,7 +35,9 @@ export default function unicef() {
         <Close />
       </Link>
 
-      <div className="video"></div>
+      <div className="video">
+        <iframe src="https://www.youtube.com/embed/t5f37QtFX6I" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+      </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
 

@@ -267,6 +267,15 @@ export const ComContainer = styled(motion.div)`
       width: 100%;
       left: 0;
       right: 0;
+
+      .__message{
+        font-size: .8rem;
+
+        top: -50px;
+        left: -65px;
+
+        padding: 0px;
+      }
     }
   }
 }

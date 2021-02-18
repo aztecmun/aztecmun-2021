@@ -374,18 +374,18 @@ export default function index() {
           <h1> Galería </h1>
         </div>
         <Carousel>
-          <img src="/img/s1.JPG" />
-          <img src="/img/s2.JPG" />
-          <img src="/img/s3.JPG" />
-          <img src="/img/s4.JPG" />
-          <img src="/img/s5.jpg" />
-          <img src="/img/s6.JPG" />
-          <img src="/img/s7.JPG" />
-          <img src="/img/s8.jpg" />
-          <img src="/img/s9.JPG" />
-          <img src="/img/s10.PNG" />
-          <img className="s11" src="/img/s11.jpg" />
-          <img src="/img/s12.jpg" />
+          <img src="/img/s1.JPG" alt="aztecmun plantel azteca" />
+          <img src="/img/s2.JPG" alt="aztecmun auditorio" />
+          <img src="/img/s3.JPG" alt="aztecmun comité" />
+          <img src="/img/s4.JPG" alt="aztecmun medalla" />
+          <img src="/img/s5.jpg" alt="aztecmun secretarios" />
+          <img src="/img/s6.JPG" alt="aztecmun secretarios" />
+          <img src="/img/s7.JPG" alt="aztecmun comitré" />
+          <img src="/img/s8.jpg" alt="aztecmun comité internacional de bioética" />
+          <img src="/img/s9.JPG" alt="aztecmun anáhuac" />
+          <img src="/img/s10.PNG" alt="aztecmun harvard" />
+          <img className="s11" src="/img/s11.jpg" alt="aztecmun harvar" />
+          <img src="/img/s12.jpg" alt="aztecmun senado de la república" />
         </Carousel>
       </HomeGallery>
     </HomeWrapper>
