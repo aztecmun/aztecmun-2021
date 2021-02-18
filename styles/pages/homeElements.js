@@ -203,8 +203,8 @@ export const HomeAbout = styled(Frame)`
     gap: 50px;
 
     .sec1 {
-      grid-column: 1 / 2;
-      grid-row: 2 / 2;
+      grid-column: 1;
+      grid-row: 2;
 
       .button {
         font-size: 1rem;
@@ -221,17 +221,16 @@ export const HomeAbout = styled(Frame)`
     .sec2{
       grid-column: 1;
       grid-row: 1;
-
-      img{
-        height: 100%;
-        width: 100%;
-      }
+      display: none;
 
       .img-1{
         display: none;
       }
 
-      background: red;
+      .img-2{
+        height: 100%;
+        width: 100%;
+      }
     }
 
 
@@ -271,10 +270,10 @@ export const HomeAbout = styled(Frame)`
     }
 
     .sec2{
-      display: none;
-
       grid-column: 1 / 3;
       grid-row: 1;
+
+      display: none;
 
       img{
         height: 100%;
