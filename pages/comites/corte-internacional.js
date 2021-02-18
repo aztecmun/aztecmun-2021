@@ -37,10 +37,14 @@ export default function corteInernacional() {
       </Link>
 
       <div className="video">
-      <iframe src="https://www.youtube.com/embed/CJMFOGSfjxg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <iframe src="https://www.youtube.com/embed/CJMFOGSfjxg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
       </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
+
+      <Link href="/signup">
+        <div className="button">Participa</div>
+      </Link>
 
       <motion.div className="content">
         <div className="content__title">

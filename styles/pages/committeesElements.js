@@ -26,6 +26,28 @@ export const ComContainer = styled(motion.div)`
     margin-bottom: 50px;
   }
 
+  .button{
+    font-size: 1.2rem;
+    color: ${props => props.theme.c_white};
+
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+    margin: 50px auto;
+
+    max-width: 15%;
+
+    border-radius: 30px;
+    background: ${props => props.theme.c_blue};
+    cursor: pointer;
+    transition: ${props => props.theme.trans};
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
   .content{
     width: 60%;
 
@@ -233,6 +255,10 @@ export const ComContainer = styled(motion.div)`
     min-height: fit-content;
 
     padding-bottom: 50px;
+
+    .button{
+      max-width: 80%;
+    }
 
     .content{
       width: 90%;

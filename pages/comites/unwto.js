@@ -41,6 +41,10 @@ export default function unwto() {
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
 
+      <Link href="/signup">
+        <div className="button">Participa</div>
+      </Link>
+
       <motion.div className="content">
         <div className="content__title">
           <div className="content__title__logo">
