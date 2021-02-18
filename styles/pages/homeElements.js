@@ -199,7 +199,7 @@ export const HomeAbout = styled(Frame)`
 
   @media (max-width: 768px) {
     grid-template-columns: 100%;
-    grid-template-rows: 200px repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     gap: 50px;
 
     .sec1 {
@@ -230,6 +230,8 @@ export const HomeAbout = styled(Frame)`
       .img-1{
         display: none;
       }
+
+      background: red;
     }
 
 
@@ -252,7 +254,7 @@ export const HomeAbout = styled(Frame)`
 
     .sec1 {
       grid-column: 1 / 3;
-      grid-row: 2;
+      grid-row: 1;
 
       margin-bottom: 75px; 
 
@@ -269,6 +271,8 @@ export const HomeAbout = styled(Frame)`
     }
 
     .sec2{
+      display: none;
+
       grid-column: 1 / 3;
       grid-row: 1;
 
@@ -284,12 +288,12 @@ export const HomeAbout = styled(Frame)`
 
     .sec3 {
       grid-column: 1;
-      grid-row: 3;
+      grid-row: 2;
     }
 
     .sec4 {
       grid-column: 2;
-      grid-row: 3;
+      grid-row: 2;
     }
   }
 `

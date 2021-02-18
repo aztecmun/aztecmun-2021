@@ -83,7 +83,7 @@ export default function index() {
 
         <div className="sec2">
           <img src="/svg/about.svg" alt="logo_aztecmun" className="img-1"/>
-          <img src="/img/__about.png" alt="logo_aztecmun" className="img-2"/>
+          <img src="/img/about2.png" alt="logo_aztecmun" className="img-2"/>
         </div>
 
         <div className="sec3">
