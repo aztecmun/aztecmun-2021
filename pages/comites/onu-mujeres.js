@@ -67,6 +67,22 @@ export default function onuMujeres() {
             <h1>Asesor</h1>
             <p>Alexia Fernanda González Rangel</p>
           </div>
+
+          <div className="content__dots">
+            <Link href="unwto">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNWTO </p> </div>
+            </Link>
+            <Link href="unicef">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNICEF </p> </div>
+            </Link>
+            <div className="content__dots__dot --active"> <p className="content__dots__dot __message"> ONU </p> </div>
+            <Link href="senado">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> SENADO </p> </div>
+            </Link>
+            <Link href="corte-internacional">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> CIJ </p> </div>
+            </Link>
+          </div>
         </div>
       </motion.div>
 

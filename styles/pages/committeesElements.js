@@ -7,6 +7,8 @@ export const ComContainer = styled(motion.div)`
   min-height: 100vh;
   width: 100%;
 
+  padding-bottom: 50px;
+
   .video{
     height: 50vh;
     width: 100%;
@@ -127,6 +129,66 @@ export const ComContainer = styled(motion.div)`
         }
       }
     }
+
+    &__dots{
+      position: fixed;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+
+      height: 60px;
+      width: 60%;
+
+      margin: auto;
+
+      background: white;
+
+      .--active{
+        background: ${props => props.theme.c_blue};
+      }
+
+      &__dot{
+        position: relative;
+
+        height: 20px;
+        width: 20px;
+
+        margin: auto;
+
+        border: 3px solid ${props => props.theme.c_blue};
+        border-radius: 50%;
+        transition: ${props => props.theme.trans};
+        cursor: pointer;
+
+        &:hover{
+          background: ${props => props.theme.c_blue};
+        }
+
+        &:hover .__message{
+          opacity: 1;
+        }
+
+        .__message{
+          color: ${props => props.theme.c_white};
+          
+          position: absolute;
+          right: -500%;
+          top: -15px;
+
+          height: auto;
+          width: auto;
+
+          padding: 5px;
+          margin-left: -50%;
+
+          opacity: 0;
+          border: none;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 5px;
+        }
+      }
+    }
   }
 
   @media (max-width: 768px){
@@ -148,6 +210,11 @@ export const ComContainer = styled(motion.div)`
         &--3{ color: ${props => props.theme.c_blue}; }
         &--4{ color: ${props => props.theme.c_orange}; }
       }
+
+      &__dots{
+        width: 100%;
+        left: 0;
+      }
     }
   }
 `
@@ -166,8 +233,8 @@ export const Close = styled(AiOutlineClose)`
   cursor: pointer;
 
   @media(max-width: 768px){
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
   }
 `
 

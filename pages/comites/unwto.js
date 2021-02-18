@@ -58,19 +58,35 @@ export default function unwto() {
             <p>Fatima Betsabé Díaz Ríos</p>
           </div>
           <div className="content__members__member">
-          <Icon className="content__members__member__img" />
+            <Icon className="content__members__member__img" />
             <h1>First Moderator</h1>
             <p>Danna Itzel Sosa Sánchez  </p>
           </div>
           <div className="content__members__member">
-          <Icon className="content__members__member__img" />
+            <Icon className="content__members__member__img" />
             <h1>Second Moderator</h1>
             <p>Hanzel Emanuel Castellanos Pérez</p>
           </div>
           <div className="content__members__member">
-          <Icon className="content__members__member__img" />
+            <Icon className="content__members__member__img" />
             <h1>Advisor</h1>
             <p>Melody Angeli Johanna Ledesma Negrete</p>
+          </div>
+
+          <div className="content__dots">
+            <div className="content__dots__dot --active"> <p className="content__dots__dot __message"> UNWTO </p> </div>
+            <Link href="unicef">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNICEF </p> </div>
+            </Link>
+            <Link href="onu-mujeres">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> ONU </p> </div>
+            </Link>
+            <Link href="senado">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> SENADO </p> </div>
+            </Link>
+            <Link href="corte-internacional">
+              <div className="content__dots__dot"> <p className="content__dots__dot __message"> CIJ </p> </div>
+            </Link>
           </div>
         </div>
       </motion.div>
