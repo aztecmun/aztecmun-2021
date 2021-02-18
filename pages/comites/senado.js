@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-// Libraries imports 
+// Libraries imports
 import { motion } from 'framer-motion'
 
 // Styles
@@ -12,9 +12,22 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 export default function unicef() {
   return (
     <ComContainer layoutId="container">
-      <Head> <title>Senado de la República | AztecMUN 2021</title> </Head>
+      <Head>
+        <title>Senado de la República | AztecMUN 2021</title>
 
-      <Link href="/" scroll={false}>
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/img/senado.png" />
+        <meta
+          property="og:title"
+          content="Senado de la República | AztecMUN 2021"
+        />
+        <meta
+          property="og:description"
+          content="Es la instancia superior de la Cámara dónde se discute y en su caso, se aprueba el trabajo legislativo. Es una institución fundamental que coordina el ejercicio de la democracia."
+        />
+      </Head>
+
+      <Link href="/#committees" scroll={false}>
         <Close />
       </Link>
 
@@ -24,7 +37,7 @@ export default function unicef() {
 
       <motion.div className="content">
         <div className="content__title">
-          <div className="content__title__logo" >
+          <div className="content__title__logo">
             <img src="/img/senado.png" alt="senado logo" />
           </div>
           <motion.h1 layoutId="title">Senado de la República</motion.h1>
@@ -32,22 +45,31 @@ export default function unicef() {
         </div>
 
         <motion.p className="content__main" layoutId="content">
-          Es la instancia superior de la Cámara dónde se discute y en su caso, se aprueba el trabajo legislativo que se ponga a su consideración. El Senado de la República es una institución fundamental que coordina el ejercicio de la democracia.
+          Es la instancia superior de la Cámara dónde se discute y en su caso,
+          se aprueba el trabajo legislativo que se ponga a su consideración. El
+          Senado de la República es una institución fundamental que coordina el
+          ejercicio de la democracia.
           <br /> <br />
-          La Cámara de Senadores nos garantiza que dicha representatividad vele por los intereses de cada entidad federativa que nos conforman como país.
-
+          La Cámara de Senadores nos garantiza que dicha representatividad vele
+          por los intereses de cada entidad federativa que nos conforman como
+          país.
         </motion.p>
 
         <div className="content__topics">
           <h1 className="content__topics__title">Tópicos</h1>
           <div className="content__topics__1">
             <h1 className="content__topics--red">Tópico A: </h1>
-            <p>Proyecto de decreto para la suspensión definitiva del Tren Maya. </p>
+            <p>
+              Proyecto de decreto para la suspensión definitiva del Tren Maya.
+            </p>
           </div>
 
           <div className="content__topics__2">
             <h1 className="content__topics--green">Tópico B: </h1>
-            <p>Financiamiento de la educación para la eliminación de la inseguridad y la pobreza</p>
+            <p>
+              Financiamiento de la educación para la eliminación de la
+              inseguridad y la pobreza
+            </p>
           </div>
         </div>
 
@@ -66,22 +88,31 @@ export default function unicef() {
 
           <div className="content__dots">
             <Link href="unwto">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNWTO </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> UNWTO </p>
+              </div>
             </Link>
             <Link href="unicef">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNICEF </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> UNICEF </p>
+              </div>
             </Link>
             <Link href="onu-mujeres">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> ONU </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> ONU </p>
+              </div>
             </Link>
-            <div className="content__dots__dot --active"> <p className="content__dots__dot __message"> SENADO </p> </div>
+            <div className="content__dots__dot --active">
+              <p className="content__dots__dot __message"> SENADO </p>
+            </div>
             <Link href="corte-internacional">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> CIJ </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> CIJ </p>
+              </div>
             </Link>
           </div>
         </div>
       </motion.div>
-
     </ComContainer>
   )
 }

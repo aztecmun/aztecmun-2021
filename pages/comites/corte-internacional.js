@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-// Libraries imports 
+// Libraries imports
 import { motion } from 'framer-motion'
 
 // Styles
@@ -12,9 +12,22 @@ import { ComContainer, Icon, Close } from 'styles/pages/committeesElements'
 export default function corteInernacional() {
   return (
     <ComContainer layoutId="container">
-      <Head> <title>Corte Internacional de Justicia | AztecMUN 2021</title> </Head>
+      <Head>
+        <title>Corte Internacional de Justicia | AztecMUN 2021</title>
 
-      <Link href="/" scroll={false}>
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/img/comite.png" />
+        <meta
+          property="og:title"
+          content="Corte Internacional de Justicia | AztecMUN 2021"
+        />
+        <meta
+          property="og:description"
+          content="Fue creada en 1945 por la Carta de las Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano judicial de las Naciones Unidas; se encuentra en el Palacio de La Paz en la Haya."
+        />
+      </Head>
+
+      <Link href="/#committees" scroll={false}>
         <Close />
       </Link>
 
@@ -24,27 +37,40 @@ export default function corteInernacional() {
 
       <motion.div className="content">
         <div className="content__title">
-          <div className="content__title__logo" >
+          <div className="content__title__logo">
             <img src="/img/comite.png" alt="senado logo" />
           </div>
-          <motion.h1 layoutId="title">Corte Internacional de Justicia </motion.h1>
+          <motion.h1 layoutId="title">
+            Corte Internacional de Justicia
+          </motion.h1>
           <p>Fecha de creación: 1 de Febrero 2020</p>
         </div>
 
         <motion.p className="content__main" layoutId="content">
-          ONU Mujeres fue establecida para acelerar el proceso de mejora de las condiciones de vida de mujeres y niñas, buscando resolver sus necesidades y aumentando su calidad de vida.
+          ONU Mujeres fue establecida para acelerar el proceso de mejora de las
+          condiciones de vida de mujeres y niñas, buscando resolver sus
+          necesidades y aumentando su calidad de vida.
         </motion.p>
 
         <div className="content__topics">
           <h1 className="content__topics__title">Tópicos</h1>
           <div className="content__topics__1">
             <h1 className="content__topics--red">Tópico A: </h1>
-            <p>Aplicación del Convenio Internacional para la Represión de la Financiación del Terrorismo y de la Convención Internacional sobre la Eliminación de Todas las Formas de Discriminación Racial (Ucrania contra Federación de Rusia).</p>
+            <p>
+              Aplicación del Convenio Internacional para la Represión de la
+              Financiación del Terrorismo y de la Convención Internacional sobre
+              la Eliminación de Todas las Formas de Discriminación Racial
+              (Ucrania contra Federación de Rusia).
+            </p>
           </div>
 
           <div className="content__topics__2">
             <h1 className="content__topics--green">Tópico B: </h1>
-            <p>Caso relativo a las actividades militares y paramilitares en Nicaragua y contra Nicaragua (Nicaragua contra los Estados Unidos de América)</p>
+            <p>
+              Caso relativo a las actividades militares y paramilitares en
+              Nicaragua y contra Nicaragua (Nicaragua contra los Estados Unidos
+              de América)
+            </p>
           </div>
         </div>
 
@@ -70,22 +96,31 @@ export default function corteInernacional() {
 
           <div className="content__dots">
             <Link href="unwto">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNWTO </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> UNWTO </p>
+              </div>
             </Link>
             <Link href="unicef">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> UNICEF </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> UNICEF </p>
+              </div>
             </Link>
             <Link href="onu-mujeres">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> ONU </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> ONU </p>
+              </div>
             </Link>
             <Link href="senado">
-              <div className="content__dots__dot"> <p className="content__dots__dot __message"> SENADO </p> </div>
+              <div className="content__dots__dot">
+                <p className="content__dots__dot __message"> SENADO </p>
+              </div>
             </Link>
-            <div className="content__dots__dot --active"> <p className="content__dots__dot __message"> CIJ </p> </div>
+            <div className="content__dots__dot --active">
+              <p className="content__dots__dot __message"> CIJ </p>
+            </div>
           </div>
         </div>
       </motion.div>
-
     </ComContainer>
   )
 }
