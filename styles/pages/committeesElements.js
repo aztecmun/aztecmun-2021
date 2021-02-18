@@ -12,6 +12,11 @@ export const ComContainer = styled(motion.div)`
   .video{
     height: 50vh;
     width: 100%;
+
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .div{

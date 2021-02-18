@@ -45,7 +45,7 @@ export default function unicef() {
             <img src="/img/unicef.png" alt="unicef logo" />
           </div>
           <motion.h1 layoutId="title">United Nations Children's Fund</motion.h1>
-          <p>Fecha de creación: 1 de Febrero 2020</p>
+          <p>Fecha de creación: 11 de Diciembre de 1946</p>
         </div>
 
         <motion.p className="content__main" layoutId="content">

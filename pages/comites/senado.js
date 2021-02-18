@@ -36,7 +36,9 @@ export default function unicef() {
         <Close />
       </Link>
 
-      <div className="video"></div>
+      <div className="video">
+        <iframe src="https://www.youtube.com/embed/MblmGQX0jf8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+      </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
 
@@ -46,7 +48,7 @@ export default function unicef() {
             <img src="/img/senado.png" alt="senado logo" />
           </div>
           <motion.h1 layoutId="title">Senado de la República</motion.h1>
-          <p>Fecha de creación: 1 de Febrero 2020</p>
+          <p>Fecha de creación: 4 de Octubre de 1824</p>
         </div>
 
         <motion.p className="content__main" layoutId="content">
