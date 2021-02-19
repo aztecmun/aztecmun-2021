@@ -145,23 +145,44 @@ export default function index() {
                   value={profileData.name}
                 />
 
-                <select
-                  className="school"
-                  name="school"
-                  onChange={handleInputChange}
-                >
-                  <option disabled selected value="">
-                    Selecciona tu escuela
-                  </option>
-                  <option value="Plantel Azteca"> Plantel Azteca </option>
-                  <option value="Otra"> Otra </option>
-
-                  {profileData.school !== '' && (
-                    <option hidden disabled selected value={profileData.school}>
-                      {profileData.school}
+                {(profileData.school === 'Plantel Azteca' ||
+                  profileData.school === '') && (
+                  <select
+                    className="school"
+                    name="school"
+                    onChange={handleInputChange}
+                  >
+                    <option disabled selected value="">
+                      Selecciona tu escuela
                     </option>
-                  )}
-                </select>
+                    <option value="Plantel Azteca"> Plantel Azteca </option>
+                    <option value="Otra"> Otra </option>
+
+                    {profileData.school !== '' && (
+                      <option
+                        hidden
+                        disabled
+                        selected
+                        value={profileData.school}
+                      >
+                        {profileData.school}
+                      </option>
+                    )}
+                  </select>
+                )}
+
+                {profileData.school !== 'Plantel Azteca' && (
+                  <input
+                    name="school"
+                    className="c2"
+                    type="text"
+                    placeholder="Ingresa tu escuela"
+                    onChange={handleInputChange}
+                    required
+                    autoComplete="off"
+                    value={profileData.school}
+                  />
+                )}
 
                 <select
                   className="committee"
