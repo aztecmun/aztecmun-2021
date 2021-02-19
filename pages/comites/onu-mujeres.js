@@ -34,7 +34,7 @@ export default function onuMujeres() {
       </Link>
 
       <div className="video">
-        <iframe src="https://www.youtube.com/embed/RZocbb6Nb6M" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <iframe src="https://www.youtube.com/embed/hcH5iQNnltQ" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
@@ -42,7 +42,7 @@ export default function onuMujeres() {
       <Link href="/signup">
         <div className="button">Participa</div>
       </Link>
-      
+
       <motion.div className="content">
         <div className="content__title">
           <div className="content__title__logo">
