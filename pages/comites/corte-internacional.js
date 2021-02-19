@@ -37,7 +37,12 @@ export default function corteInernacional() {
       </Link>
 
       <div className="video">
-        <iframe src="https://www.youtube.com/embed/CJMFOGSfjxg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <iframe
+          src="https://www.youtube.com/embed/CJMFOGSfjxg"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </div>
 
       <img src="/img/div.png" alt="aztecmun" className="div" />
@@ -58,13 +63,26 @@ export default function corteInernacional() {
         </div>
 
         <motion.p className="content__main" layoutId="content">
-          La Corte Internacional de Justicia también conocida como Tribunal Internacional de Justicia fue creada en 1945 por la Carta de las Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano judicial de las Naciones Unidas; su sede se encuentra en el Palacio de La Paz en la Haya (países bajos). Una de sus funciones principales es emitir opiniones consultivas sobre cuestiones que pueden someterse órganos o instituciones especializadas de la ONU. Se compone de quince magistrados (jueces), elegidos por la Asamblea General y el Consejo de Seguridad, los cuales cumplen mandatos de nueve años. La Corte desempeña una doble misión: el arreglo de las controversias de orden jurídico entre los Estados que le sean sometidas por estos (procedimiento contencioso) y la emisión de dictámenes consultivos sobre cuestiones jurídicas que le sometan los órganos u organismos de las Naciones Unidas (procedimiento consultivo).
+          La Corte Internacional de Justicia también conocida como Tribunal
+          Internacional de Justicia fue creada en 1945 por la Carta de las
+          Naciones Unidas y comenzó a funcionar en 1946, es el principal órgano
+          judicial de las Naciones Unidas; su sede se encuentra en el Palacio de
+          La Paz en la Haya (países bajos). Una de sus funciones principales es
+          emitir opiniones consultivas sobre cuestiones que pueden someterse
+          órganos o instituciones especializadas de la ONU. Se compone de quince
+          magistrados (jueces), elegidos por la Asamblea General y el Consejo de
+          Seguridad, los cuales cumplen mandatos de nueve años. La Corte
+          desempeña una doble misión: el arreglo de las controversias de orden
+          jurídico entre los Estados que le sean sometidas por estos
+          (procedimiento contencioso) y la emisión de dictámenes consultivos
+          sobre cuestiones jurídicas que le sometan los órganos u organismos de
+          las Naciones Unidas (procedimiento consultivo).
         </motion.p>
 
         <div className="content__topics">
-          <h1 className="content__topics__title">Tópicos</h1>
+          <h1 className="content__topics__title">Casos</h1>
           <div className="content__topics__1">
-            <h1 className="content__topics--red">Tópico A: </h1>
+            <h1 className="content__topics--red">Caso A: </h1>
             <p>
               Aplicación del Convenio Internacional para la Represión de la
               Financiación del Terrorismo y de la Convención Internacional sobre
@@ -74,7 +92,7 @@ export default function corteInernacional() {
           </div>
 
           <div className="content__topics__2">
-            <h1 className="content__topics--green">Tópico B: </h1>
+            <h1 className="content__topics--green">Caso B: </h1>
             <p>
               Caso relativo a las actividades militares y paramilitares en
               Nicaragua y contra Nicaragua (Nicaragua contra los Estados Unidos
