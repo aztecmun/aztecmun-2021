@@ -35,6 +35,7 @@ export default function index() {
     age: '',
     phone: '',
     email: '',
+    role: '',
   })
 
   useEffect(() => {
@@ -58,6 +59,7 @@ export default function index() {
             age: profile.age,
             phone: profile.phone,
             email: profile.email,
+            role: profile.role,
           })
         }
       })
@@ -184,39 +186,54 @@ export default function index() {
                   />
                 )}
 
-                <select
-                  className="committee"
-                  name="committee"
-                  onChange={handleInputChange}
-                >
-                  <option disabled selected value="">
-                    Selecciona un comité
-                  </option>
-                  <option value="ONU Mujeres"> ONU Mujeres </option>
-                  <option value="Corte Internacional de Justicia">
-                    Corte Internacional de Justicia
-                  </option>
-                  <option value="Senado de la República">
-                    Senado de la República
-                  </option>
-                  <option value="World Tourism Organization">
-                    World Tourism Organization
-                  </option>
-                  <option value="United Nations Children's Fund">
-                    United Natios Children's Fund
-                  </option>
-
-                  {profileData.committee !== '' && (
-                    <option
-                      hidden
-                      disabled
-                      selected
-                      value={profileData.committee}
-                    >
-                      {profileData.committee}
+                {profileData.role === 'delegate' && (
+                  <select
+                    className="committee"
+                    name="committee"
+                    onChange={handleInputChange}
+                  >
+                    <option disabled selected value="">
+                      Selecciona un comité
                     </option>
-                  )}
-                </select>
+                    <option value="ONU Mujeres"> ONU Mujeres </option>
+                    <option value="Corte Internacional de Justicia">
+                      Corte Internacional de Justicia
+                    </option>
+                    <option value="Senado de la República">
+                      Senado de la República
+                    </option>
+                    <option value="World Tourism Organization">
+                      World Tourism Organization
+                    </option>
+                    <option value="United Nations Children's Fund">
+                      United Natios Children's Fund
+                    </option>
+
+                    {profileData.committee !== '' && (
+                      <option
+                        hidden
+                        disabled
+                        selected
+                        value={profileData.committee}
+                      >
+                        {profileData.committee}
+                      </option>
+                    )}
+                  </select>
+                )}
+
+                {profileData.role === 'secretariat' && (
+                  <input
+                    name="committee"
+                    className="c2"
+                    type="text"
+                    placeholder="Ingresa tu secretaría"
+                    onChange={handleInputChange}
+                    required
+                    autoComplete="off"
+                    value={profileData.committee}
+                  />
+                )}
               </div>
               <div className="about">
                 <div className="icon">
