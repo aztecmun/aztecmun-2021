@@ -24,11 +24,17 @@ export default function index() {
   }, [user])
 
   useEffect(() => {
+    let unsuscribe
+
     if (user) {
       queryAllProfiles((newProfiles) => {
-        setProfiles(newProfiles)
+        if (newProfiles) {
+          unsuscribe = setProfiles(newProfiles)
+        }
       })
     }
+
+    return () => unsuscribe && unsuscribe()
   }, [user])
 
   return (

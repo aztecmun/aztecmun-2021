@@ -153,3 +153,53 @@ export const queryAllProfiles = (callback) => {
       callback(newProfile)
     })
 }
+
+export const queryUNWTOdelegates = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .where('committee', '==', 'World Tourism Organization')
+    .get()
+    .then((snapshot) => {
+      return snapshot.size
+    })
+}
+
+export const queryUNICEFdelegates = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .where('committee', '==', "United Nations Children's Fund")
+    .get()
+    .then((snapshot) => {
+      return snapshot.size
+    })
+}
+
+export const queryONUmujeresDelegates = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .where('committee', '==', 'ONU Mujeres')
+    .get()
+    .then((snapshot) => {
+      return snapshot.size
+    })
+}
+
+export const querySenadoDelegates = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .where('committee', '==', 'Senado de la República')
+    .get()
+    .then((snapshot) => {
+      return snapshot.size
+    })
+}
+
+export const queryCorteDelegates = (callback) => {
+  return db
+    .collection('usersProfiles')
+    .where('committee', '==', 'Corte Internacional de Justicia')
+    .get()
+    .then((snapshot) => {
+      return snapshot.size
+    })
+}

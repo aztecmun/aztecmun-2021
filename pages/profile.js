@@ -199,7 +199,7 @@ export default function index() {
                   <option value="Senado de la República">
                     Senado de la República
                   </option>
-                  <option value="Worl Tourism Organization">
+                  <option value="World Tourism Organization">
                     World Tourism Organization
                   </option>
                   <option value="United Nations Children's Fund">
@@ -242,15 +242,25 @@ export default function index() {
                     <option value="Tercero de Secundaria">
                       Tercero de Secundaria
                     </option>
+                    <option value="Primer semestre de Bachillerato">
+                      Primer semestre de Bachillerato
+                    </option>
                     <option value="Segundo semestre de Bachillerato">
                       Segundo semestre de Bachillerato
                     </option>
                     <option value="Tercer semestre de Bachillerato">
                       Tercer semestre de Bachillerato
                     </option>
+                    <option value="Cuarto semestre de Bachillerato">
+                      Cuarto semestre de Bachillerato
+                    </option>
+                    <option value="Quinto semestre de Bachillerato">
+                      Quinto semestre de Bachillerato
+                    </option>
                     <option value="Sexto semestre de Bachillerato">
                       Sexto semestre de Bachillerato
                     </option>
+                    <option value="Universidad">Universidad</option>
 
                     {profileData.grade !== '' && (
                       <option
