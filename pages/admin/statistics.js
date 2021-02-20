@@ -1,7 +1,8 @@
 // React and next imports
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import { Bar } from 'react-chartjs-2'
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 // Firebase and user auth
 import useUser, { USER_STATES } from 'hooks/useUser'
@@ -39,6 +40,10 @@ export default function statistics() {
 
   return (
     <>
+      <Head>
+        <title>Estadísticas de comités | AztecMUN 2021</title>
+      </Head>
+
       <Bar
         data={{
           labels: [
