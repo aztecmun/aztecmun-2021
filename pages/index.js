@@ -23,6 +23,11 @@ import {
 
 export default function index() {
   const user = useUser()
+  // const router = useRouter()
+
+  // useEffect(() => {
+  //   user && router.replace('/home')
+  // }, [user])
 
   return (
     <HomeWrapper>
@@ -82,8 +87,8 @@ export default function index() {
         </div>
 
         <div className="sec2">
-          <img src="/svg/about.svg" alt="logo_aztecmun" className="img-1"/>
-          <img src="/img/about2.png" alt="logo_aztecmun" className="img-2"/>
+          <img src="/svg/about.svg" alt="logo_aztecmun" className="img-1" />
+          <img src="/img/about2.png" alt="logo_aztecmun" className="img-2" />
         </div>
 
         <div className="sec3">
@@ -382,7 +387,10 @@ export default function index() {
           <img src="/img/s5.jpg" alt="aztecmun secretarios" />
           <img src="/img/s6.JPG" alt="aztecmun secretarios" />
           <img src="/img/s7.JPG" alt="aztecmun comitré" />
-          <img src="/img/s8.jpg" alt="aztecmun comité internacional de bioética" />
+          <img
+            src="/img/s8.jpg"
+            alt="aztecmun comité internacional de bioética"
+          />
           <img src="/img/s9.JPG" alt="aztecmun anáhuac" />
           <img src="/img/s10.PNG" alt="aztecmun harvard" />
           <img className="s11" src="/img/s11.jpg" alt="aztecmun harvar" />

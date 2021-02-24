@@ -72,7 +72,7 @@ export const createAccountWithEmail = (email, password) => {
         role: 'delegate',
       })
 
-      const emailConfig = { url: 'https://localhost:3000/profile' }
+      const emailConfig = { url: 'https://aztecmun.com/profile' }
 
       result.user.sendEmailVerification(emailConfig).catch((error) => {
         Swal.fire({

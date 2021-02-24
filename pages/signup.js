@@ -57,7 +57,7 @@ export default function signup() {
           <h1>Crear Cuenta</h1>
           <Input>
             Correo Electrónico
-                <input
+            <input
               name="email"
               type="email"
               onChange={handleInputChange}
@@ -67,7 +67,7 @@ export default function signup() {
           </Input>
           <Input>
             Contraseña
-                <input
+            <input
               name="password"
               type="password"
               onChange={handleInputChange}
@@ -78,7 +78,7 @@ export default function signup() {
           <Button>Crear cuenta</Button>
           <p>
             ¿Ya tienes cuenta?
-                <span>
+            <span>
               <Link href="/login"> ¡Inicia Sesión! </Link>
             </span>
           </p>
