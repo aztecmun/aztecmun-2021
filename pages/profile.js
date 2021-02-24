@@ -195,7 +195,6 @@ export default function index() {
                     <option disabled selected value="">
                       Selecciona un comité
                     </option>
-                    <option value="ONU Mujeres"> ONU Mujeres </option>
                     <option value="Corte Internacional de Justicia">
                       Corte Internacional de Justicia
                     </option>
